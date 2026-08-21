@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Work — Muhammad Babar™ | UI/UX Design Case Studies by Industry</title>
+<meta name="description" content="UI/UX design case studies by Muhammad Babar across fintech, healthcare, SaaS, e-commerce, education, and AI — organized by industry, with measurable outcomes.">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  html,body{margin:0;padding:0;background:#0a0a0a;color:#f2f2ef;font-family:'Archivo',sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  a:hover{color:#ffffff}
+</style>
+</helmet>
+<div style="background:#0a0a0a;color:#f2f2ef;font-family:'Archivo',sans-serif">
+  <dc-import name="Nav" hint-size="100%,72px"></dc-import>
+
+  <section data-screen-label="Work hero" style="padding:120px 40px 60px;max-width:1200px;margin:0 auto">
+    <div style="font-size:12px;letter-spacing:0.12em;color:#8a8a84;margin-bottom:24px">✳&nbsp; SELECTED WORK</div>
+    <h1 style="margin:0 0 24px;font-size:72px;line-height:1.05;letter-spacing:-0.03em;font-weight:500;max-width:900px;text-wrap:pretty">Case studies with outcomes, not just screens.</h1>
+    <p style="margin:0;font-size:15px;line-height:1.7;color:#9a9a94;max-width:520px">Work across six industries. Each case links research, design decisions, and the numbers they moved.</p>
+  </section>
+
+  <section data-screen-label="Industry filter" style="padding:0 40px 50px;max-width:1200px;margin:0 auto">
+    <div style="display:flex;flex-wrap:wrap;gap:10px">
+      <sc-for list="{{ filters }}" as="f" hint-placeholder-count="7">
+        <button onClick="{{ f.pick }}" style="background:{{ f.bg }};color:{{ f.fg }};border:1px solid #2a2a26;border-radius:100px;padding:10px 20px;font-size:13px;font-weight:500;cursor:pointer;font-family:'Archivo',sans-serif">{{ f.label }}</button>
+      </sc-for>
+    </div>
+  </section>
+
+  <section data-screen-label="Case list" style="padding:0 40px 120px;max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:48px">
+    <sc-for list="{{ cases }}" as="c" hint-placeholder-count="3">
+      <a href="Work Detail.dc.html" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:stretch">
+        <div style="border-radius:8px;overflow:hidden;position:relative;min-height:360px">
+          <image-slot id="{{ c.slotId }}" shape="rect" placeholder="{{ c.placeholder }}"></image-slot>
+        </div>
+        <div style="background:#111110;border:1px solid #222220;border-radius:8px;padding:36px;display:flex;flex-direction:column;justify-content:space-between;gap:32px" style-hover="border-color:#3a3a36">
+          <div>
+            <div style="font-size:12px;color:#8a8a84;margin-bottom:14px">✳&nbsp; {{ c.meta }}</div>
+            <h2 style="margin:0 0 12px;font-size:26px;font-weight:500;letter-spacing:-0.01em">{{ c.title }}</h2>
+            <p style="margin:0;font-size:14px;line-height:1.6;color:#9a9a94">{{ c.desc }}</p>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:end;border-top:1px solid #222220;padding-top:24px">
+            <div style="display:flex;gap:40px">
+              <div><div style="font-size:36px;font-weight:500">{{ c.stat1 }}</div><div style="font-size:12px;color:#8a8a84;margin-top:4px">{{ c.stat1Label }}</div></div>
+              <div><div style="font-size:36px;font-weight:500">{{ c.stat2 }}</div><div style="font-size:12px;color:#8a8a84;margin-top:4px">{{ c.stat2Label }}</div></div>
+            </div>
+            <span style="font-size:20px">→</span>
+          </div>
+        </div>
+      </a>
+    </sc-for>
+  </section>
+
+  <section data-screen-label="CTA" style="border-top:1px solid #222220;padding:120px 40px;text-align:center">
+    <h2 style="margin:0 0 28px;font-size:48px;letter-spacing:-0.02em;font-weight:500">Want results like these?</h2>
+    <a href="Contact.dc.html" style="display:inline-block;background:#f2f2ef;color:#0a0a0a;padding:14px 28px;border-radius:4px;font-size:14px;font-weight:500" style-hover="background:#ffffff">Start a project</a>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,480px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { active: "All" };
+  static CASES = [
+    { industry: "Fintech", slotId: "work-fp-cover", placeholder: "FinPay — cover image", meta: "FINTECH · WEB APP · 2025", title: "FinPay — unified invoicing & payments dashboard", desc: "Redesigned a fragmented back office into one clear operational view for finance teams.", stat1: "42%", stat1Label: "Faster task completion", stat2: "58%", stat2Label: "Feature adoption lift" },
+    { industry: "Fintech", slotId: "work-vault-cover", placeholder: "VaultPay — cover image", meta: "FINTECH · MOBILE APP · 2023", title: "VaultPay — personal finance that explains itself", desc: "A budgeting app that turns raw transactions into plain-language insights people act on.", stat1: "3.2×", stat1Label: "Weekly active sessions", stat2: "64%", stat2Label: "Budget goal completion" },
+    { industry: "Healthcare", slotId: "work-mc-cover", placeholder: "MediCare — cover image", meta: "HEALTHCARE · MOBILE APP · 2024", title: "MediCare — patient booking made effortless", desc: "A mobile experience that turned a 9-step booking flow into three taps, for all ages and abilities.", stat1: "1,200+", stat1Label: "Daily bookings", stat2: "72%", stat2Label: "30-day retention" },
+    { industry: "SaaS & B2B", slotId: "work-fl-cover", placeholder: "Flowdesk — cover image", meta: "SAAS & B2B · DESIGN SYSTEM · 2024", title: "Flowdesk — a design system for a 40-person team", desc: "Tokens, components, and documentation that unified three products under one language.", stat1: "2×", stat1Label: "Faster feature delivery", stat2: "120+", stat2Label: "Documented components" },
+    { industry: "E-commerce", slotId: "work-kart-cover", placeholder: "Kartline — cover image", meta: "E-COMMERCE · WEB & MOBILE · 2023", title: "Kartline — checkout that stopped leaking revenue", desc: "A research-led rebuild of cart and checkout that removed friction at every step to payment.", stat1: "-28%", stat1Label: "Cart abandonment", stat2: "19%", stat2Label: "Revenue per visitor lift" },
+    { industry: "Education", slotId: "work-lrn-cover", placeholder: "Learnly — cover image", meta: "EDUCATION · WEB APP · 2022", title: "Learnly — courses students actually finish", desc: "Progress design, streaks, and simplified navigation for an online learning platform.", stat1: "47%", stat1Label: "Course completion rate", stat2: "31%", stat2Label: "Drop in support queries" },
+    { industry: "AI & Automation", slotId: "work-ai-cover", placeholder: "Opsly — cover image", meta: "AI & AUTOMATION · WEB APP · 2025", title: "Opsly — human-friendly AI workflow builder", desc: "Making agent-driven automation legible: visual flows, clear guardrails, trustworthy defaults.", stat1: "5 min", stat1Label: "To first working flow", stat2: "88%", stat2Label: "Setup completion rate" },
+  ];
+  renderVals() {
+    const industries = ["All", "Fintech", "Healthcare", "SaaS & B2B", "E-commerce", "Education", "AI & Automation"];
+    const active = this.state.active;
+    return {
+      filters: industries.map((label) => ({
+        label,
+        bg: label === active ? "#f2f2ef" : "transparent",
+        fg: label === active ? "#0a0a0a" : "#c9c9c4",
+        pick: () => this.setState({ active: label }),
+      })),
+      cases: active === "All" ? Component.CASES : Component.CASES.filter((c) => c.industry === active),
+    };
+  }
+}
+</script>
+</body>
+</html>

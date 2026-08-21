@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Services — Muhammad Babar™ | UI/UX, No Code & AI Design</title>
+<meta name="description" content="Three service lines by Muhammad Babar: UI UX Design, No Code Design (Framer & Webflow), and AI Design — each with specialized sub-services.">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;padding:0;background:#0a0a0a;color:#f2f2ef;font-family:'Archivo',sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  a:hover{color:#ffffff}
+</style>
+</helmet>
+<div style="background:#0a0a0a;color:#f2f2ef;font-family:'Archivo',sans-serif">
+  <dc-import name="Nav" hint-size="100%,72px"></dc-import>
+
+  <section data-screen-label="Services hero" style="padding:120px 40px 40px;max-width:1280px;margin:0 auto">
+    <div style="font-size:12px;letter-spacing:0.12em;color:#8a8a84;margin-bottom:24px">✳&nbsp; SERVICES</div>
+    <h1 style="margin:0;font-size:64px;line-height:1.05;letter-spacing:-0.03em;font-weight:500;max-width:900px;text-wrap:pretty">Three ways I can help.</h1>
+  </section>
+
+  <section data-screen-label="Expanding panels" style="padding:40px 40px 120px;max-width:1280px;margin:0 auto">
+    <div style="display:flex;gap:16px;height:560px">
+      <sc-for list="{{ panels }}" as="p" hint-placeholder-count="3">
+        <div onClick="{{ p.pick }}" style="flex:{{ p.flex }};transition:flex 0.5s cubic-bezier(0.3,0.8,0.3,1);background:{{ p.bg }};color:{{ p.fg }};border:1px solid #222220;border-radius:10px;overflow:hidden;cursor:pointer;position:relative;min-width:88px">
+          <sc-if value="{{ p.isActive }}" hint-placeholder-val="{{ false }}">
+            <div style="padding:40px;display:flex;flex-direction:column;height:100%;box-sizing:border-box;justify-content:space-between;gap:24px">
+              <div>
+                <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:20px">
+                  <span style="font-size:13px;opacity:0.6">{{ p.num }}</span>
+                  <span style="font-size:13px;opacity:0.6;white-space:nowrap">{{ p.tag }}</span>
+                </div>
+                <h2 style="margin:0 0 16px;font-size:44px;font-weight:500;letter-spacing:-0.02em;line-height:1.05;white-space:nowrap">{{ p.title }}</h2>
+                <p style="margin:0 0 28px;font-size:14px;line-height:1.65;opacity:0.75;max-width:420px">{{ p.desc }}</p>
+                <div style="display:flex;flex-direction:column;max-width:420px">
+                  <sc-for list="{{ p.subs }}" as="s" hint-placeholder-count="5">
+                    <a href="UI UX Design.dc.html" style="display:flex;justify-content:space-between;gap:16px;border-top:1px solid {{ p.line }};padding:12px 0;font-size:14px;color:inherit" style-hover="opacity:0.7"><span>{{ s.name }}</span><span style="opacity:0.5">→</span></a>
+                  </sc-for>
+                </div>
+              </div>
+              <a href="UI UX Design.dc.html" style="align-self:flex-start;background:{{ p.btnBg }};color:{{ p.btnFg }};padding:13px 24px;border-radius:4px;font-size:13px;font-weight:500;white-space:nowrap">Explore →</a>
+            </div>
+          </sc-if>
+          <sc-if value="{{ p.isCollapsed }}" hint-placeholder-val="{{ true }}">
+            <div style="height:100%;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:32px 0;box-sizing:border-box">
+              <span style="font-size:13px;color:#8a8a84">{{ p.num }}</span>
+              <span style="writing-mode:vertical-rl;font-size:22px;font-weight:500;letter-spacing:-0.01em;white-space:nowrap">{{ p.title }}</span>
+              <span style="font-size:18px;color:#8a8a84">+</span>
+            </div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,480px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { active: 0 };
+  static DATA = [
+    { title: "UI UX Design", tag: "PRODUCT DESIGN", desc: "Research-driven product design for web and mobile — from first insight to a polished, developer-ready interface.", subs: ["UX Research & Strategy", "Wireframing & Prototyping", "Web & Mobile App Design", "Design Systems", "Usability Testing"] },
+    { title: "No Code Design", tag: "FRAMER · WEBFLOW", desc: "Design and launch production websites without an engineering team — fast, responsive, and easy for you to edit.", subs: ["Framer Websites", "Webflow Development", "Landing Pages", "CMS & E-commerce Setup", "Maintenance & Optimization"] },
+    { title: "AI Design", tag: "AGENTS · COPILOTS", desc: "Interfaces for AI products people can trust — agents, copilots, and conversational experiences with clear guardrails.", subs: ["AI Product & Agent UX", "Chat & Conversational Interfaces", "AI Dashboards & Data UX", "Prompt & Interaction Design", "AI-assisted Design Workflows"] },
+  ];
+  renderVals() {
+    const a = this.state.active;
+    return {
+      panels: Component.DATA.map((s, i) => {
+        const act = i === a;
+        return {
+          num: "0" + (i + 1), title: s.title, tag: s.tag, desc: s.desc,
+          subs: s.subs.map((name) => ({ name })),
+          isActive: act, isCollapsed: !act,
+          flex: act ? "7 1 0%" : "0 0 88px",
+          bg: act ? "#f4f4f1" : "#111110",
+          fg: act ? "#0a0a0a" : "#f2f2ef",
+          line: act ? "#d6d6d0" : "#222220",
+          btnBg: act ? "#0a0a0a" : "#f2f2ef",
+          btnFg: act ? "#f2f2ef" : "#0a0a0a",
+          pick: () => this.setState({ active: i }),
+        };
+      }),
+    };
+  }
+}
+</script>
+</body>
+</html>

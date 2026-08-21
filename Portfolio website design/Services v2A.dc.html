@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Services — Muhammad Babar™ | UI/UX, No Code & AI Design</title>
+<meta name="description" content="Three service lines by Muhammad Babar: UI UX Design, No Code Design (Framer & Webflow), and AI Design — each with specialized sub-services.">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;padding:0;background:#0a0a0a;color:#f2f2ef;font-family:'Archivo',sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  a:hover{color:#ffffff}
+</style>
+</helmet>
+<div style="background:#0a0a0a;color:#f2f2ef;font-family:'Archivo',sans-serif">
+  <dc-import name="Nav" hint-size="100%,72px"></dc-import>
+
+  <section data-screen-label="Services hero" style="padding:120px 40px 40px;max-width:1280px;margin:0 auto">
+    <div style="font-size:12px;letter-spacing:0.12em;color:#8a8a84;margin-bottom:24px">✳&nbsp; SERVICES</div>
+    <h1 style="margin:0;font-size:64px;line-height:1.05;letter-spacing:-0.03em;font-weight:500;max-width:900px;text-wrap:pretty">Three ways I can help.</h1>
+  </section>
+
+  <section data-screen-label="Interactive service index" style="padding:40px 40px 120px;max-width:1280px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:60px;align-items:stretch">
+    <div style="display:flex;flex-direction:column">
+      <sc-for list="{{ rows }}" as="r" hint-placeholder-count="3">
+        <div onMouseEnter="{{ r.hover }}" style="border-top:1px solid #222220;padding:44px 0;cursor:pointer;display:flex;align-items:baseline;gap:32px;opacity:{{ r.opacity }};transition:opacity 0.3s">
+          <span style="font-size:14px;color:#8a8a84;width:40px">{{ r.num }}</span>
+          <span style="font-size:56px;font-weight:500;letter-spacing:-0.03em;line-height:1">{{ r.title }}</span>
+          <span style="margin-left:auto;font-size:28px;transform:{{ r.arrowTransform }};transition:transform 0.3s">→</span>
+        </div>
+      </sc-for>
+      <div style="border-top:1px solid #222220"></div>
+    </div>
+    <div style="background:#111110;border:1px solid #222220;border-radius:8px;padding:40px;display:flex;flex-direction:column;justify-content:space-between;gap:32px;min-height:480px">
+      <div>
+        <div style="font-size:12px;letter-spacing:0.12em;color:#8a8a84;margin-bottom:20px">✳&nbsp; {{ activeLabel }}</div>
+        <p style="margin:0 0 32px;font-size:17px;line-height:1.6;color:#c9c9c4">{{ activeDesc }}</p>
+        <div style="display:flex;flex-direction:column">
+          <sc-for list="{{ activeSubs }}" as="s" hint-placeholder-count="5">
+            <a href="UI UX Design.dc.html" style="display:flex;justify-content:space-between;gap:16px;border-top:1px solid #222220;padding:14px 0;font-size:15px;color:#d6d6d1" style-hover="color:#ffffff"><span>{{ s.name }}</span><span style="color:#8a8a84">→</span></a>
+          </sc-for>
+        </div>
+      </div>
+      <a href="UI UX Design.dc.html" style="align-self:flex-start;background:#f2f2ef;color:#0a0a0a;padding:13px 24px;border-radius:4px;font-size:13px;font-weight:500" style-hover="background:#ffffff">{{ activeCta }}</a>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,480px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { active: 0 };
+  static DATA = [
+    { title: "UI UX Design", label: "SERVICE · 01", desc: "Research-driven product design for web and mobile — from first insight to a polished, developer-ready interface.", subs: ["UX Research & Strategy", "Wireframing & Prototyping", "Web & Mobile App Design", "Design Systems", "Usability Testing"] },
+    { title: "No Code Design", label: "SERVICE · 02", desc: "Design and launch production websites without an engineering team — fast, responsive, and easy for you to edit.", subs: ["Framer Websites", "Webflow Development", "Landing Pages", "CMS & E-commerce Setup", "Maintenance & Optimization"] },
+    { title: "AI Design", label: "SERVICE · 03", desc: "Interfaces for AI products people can trust — agents, copilots, and conversational experiences with clear guardrails.", subs: ["AI Product & Agent UX", "Chat & Conversational Interfaces", "AI Dashboards & Data UX", "Prompt & Interaction Design", "AI-assisted Design Workflows"] },
+  ];
+  renderVals() {
+    const a = this.state.active;
+    const d = Component.DATA[a];
+    return {
+      rows: Component.DATA.map((s, i) => ({
+        num: "0" + (i + 1),
+        title: s.title,
+        opacity: i === a ? "1" : "0.35",
+        arrowTransform: i === a ? "translateX(0)" : "translateX(-8px)",
+        hover: () => this.setState({ active: i }),
+      })),
+      activeLabel: d.label,
+      activeDesc: d.desc,
+      activeSubs: d.subs.map((name) => ({ name })),
+      activeCta: "Explore " + d.title + " →",
+    };
+  }
+}
+</script>
+</body>
+</html>

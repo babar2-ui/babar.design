@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Contact — Muhammad Babar™ | UI/UX Designer</title>
+<meta name="description" content="Get in touch with UI/UX designer Muhammad Babar for freelance projects, embedded contract work, or full-time roles.">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;padding:0;background:#0a0a0a;color:#f2f2ef;font-family:'Archivo',sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  a:hover{color:#ffffff}
+  input::placeholder,textarea::placeholder{color:#6f6f6a}
+</style>
+</helmet>
+<div style="background:#0a0a0a;color:#f2f2ef;font-family:'Archivo',sans-serif;min-height:100vh;display:flex;flex-direction:column">
+  <dc-import name="Nav" hint-size="100%,72px"></dc-import>
+
+  <section data-screen-label="Contact" style="flex:1;padding:120px 40px;max-width:1200px;margin:0 auto;width:100%;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start">
+    <div>
+      <div style="font-size:12px;letter-spacing:0.12em;color:#8a8a84;margin-bottom:24px">✳&nbsp; CONTACT</div>
+      <h1 style="margin:0 0 24px;font-size:56px;line-height:1.08;letter-spacing:-0.03em;font-weight:500;text-wrap:pretty">Let's build something people love.</h1>
+      <p style="margin:0 0 32px;font-size:14px;line-height:1.7;color:#9a9a94;max-width:400px">Tell me about your product, your team, and what's slowing you down. I usually reply within a day.</p>
+      <a href="mailto:{{ email }}" style="font-size:18px;font-weight:500;border-bottom:1px solid #3a3a36;padding-bottom:4px" style-hover="border-color:#f2f2ef">{{ email }}</a>
+      <div style="margin-top:48px;display:flex;flex-direction:column;gap:12px;font-size:13px;color:#9a9a94">
+        <div style="display:flex;gap:16px"><span style="color:#8a8a84;width:90px">LOCATION</span><span>Remote · Worldwide</span></div>
+        <div style="display:flex;gap:16px"><span style="color:#8a8a84;width:90px">RESPONSE</span><span>Within 24 hours</span></div>
+        <div style="display:flex;gap:16px"><span style="color:#8a8a84;width:90px">SOCIALS</span><span style="display:flex;gap:14px"><a href="https://www.linkedin.com" target="_blank" style-hover="color:#fff">LinkedIn</a><a href="https://dribbble.com" target="_blank" style-hover="color:#fff">Dribbble</a><a href="https://www.behance.net" target="_blank" style-hover="color:#fff">Behance</a></span></div>
+      </div>
+    </div>
+    <form onSubmit="{{ onSubmit }}" style="display:flex;flex-direction:column;gap:16px;background:#111110;border:1px solid #222220;border-radius:8px;padding:32px">
+      <input name="name" required placeholder="Your name" style="background:#0a0a0a;border:1px solid #222220;border-radius:6px;padding:16px;font-size:14px;color:#f2f2ef;font-family:'Archivo',sans-serif;outline:none" style-focus="border-color:#4a4a44">
+      <input name="email" type="email" required placeholder="Your email" style="background:#0a0a0a;border:1px solid #222220;border-radius:6px;padding:16px;font-size:14px;color:#f2f2ef;font-family:'Archivo',sans-serif;outline:none" style-focus="border-color:#4a4a44">
+      <input name="company" placeholder="Company (optional)" style="background:#0a0a0a;border:1px solid #222220;border-radius:6px;padding:16px;font-size:14px;color:#f2f2ef;font-family:'Archivo',sans-serif;outline:none" style-focus="border-color:#4a4a44">
+      <textarea name="message" required rows="6" placeholder="Tell me about your project…" style="background:#0a0a0a;border:1px solid #222220;border-radius:6px;padding:16px;font-size:14px;color:#f2f2ef;font-family:'Archivo',sans-serif;outline:none;resize:vertical" style-focus="border-color:#4a4a44"></textarea>
+      <button type="submit" style="background:#f2f2ef;color:#0a0a0a;border:none;border-radius:6px;padding:16px;font-size:14px;font-weight:500;cursor:pointer;font-family:'Archivo',sans-serif" style-hover="background:#ffffff">{{ submitLabel }}</button>
+      <sc-if value="{{ statusMsg }}" hint-placeholder-val="{{ false }}">
+        <p style="margin:0;font-size:13px;color:#9a9a94">{{ statusMsg }}</p>
+      </sc-if>
+    </form>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,480px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;email&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;babar.13@outlook.com&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Contact&quot;}}">
+class Component extends DCLogic {
+  state = { status: null, sending: false };
+  renderVals() {
+    const email = this.props.email ?? "babar.13@outlook.com";
+    return {
+      email,
+      submitLabel: this.state.sending ? "Sending…" : "Send message",
+      statusMsg: this.state.status,
+      onSubmit: (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const data = Object.fromEntries(new FormData(form).entries());
+        this.setState({ sending: true, status: null });
+        fetch("https://formsubmit.co/ajax/" + encodeURIComponent(email), {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({ ...data, _subject: "Portfolio inquiry from " + data.name }),
+        })
+          .then((r) => r.json())
+          .then((res) => {
+            const ok = res.success === "true" || res.success === true;
+            this.setState({
+              sending: false,
+              status: ok
+                ? "Thanks — your message is on its way. I'll reply within a day."
+                : "Couldn't send just now. Please email me directly instead.",
+            });
+            if (ok) form.reset();
+          })
+          .catch(() =>
+            this.setState({ sending: false, status: "Couldn't send just now. Please email me directly instead." })
+          );
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>

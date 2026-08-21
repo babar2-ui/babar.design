@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+</helmet>
+<div style="height:75px"></div>
+<header style="position:fixed;top:0;left:0;right:0;z-index:100;font-family:'Archivo',sans-serif;color:#f2f2ef;background:rgba(10,10,10,0.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid #1c1c1a">
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:20px 40px">
+    <a href="Babar Portfolio.dc.html" style="display:flex;align-items:center;gap:8px;font-weight:600;font-size:18px;letter-spacing:-0.02em;color:#f2f2ef;text-decoration:none">✳ Babar™</a>
+    <nav style="display:flex;align-items:center;gap:28px;font-size:13px;color:#c9c9c4">
+      <a href="About.dc.html" style="color: {{ cAbout }};text-decoration:none;padding-bottom:4px;border-bottom:1px solid {{ bAbout }}" style-hover="color:#ffffff">About</a>
+      <div onMouseEnter="{{ openMenu }}" onMouseLeave="{{ closeMenu }}" style="position:static">
+        <a href="Services.dc.html" style="display:flex;align-items:center;gap:6px;color: {{ cServices }};text-decoration:none;padding:10px 0;border-bottom:1px solid {{ bServices }}" style-hover="color:#ffffff">Services <span style="font-size:9px">{{ chevron }}</span></a>
+        <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+          <div style="position:absolute;top:100%;left:0;right:0;height:70vh;display:flex;flex-direction:column;background:#0f0f0e;border-bottom:1px solid #222220;box-shadow:0 24px 48px rgba(0,0,0,0.5)">
+            <div style="flex:1;width:100%;max-width:1200px;margin:0 auto;padding:60px 40px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:48px;align-content:start;box-sizing:border-box">
+              <div>
+                <a href="Services.dc.html" style="display:block;font-size:15px;font-weight:600;color:#f2f2ef;text-decoration:none;padding-bottom:14px;border-bottom:1px solid #222220;margin-bottom:14px" style-hover="color:#ffffff">✳&nbsp; UI UX Design</a>
+                <div style="display:flex;flex-direction:column;gap:10px;font-size:13px">
+                  <a href="UX Research - Strategy.dc.html" style="color:#9a9a94;text-decoration:none" style-hover="color:#ffffff">UX Research & Strategy</a>
+                  <a href="Wireframing and Prototyping.dc.html" style="color:#9a9a94;text-decoration:none" style-hover="color:#ffffff">Wireframing & Prototyping</a>
+                  <a href="Mobile App Design.dc.html" style="color:#9a9a94;text-decoration:none" style-hover="color:#ffffff">Web & Mobile App Design</a>
+                  <a href="Design Systems.dc.html" style="color:#9a9a94;text-decoration:none" style-hover="color:#ffffff">Design Systems</a>
+                  <a href="Usability Testing.dc.html" style="color:#9a9a94;text-decoration:none" style-hover="color:#ffffff">Usability Testing</a>
+                  <a href="SaaS Product Design.dc.html" style="color:#9a9a94;text-decoration:none" style-hover="color:#ffffff">SaaS Product Design</a>
+                  <a href="Product Strategy.dc.html" style="color:#9a9a94;text-decoration:none" style-hover="color:#ffffff">Product Strategy</a>
+                </div>
+              </div>
+              <div>
+                <a href="Services.dc.html" style="display:block;font-size:15px;font-weight:600;color:#f2f2ef;text-decoration:none;padding-bottom:14px;border-bottom:1px solid #222220;margin-bottom:14px" style-hover="color:#ffffff">✳&nbsp; No Code Design</a>
+                <div style="display:flex;flex-direction:column;gap:10px;font-size:13px">
+                  <a href="Framer Websites.dc.html" style="color:#9a9a94;text-decoration:none" style-hover="color:#ffffff">Framer Websites</a>
+                  <a href="Web Design.dc.html" style="color:#9a9a94;text-decoration:none" style-hover="color:#ffffff">Webflow Development</a>
+                  <a href="Web Design.dc.html" style="color:#9a9a94;text-decoration:none" style-hover="color:#ffffff">Landing Pages</a>
+                  <a href="Web Design.dc.html" style="color:#9a9a94;text-decoration:none" style-hover="color:#ffffff">CMS & E-commerce Setup</a>
+                  <a href="Web Design.dc.html" style="color:#9a9a94;text-decoration:none" style-hover="color:#ffffff">Maintenance & Optimization</a>
+                </div>
+              </div>
+              <div>
+                <a href="Services.dc.html" style="display:block;font-size:15px;font-weight:600;color:#f2f2ef;text-decoration:none;padding-bottom:14px;border-bottom:1px solid #222220;margin-bottom:14px" style-hover="color:#ffffff">✳&nbsp; AI Design</a>
+                <div style="display:flex;flex-direction:column;gap:10px;font-size:13px">
+                  <a href="AI Product Design.dc.html" style="color:#9a9a94;text-decoration:none" style-hover="color:#ffffff">AI Product & Agent UX</a>
+                  <a href="AI UX Design.dc.html" style="color:#9a9a94;text-decoration:none" style-hover="color:#ffffff">Chat & Conversational Interfaces</a>
+                  <a href="Dashboard Design.dc.html" style="color:#9a9a94;text-decoration:none" style-hover="color:#ffffff">AI Dashboards & Data UX</a>
+                  <a href="AI UX Design.dc.html" style="color:#9a9a94;text-decoration:none" style-hover="color:#ffffff">Prompt & Interaction Design</a>
+                  <a href="AI Product Design.dc.html" style="color:#9a9a94;text-decoration:none" style-hover="color:#ffffff">AI-assisted Design Workflows</a>
+                </div>
+              </div>
+            </div>
+            <div style="border-top:1px solid #1c1c1a">
+              <div style="max-width:1200px;margin:0 auto;padding:16px 40px;display:flex;justify-content:space-between;align-items:center;font-size:13px">
+                <span style="color:#8a8a84">Not sure what you need? I'll help you scope it.</span>
+                <a href="Services.dc.html" style="color:#f2f2ef;text-decoration:none;font-weight:500" style-hover="color:#ffffff">View all services →</a>
+              </div>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+      <a href="Work.dc.html" style="color: {{ cWork }};text-decoration:none;padding-bottom:4px;border-bottom:1px solid {{ bWork }}" style-hover="color:#ffffff">Work</a>
+      <a href="Insights.dc.html" style="color: {{ cInsights }};text-decoration:none;padding-bottom:4px;border-bottom:1px solid {{ bInsights }}" style-hover="color:#ffffff">Insights</a>
+      <a href="FAQ.dc.html" style="color: {{ cFAQ }};text-decoration:none;padding-bottom:4px;border-bottom:1px solid {{ bFAQ }}" style-hover="color:#ffffff">FAQ</a>
+      <a href="Contact.dc.html" style="background:#f2f2ef;color:#0a0a0a;padding:10px 18px;border-radius:4px;font-weight:500;text-decoration:none" style-hover="background:#ffffff">Contact me</a>
+    </nav>
+  </div>
+</header>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { open: false, page: "" };
+  componentDidMount() {
+    try {
+      const p = decodeURIComponent(window.location.pathname.split("/").pop() || "");
+      this.setState({ page: p });
+    } catch (e) {}
+  }
+  c(names) {
+    return names.some(n => this.state.page === n) ? "#ffffff" : "#c9c9c4";
+  }
+  b(names) {
+    return names.some(n => this.state.page === n) ? "#f2f2ef" : "transparent";
+  }
+  renderVals() {
+    const S = ["Services.dc.html", "Services v2A.dc.html", "Services v2B.dc.html", "Services v2C.dc.html", "UX Research - Strategy.dc.html", "AI Product Design.dc.html", "SaaS Product Design.dc.html", "Mobile App Design.dc.html", "UI UX Design.dc.html", "Web Design.dc.html", "Dashboard Design.dc.html", "AI UX Design.dc.html", "Design Systems.dc.html", "Product Strategy.dc.html", "Wireframing and Prototyping.dc.html", "Usability Testing.dc.html", "Framer Websites.dc.html"];
+    return {
+      cAbout: this.c(["About.dc.html"]), bAbout: this.b(["About.dc.html"]),
+      cServices: this.c(S), bServices: this.b(S),
+      cWork: this.c(["Work.dc.html", "Work Detail.dc.html"]), bWork: this.b(["Work.dc.html", "Work Detail.dc.html"]),
+      cInsights: this.c(["Insights.dc.html", "Insight Detail.dc.html"]), bInsights: this.b(["Insights.dc.html", "Insight Detail.dc.html"]),
+      cFAQ: this.c(["FAQ.dc.html"]), bFAQ: this.b(["FAQ.dc.html"]),
+      menuOpen: this.state.open,
+      chevron: this.state.open ? "▲" : "▼",
+      openMenu: () => { clearTimeout(this._closeT); this.setState({ open: true }); },
+      closeMenu: () => { clearTimeout(this._closeT); this._closeT = setTimeout(() => this.setState({ open: false }), 300); },
+    };
+  }
+}
+</script>
+</body>
+</html>
