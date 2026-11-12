@@ -25,7 +25,7 @@ _sj.write_text(_t.replace("if (window.innerWidth > 900) setOpen(false);", "if (w
 css = CSS.read_bytes()
 ver = hashlib.sha256(css).hexdigest()[:8]
 
-SECTIONS = ["about", "services", "work", "insights", "faq"]
+SECTIONS = ["about", "services", "industries", "work", "insights", "faq"]
 
 def card(p):
     return (f'<div class="rx-card"><a class="rx-card-img" href="{p}about/index.html" tabindex="-1" aria-hidden="true">'
@@ -38,7 +38,7 @@ def reel(p):
     return (f'<a class="rx-reel" href="{p}work/index.html"><img src="{p}uploads/work-zippy-cover-w480.webp" '
             f'alt="Zippy fintech wallet app UI design" width="480" height="300" loading="lazy" decoding="async"></a>')
 
-HERO_LABELS = ("Hero", "Services hero", "Work hero", "Insights hero", "Article hero", "FAQ hero")
+HERO_LABELS = ("Hero", "Services hero", "Industries hero", "Work hero", "Insights hero", "Article hero", "FAQ hero")
 STRIP = ('<dl class="rx-strip"><div><dt>Years designing</dt><dd>8+</dd></div><div><dt>Projects delivered</dt><dd>300+</dd></div>'
          '<div><dt>Industries &amp; domains</dt><dd>20+</dd></div><div><dt>On-time delivery</dt><dd>100%</dd></div></dl>')
 

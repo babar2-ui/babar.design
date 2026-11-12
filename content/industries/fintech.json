@@ -1,0 +1,19 @@
+{
+  "name": "Fintech",
+  "order": 1,
+  "tagline": "Payments · Banking · Compliance",
+  "summary": "Secure software for banking, payments, and finance.",
+  "description": "Secure software for banking, payments, and finance.",
+  "focus": [
+    "Trust & security UX",
+    "Onboarding & KYC flows",
+    "Financial dashboards"
+  ],
+  "image": "/uploads/aa342318c21568.webp",
+  "image_alt": "Contactless card payment at a payment terminal, fintech industry",
+  "work_match": "FINTECH",
+  "overview": "",
+  "challenges": [],
+  "faqs": [],
+  "draft": false
+}

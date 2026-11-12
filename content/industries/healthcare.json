@@ -1,0 +1,19 @@
+{
+  "name": "Healthcare",
+  "order": 3,
+  "tagline": "Patients · Clinicians · Access",
+  "summary": "Digital healthcare solutions for better patient care.",
+  "description": "Digital healthcare solutions for better patient care.",
+  "focus": [
+    "Accessibility-first design",
+    "Booking & records",
+    "Clinical dashboards"
+  ],
+  "image": "/uploads/488bee2c4308c7.webp",
+  "image_alt": "Doctor working at a laptop, healthcare industry",
+  "work_match": "HEALTH",
+  "overview": "",
+  "challenges": [],
+  "faqs": [],
+  "draft": false
+}

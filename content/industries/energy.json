@@ -1,0 +1,19 @@
+{
+  "name": "Energy",
+  "order": 10,
+  "tagline": "Grid · Monitoring · Sustainability",
+  "summary": "Energy platforms for monitoring, efficiency, and sustainability.",
+  "description": "Energy platforms for monitoring, efficiency, and sustainability.",
+  "focus": [
+    "Monitoring & telemetry",
+    "Usage analytics",
+    "Sustainability reporting"
+  ],
+  "image": "/uploads/959a8773a97849.webp",
+  "image_alt": "Wind turbines at sunrise, energy industry",
+  "work_match": "",
+  "overview": "",
+  "challenges": [],
+  "faqs": [],
+  "draft": false
+}

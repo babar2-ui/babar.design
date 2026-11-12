@@ -43,8 +43,10 @@ pages = []
 for f in sorted(OUT.rglob("*.html")):
     rel = f.parent.relative_to(OUT).as_posix()
     base = "" if rel == "." else rel
-    f.write_text(convert(f.read_text(encoding="utf-8"), base), encoding="utf-8")
-    pages.append("/" if not base else f"/{base}/")
+    t = convert(f.read_text(encoding="utf-8"), base)
+    f.write_text(t, encoding="utf-8")
+    if '<meta name="robots" content="noindex' not in t:  # noindex pages (e.g. a short industry page) stay out of the sitemap
+        pages.append("/" if not base else f"/{base}/")
 
 (OUT / "netlify.toml").write_text('''[build]
   publish = "."

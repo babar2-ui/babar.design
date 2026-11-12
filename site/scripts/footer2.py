@@ -9,6 +9,12 @@ ARROW = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="cur
 _SOCIALS = None
 
 
+def _has_industries():
+    import json, os
+    f = os.environ.get("RX_INDUSTRIES")
+    return bool(f and os.path.exists(f) and json.loads(open(f, encoding="utf-8").read()))
+
+
 def socials(src_index):
     global _SOCIALS
     if _SOCIALS is None:
@@ -35,6 +41,9 @@ def build(h, p, src_index):
     colhtml = ""
     for lab, body in cols:
         links = re.findall(r'<a href="([^"]*)"[^>]*>(.*?)</a>', body, re.S)
+        if lab == "SITEMAP" and _has_industries():  # Industries pages (industries.py) sit after Services
+            k = next((i for i, (u, t) in enumerate(links) if t.strip() == "Services"), len(links) - 1)
+            links.insert(k + 1, (f"{p}industries/index.html", "Industries"))
         if links:
             inner = "".join(f'<li><a href="{u}">{t}</a></li>' for u, t in links)
             colhtml += f'<div class="ftx-col"><span class="ftx-k">{lab}</span><ul>{inner}</ul></div>'

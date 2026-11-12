@@ -1471,3 +1471,48 @@ html body.rx h1.atx-h1{font-size:62px!important;line-height:1.02!important;lette
 @media (min-width:1100px){html body.rx .hero-fit h1{font-size:min(7vw,104px)!important}}
 @media (max-width:1099px){html body.rx .hero-fit h1{font-size:min(9vw,52px)!important}}
 @media (max-width:600px){html body.rx .hero-fit h1{font-size:34px!important}}
+
+/* =====================================================================
+   v5.5 Industries (site/scripts/industries.py) + the sidebar Industries menu
+   ===================================================================== */
+@media (min-width:1100px){
+  html body.rx .rx-nav .rx-sub-ind{width:min(520px,calc(100vw - var(--rx-side) - 40px))}
+  html body.rx .rx-nav .rx-sub-ind .rx-sub-in{grid-template-columns:1fr}
+  html body.rx .rx-nav .rx-sub-ind .rx-sg ul{columns:2;column-gap:32px}
+  html body.rx .rx-nav .rx-sub-ind .rx-sg li{break-inside:avoid}
+}
+html body.rx .rx-nav .rx-ind.is-sec > a{color:var(--rx-blue)!important}
+/* list page */
+html body.rx .inx-list{padding-top:72px}
+.ind-more{display:inline-flex;margin-top:22px;padding:13px 20px;border-radius:9px;background:var(--rx-blue);color:#fff!important;font-size:14px;font-weight:500;text-decoration:none;transition:background-color .25s}
+.ind-more:hover{background:var(--rx-blue2)}
+/* industry page */
+.inx-two{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:48px;align-items:stretch}
+.inx-fl{display:flex;flex-direction:column;gap:28px}
+.inx-cards{grid-template-columns:repeat(3,minmax(0,1fr));flex:1}
+.inx-cards .axs-card{min-height:220px}
+.inx-pic{min-height:320px}
+.inx-sgs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.inx-sg{display:flex;flex-direction:column;gap:18px;padding:26px;background:#1b1b1a;border:1px solid #3a3a37;border-radius:4px}
+.inx-sh{font-family:var(--rx-mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:#a4a49e;padding-bottom:14px;border-bottom:1px solid #3a3a37}
+.inx-sg ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.inx-sg a{color:#f2f2ef;text-decoration:none;font-size:18px;font-weight:500;letter-spacing:-.015em;transition:color .2s}
+.inx-sg a:hover{color:#9aa6ff}
+.inx-chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.inx-chips a{display:inline-flex;padding:12px 18px;border:1px solid var(--rx-line);border-radius:100px;background:var(--rx-card);color:var(--rx-ink);text-decoration:none;font-size:15px;font-weight:500;transition:background-color .25s,color .25s,border-color .25s}
+.inx-chips a:hover{background:var(--rx-blue);border-color:var(--rx-blue);color:#fff}
+html body.rx .inx-more{padding:90px 0}
+@media (max-width:1099px){
+  .inx-two{grid-template-columns:1fr;gap:28px}
+  .inx-sgs{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .inx-cards{grid-template-columns:1fr}.inx-cards .axs-card{min-height:150px}
+  .inx-pic{min-height:220px}
+  html body.rx .inx-more{padding:64px 0}
+}
+html body.rx .inx-cards h3.axs-ct{font-size:21px!important;line-height:1.15!important;text-transform:none;letter-spacing:-.02em!important;overflow-wrap:anywhere}
+html body.rx .inx-focus{padding-bottom:24px}
+html body.rx .inx-focus + .axs-light{padding-top:72px}
+.ind-copy{display:flex;flex-direction:column;align-items:flex-start}
+.ind-more{align-self:flex-start}

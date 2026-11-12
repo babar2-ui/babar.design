@@ -1,0 +1,19 @@
+{
+  "name": "Education",
+  "order": 5,
+  "tagline": "Learning · Engagement · Completion",
+  "summary": "Modern EdTech platforms for smarter learning.",
+  "description": "Modern EdTech platforms for smarter learning.",
+  "focus": [
+    "Course & lesson flows",
+    "Progress & assessment",
+    "Learner engagement"
+  ],
+  "image": "/uploads/b174261ca57f76.webp",
+  "image_alt": "Students learning on laptops, education industry",
+  "work_match": "EDUCATION",
+  "overview": "",
+  "challenges": [],
+  "faqs": [],
+  "draft": false
+}
