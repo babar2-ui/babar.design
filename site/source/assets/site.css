@@ -1,0 +1,40 @@
+/* Static-site behaviour layer. The page markup is prerendered; this covers the
+   few things the design's runtime used to do in the browser. */
+
+/* Mega-menu: the inner panel keeps its own absolute positioning against the
+   fixed header, so these wrappers stay out of the way. */
+.nav-has-menu { position: static; }
+.nav-mega { position: static; }
+
+/* Empty image slots — placeholders for work that has no image yet. */
+.slot-empty {
+  display: flex; align-items: center; justify-content: center;
+  border: 1px dashed #2a2a26; border-radius: 8px;
+  background: #0f0f0e; color: #6f6f6a;
+  font: 500 13px/1.4 'Archivo', system-ui, sans-serif;
+  text-align: center; padding: 16px; box-sizing: border-box;
+}
+.slot-empty span { max-width: 22ch; }
+
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid #f2f2ef; outline-offset: 2px; border-radius: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001s !important; transition-duration: .001s !important; }
+}
+
+/* hidden-wins: elements hidden by script (e.g. filtered-out case studies) must disappear even
+   when their inline style sets a display value */
+[hidden] { display: none !important; }
+
+/* reCAPTCHA: Netlify fills this slot at deploy. Keep the empty slot from adding
+   a gap where it isn't filled (local copies), and fit the fixed 304px widget on
+   the narrowest phones. */
+.om-captcha:empty { display: none; }
+@media (max-width: 380px) {
+  .om-form [data-netlify-recaptcha], .om-form .g-recaptcha { transform: scale(.88); transform-origin: 0 0; height: 69px; }
+}
+
+/* a marquee only loops once script has added its second copy */
+[data-marquee]:not([data-marquee="ready"]) { animation-play-state: paused !important; }

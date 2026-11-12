@@ -1,0 +1,176 @@
+# babar.info/admin — add and edit blog articles and case studies.
+# Every Publish saves the entry to GitHub (babar2-ui/babar.design); Netlify then rebuilds the site (about 1–2 minutes).
+# The page design comes from site/scripts/cms.py, so entries only hold words and images.
+
+app_title: Babar · Admin
+logo:
+  src: /favicon.svg
+
+backend:
+  name: github
+  repo: babar2-ui/babar.design
+  branch: main
+  commit_messages:
+    create: "Admin: add {{collection}} “{{slug}}”"
+    update: "Admin: update {{collection}} “{{slug}}”"
+    delete: "Admin: delete {{collection}} “{{slug}}”"
+    uploadMedia: "Admin: upload “{{path}}”"
+    deleteMedia: "Admin: delete “{{path}}”"
+
+editor:
+  preview: false   # the form uses the full width; the eye button still shows a preview
+
+site_url: https://babar.info
+display_url: https://babar.info
+
+media_folder: content/uploads
+public_folder: /uploads/cms
+media_libraries:
+  default:
+    config:
+      max_file_size: 15000000
+      slugify_filename: true
+      transformations:
+        raster_image:
+          format: webp
+          quality: 85
+          width: 2400
+          height: 2400
+
+slug:
+  encoding: ascii
+  clean_accents: true
+
+collections:
+  # ------------------------------------------------------------------ blog
+  - name: insights
+    label: Blog articles
+    label_singular: Blog article
+    description: Articles on babar.info/insights. Newest first on the Insights page.
+    icon: article
+    folder: content/insights
+    format: json
+    extension: json
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    summary: "{{title}} · {{date}}"
+    sortable_fields: [date, title]
+    preview_path: /insights/{{slug}}/
+    fields:
+      - { name: title, label: Headline, widget: string, hint: "The H1 on the article page and the title on its card." }
+      - { name: short_title, label: Breadcrumb label, widget: string, required: false, hint: "Short name for the breadcrumb (Home / Insights / …). Leave empty to use the headline." }
+      - { name: seo_title, label: SEO title, widget: string, required: false, hint: "Browser tab and Google title, about 60 characters. Leave empty to use the headline." }
+      - { name: description, label: Meta description, widget: text, hint: "Shown on Google and social cards. About 150–160 characters." }
+      - { name: category, label: Category, widget: string, default: Design, hint: "One or two words, e.g. Trends, Tools, Craft, AI Design." }
+      - { name: date, label: Published, widget: datetime, format: YYYY-MM-DD, time_format: false, default: "{{now}}" }
+      - { name: updated, label: Updated, widget: datetime, format: YYYY-MM-DD, time_format: false, required: false, hint: "Only when you change a published article." }
+      - { name: read_time, label: Read time (minutes), widget: number, value_type: int, min: 1, required: false, hint: "Leave empty to work it out from the length of the article." }
+      - { name: cover, label: Cover image, widget: image, hint: "Wide image, 16:9 works best. Converted to WebP on upload." }
+      - { name: cover_alt, label: Cover image description, widget: string, hint: "What the image shows, for screen readers and Google." }
+      - name: takeaways
+        label: Key takeaways
+        label_singular: Takeaway
+        widget: list
+        required: false
+        hint: "Optional. Shown in a box after the opening paragraphs."
+        field: { name: text, label: Takeaway, widget: string }
+      - name: body
+        label: Article
+        widget: richtext
+        buttons: [bold, italic, link, heading-two, heading-three, quote, bulleted-list, numbered-list, code]
+        hint: "Use Heading 2 for sections. Images can be added with the + button."
+      - name: tags
+        label: Tags
+        label_singular: Tag
+        widget: list
+        required: false
+        field: { name: tag, label: Tag, widget: string }
+      - { name: cta_text, label: Closing line, widget: string, required: false, hint: "Next to the Let’s talk button. Default: Planning a redesign or a new product launch?" }
+      - { name: keywords, label: SEO keywords, widget: string, required: false, hint: "Optional, comma separated." }
+      - { name: og_image, label: Social share image, widget: image, required: false, hint: "Optional, 1200×630. Leave empty to use the cover." }
+      - { name: draft, label: Draft (not on the website), widget: boolean, default: false, required: false }
+
+  # ------------------------------------------------------------------ case studies
+  - name: work
+    label: Case studies
+    label_singular: Case study
+    description: Case studies on babar.info/work. Newest first, above the existing ones.
+    icon: work
+    folder: content/work
+    format: json
+    extension: json
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    summary: "{{title}} · {{industry}}"
+    sortable_fields: [date, title]
+    preview_path: /work/{{slug}}/
+    fields:
+      - { name: title, label: Title, widget: string, hint: "e.g. KADUU — a dark web intelligence workspace. The H1 and the card title." }
+      - { name: short_title, label: Breadcrumb label, widget: string, required: false, hint: "e.g. KADUU. Leave empty to use the title." }
+      - { name: seo_title, label: SEO title, widget: string, required: false, hint: "Browser tab and Google title, about 60 characters." }
+      - { name: description, label: Meta description, widget: text, hint: "Shown on Google and social cards. About 150–160 characters." }
+      - { name: summary, label: Summary, widget: text, hint: "One or two sentences under the title and on the Work page card." }
+      - name: industry
+        label: Industry
+        widget: select
+        options: [Fintech, Healthcare, E-commerce, SaaS & B2B, Education]
+        hint: "Matches the filter buttons on the Work page."
+      - { name: platform, label: Platform, widget: string, default: Web app, hint: "e.g. Web app, Mobile app, Website." }
+      - { name: year, label: Year, widget: string, required: false }
+      - { name: date, label: Date added, widget: datetime, format: YYYY-MM-DD, time_format: false, default: "{{now}}", hint: "Sets the order on the Work page (newest first)." }
+      - { name: cover, label: Cover image, widget: image, hint: "Shown at the top of the page and on the card. Converted to WebP on upload." }
+      - { name: cover_alt, label: Cover image description, widget: string, hint: "What the image shows, for screen readers and Google." }
+      - name: details
+        label: Project details
+        label_singular: Detail
+        widget: list
+        required: false
+        hint: "Short facts under the title, e.g. Client, Role, Timeline, Team."
+        summary: "{{label}}: {{value}}"
+        fields:
+          - { name: label, label: Label, widget: string }
+          - { name: value, label: Value, widget: string }
+      - { name: live_url, label: Live site link, widget: string, required: false, pattern: ["^https://", "Start with https://"] }
+      - name: stats
+        label: Results
+        label_singular: Result
+        widget: list
+        required: false
+        max: 4
+        hint: "Up to 4 numbers. The first two also go on the Work page card. Real numbers only."
+        summary: "{{value}} {{label}}"
+        fields:
+          - { name: value, label: Number, widget: string, hint: "e.g. 38%, 4.8, 3x" }
+          - { name: label, label: What it measures, widget: string }
+      - { name: results_intro, label: Results intro, widget: text, required: false, hint: "Optional sentence next to the results." }
+      - name: sections
+        label: Story sections
+        label_singular: Section
+        widget: list
+        required: false
+        hint: "The case study itself, e.g. Challenge, Research, Design, Outcome. Sections alternate light and dark."
+        summary: "{{label}} — {{heading}}"
+        fields:
+          - { name: label, label: Label, widget: string, hint: "Small tag, e.g. Challenge" }
+          - { name: heading, label: Heading, widget: string, required: false }
+          - name: body
+            label: Text
+            widget: richtext
+            required: false
+            buttons: [bold, italic, link, heading-three, quote, bulleted-list, numbered-list]
+          - name: images
+            label: Images
+            label_singular: Image
+            widget: list
+            required: false
+            hint: "1 image = full width, 2 = side by side, 3 or more = grid."
+            summary: "{{alt}}"
+            fields:
+              - { name: image, label: Image, widget: image }
+              - { name: alt, label: Description, widget: string, hint: "What the image shows." }
+              - { name: caption, label: Caption, widget: string, required: false }
+      - { name: keywords, label: SEO keywords, widget: string, required: false }
+      - { name: og_image, label: Social share image, widget: image, required: false, hint: "Optional, 1200×630. Leave empty to use the cover." }
+      - { name: draft, label: Draft (not on the website), widget: boolean, default: false, required: false }
