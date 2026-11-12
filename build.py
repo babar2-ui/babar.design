@@ -26,6 +26,22 @@ def run(*args):
         sys.exit(r.returncode)
 
 
+def vercel_forms(out):
+    """On Vercel there is no Netlify Forms: the contact form posts to the api/contact.js function
+    (emails through Resend) and the Netlify-only reCAPTCHA box is left out (the honeypot stays)."""
+    n = 0
+    for f in out.rglob("*.html"):
+        h = f.read_text(encoding="utf-8")
+        if 'data-netlify="true"' not in h:
+            continue
+        h = h.replace('method="POST" data-netlify="true" data-netlify-recaptcha="true"', 'method="POST" action="/api/contact" data-netlify="true"')
+        h = h.replace('<div class="om-captcha" data-netlify-recaptcha="true"></div>', "")
+        assert 'action="/api/contact"' in h and 'data-netlify-recaptcha="true"' not in h, f
+        f.write_text(h, encoding="utf-8")
+        n += 1
+    print("vercel: contact form on", n, "pages posts to /api/contact")
+
+
 def main():
     for d in (STAGE, LOCAL, DIST):
         if d.exists():
@@ -56,6 +72,8 @@ def main():
     robots = DIST / "robots.txt"
     robots.write_text(robots.read_text(encoding="utf-8").replace("Allow: /\n", "Allow: /\nDisallow: /admin/\n"), encoding="utf-8")
     shutil.copytree(ROOT / "admin", DIST / "admin")
+    if os.environ.get("VERCEL") or os.environ.get("DEPLOY_TARGET") == "vercel":
+        vercel_forms(DIST)
     run(SCRIPTS / "refcheck.py", DIST, "abs")
     run(SCRIPTS / "refcheck.py", LOCAL, "rel")
     shutil.rmtree(STAGE)

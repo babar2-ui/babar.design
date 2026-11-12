@@ -13,7 +13,7 @@ for f in R.rglob("*.html"):
     for u in urls:
         if not u or SKIP.match(u): continue
         path = re.split(r"[?#]", u)[0]
-        if not path: continue
+        if not path or path.startswith("/api/"): continue  # serverless functions (Vercel)
         if path.startswith("/"): t = R / path.lstrip("/")
         else: t = f.parent / path
         if t.is_dir() or path.endswith("/"): t = t / "index.html"

@@ -21,7 +21,11 @@ shutil.copytree(SRC, OUT)
 _sj = OUT / "assets" / "site.js"
 _t = _sj.read_text(encoding="utf-8")
 assert _t.count("if (window.innerWidth > 900) setOpen(false);") == 1
-_sj.write_text(_t.replace("if (window.innerWidth > 900) setOpen(false);", "if (window.innerWidth > 1099) setOpen(false);"), encoding="utf-8")
+_t = _t.replace("if (window.innerWidth > 900) setOpen(false);", "if (window.innerWidth > 1099) setOpen(false);")
+# the form posts to its own action when it has one (/api/contact on Vercel), else to Netlify Forms ("/")
+assert _t.count("fetch('/', {") == 1
+_t = _t.replace("fetch('/', {", "fetch(form.getAttribute('action') || '/', {")
+_sj.write_text(_t, encoding="utf-8")
 css = CSS.read_bytes()
 ver = hashlib.sha256(css).hexdigest()[:8]
 

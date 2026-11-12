@@ -25,9 +25,11 @@ content/        what the admin saves: insights/*.json, work/*.json, uploads/
 admin/          the admin (Sveltia CMS) and its settings, config.yml
 build.py        runs everything: python3 build.py
 netlify.toml    build command, headers and redirects for Netlify
+vercel.json     the same for Vercel
+api/contact.js  Vercel only: emails each contact form message through Resend
 ```
 
-`python3 build.py` (Python 3.11+, `pip install -r requirements.txt`) writes:
+`python3 build.py` (Python 3.9+, nothing to install: Markdown is bundled in `site/scripts/_vendor`) writes:
 
 - `dist/`: what Netlify publishes
 - `_build/local/`: the same site with relative links, to open on a computer (`Start-Preview.bat`)
@@ -44,3 +46,16 @@ netlify.toml    build command, headers and redirects for Netlify
      homepage `https://babar.info`, callback `https://api.netlify.com/auth/done`. Then in Netlify,
      Project configuration → Access & security → OAuth → Install provider → GitHub, with the app's
      client ID and secret.
+
+## Hosting on Vercel
+
+1. vercel.com → Add New → Project → import `babar2-ui/babar.design`. Leave the settings as they are;
+   they come from `vercel.json` (build `python3 build.py`, output `dist`).
+2. Contact form: create a free account at resend.com **with babar.13@outlook.com** (until a domain is
+   verified, Resend only delivers to the account's own address), then API Keys → Create. In Vercel,
+   Project → Settings → Environment Variables, add `RESEND_API_KEY` (Production and Preview) and redeploy.
+   Optional: verify babar.info in Resend (Domains) and set `CONTACT_FROM` to e.g. `babar.info <hello@babar.info>`.
+3. Domain: Project → Settings → Domains → add `babar.info` and `www.babar.info`, then add the DNS records
+   Vercel shows at your DNS provider. When babar.info opens the Vercel site, remove the domain from Netlify.
+
+On Vercel the form posts to `/api/contact`; on Netlify it still uses Netlify Forms. The admin works the same on both.
