@@ -189,6 +189,9 @@ for f in sorted(OUT.rglob("*.html")):
         if str(rel) == "services":
             sys.path.insert(0, str(pathlib.Path(__file__).parent)); import services_page
             h = services_page.place(h)
+        if len(rel.parts) == 2 and rel.parts[0] == "insights":
+            sys.path.insert(0, str(pathlib.Path(__file__).parent)); import article_page
+            h = article_page.place(h)
         if len(rel.parts) == 2 and rel.parts[0] == "services":
             sys.path.insert(0, str(pathlib.Path(__file__).parent)); import service_detail
             h = service_detail.place(h)
