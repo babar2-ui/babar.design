@@ -191,36 +191,93 @@ def services_groups(top):
     return out
 
 
+def _h2(label, cls=""):
+    return f'<h2 class="svd-h{(" " + cls) if cls else ""}"><span aria-hidden="true">/ </span>{label}</h2>'
+
+
+def _items(d, key):
+    return [x for x in d.get(key) or [] if str(x.get("title") or "").strip()]
+
+
+def tools_section(stage, slug):
+    """The Tools & expertise tiles from the service pages (same logos and words)."""
+    import service_detail
+    h = (stage / "services" / "ui-ux-design" / "index.html").read_text(encoding="utf-8")
+    m = re.search(r'<section[^>]*data-screen-label="Tools and expertise"', h)
+    sec = h[m.start():h.index("</section>", m.start()) + len("</section>")]
+    return service_detail.tools(service_detail._norm(rebase(sec, "services/ui-ux-design", f"industries/{slug}")))
+
+
+HERO_BTNS = ('    <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 36px;">'
+             '<a href="{p}contact/index.html" class="scp0" style="background: rgb(242, 242, 239); color: rgb(10, 10, 10); padding: 14px 24px; border-radius: 4px; font-size: 14px; font-weight: 500;">Start a design project</a>'
+             '<a href="{p}work/index.html" class="scp1" style="display: inline-block; border: 1px solid rgb(58, 58, 54); padding: 14px 28px; border-radius: 4px; font-size: 14px; color: rgb(230, 230, 225);">See related work</a></div>\n')
+
+
 def detail_page(stage, d, inds, cards, ctx):
+    """Same building blocks and animations as the service pages (service_detail.py / rx.css v4.9)."""
+    import capabilities2, process2, work2
     slug = d["slug"]
     top, foot = shell(stage, f"industries/{slug}")
     p = "../../"
     url = f"{SITE}/industries/{slug}/"
-    n = inds.index(d) + 1
+    name = d["name"]
     has_text = bool(str(d.get("overview") or "").strip())
-    out = [HERO.format(crumb=crumb(p, d["name"]), pill=f"/ {n:02d} · {esc(str(d.get('tagline') or '').upper())}",
-                       h1=esc(d.get("headline") or d["name"]), p=P.format(esc(d["summary"])))]
-    # what I design: the focus areas, with the industry image
-    focus = [f for f in d.get("focus") or [] if str(f).strip()]
-    cards_html = "".join(f'<article class="axs-card"><span class="axs-no" aria-hidden="true">/{i + 1:02d}</span><h3 class="axs-ct">{esc(f)}</h3></article>'
-                         for i, f in enumerate(focus))
-    out.append(f'<section class="axs axs-light inx-focus" data-screen-label="Focus"><div class="axs-in inx-two">'
-               f'<div class="inx-fl"><span class="pr-tag">/ What I design</span><div class="axs-cards inx-cards">{cards_html}</div></div>'
-               f'<figure class="inx-pic">{img_tag(ctx, d, p)}</figure></div></section>')
-    if has_text:
-        out.append(f'<section class="axs axs-light csx-sec" data-screen-label="Overview"><div class="axs-in axs-stack"><div class="csx-row">'
-                   f'<span class="pr-tag">/ Overview</span><div class="csx-main"><div class="csx-prose">{cms.md_html(d["overview"], ctx, p)}</div></div></div></div></section>')
-    ch = [c for c in d.get("challenges") or [] if str(c.get("title") or "").strip()]
+    pill = f"/ {esc(name.upper())} · {esc(str(d.get('tagline') or '').upper())}"
+    hero = HERO.format(crumb=crumb(p, name), pill=pill, h1=esc(d.get("headline") or name),
+                       p=P.format(esc(d.get("hero_lead") or d["summary"])))
+    hero = hero.replace("  </section>", HERO_BTNS.format(p=p) + "  </section>", 1)
+    out = [hero]
+    # overview: summary as the lead, the text, the industry image
+    body = cms.md_html(d.get("overview") or "", ctx, p).replace("<p>", '<p class="axs-p">')
+    focus = "".join(f"<li>{esc(f)}</li>" for f in d.get("focus") or [] if str(f).strip())
+    out.append(f'<section class="axs axs-light svd-ov" data-screen-label="Overview"><div class="axs-in axs-stack">'
+               f'<div class="axs-hd"><span class="pr-tag">/ Overview</span><p class="axs-lead">{esc(d["summary"])}</p></div>'
+               f'<div class="svd-two"><div class="svd-copy">{body}<ul class="ind-chips inx-focus">{focus}</ul></div>'
+               f'<figure class="axs-pic svd-pic">{img_tag(ctx, d, p)}</figure></div></div></section>')
+    ch = _items(d, "challenges")
     if ch:
-        items = "".join(f'<article class="axs-card"><span class="axs-no" aria-hidden="true">/{i + 1:02d}</span><h3 class="axs-ct">{esc(c["title"])}</h3>'
-                        + (f'<p class="axs-cd">{esc(c.get("text"))}</p>' if c.get("text") else "") + "</article>" for i, c in enumerate(ch))
-        out.append(f'<section class="axs axs-dark" data-screen-label="Challenges"><div class="axs-in axs-stack"><div class="axs-hd"><span class="pr-tag">/ Challenges</span></div>'
-                   f'<div class="axs-cards axs-c{min(len(ch), 4)}">{items}</div></div></section>')
+        cards_html = "".join(f'<article class="axs-card"><span class="axs-no" aria-hidden="true">/{i + 1:02d}</span>'
+                             f'<h3 class="axs-ct">{esc(c["title"])}</h3><p class="axs-cd">{esc(c.get("text"))}</p></article>' for i, c in enumerate(ch))
+        out.append(f'<section class="axs axs-dark" data-screen-label="The challenge"><div class="axs-in axs-stack">'
+                   f'{_h2("THE CHALLENGE")}<div class="axs-cards axs-c{min(len(ch), 4)} svd-cards">{cards_html}</div></div></section>')
+    pr = _items(d, "products")
+    if pr:
+        panels = "".join(
+            f'<li class="cpx-p{" is-on" if i == 0 else ""}" style="--i:{i}">'
+            f'<div class="cpx-strip"><h3 class="cpx-t"><button type="button" class="cpx-btn" aria-expanded="{"true" if i == 0 else "false"}">{esc(x["title"])}</button></h3>'
+            f'<span class="cpx-no" aria-hidden="true">/{i + 1:02d}</span></div>'
+            f'<div class="cpx-body"><span class="cpx-num" aria-hidden="true" data-n="{i + 1:02d}"></span><p class="cpx-d">{esc(x.get("text"))}</p></div></li>'
+            for i, x in enumerate(pr))
+        out.append(f'<section data-screen-label="What I design" class="cpx cpx-about svd-cpx" style="--n:{len(pr)}"><div class="cpx-pin">'
+                   f'<div class="cpx-hd">{_h2("WHAT I DESIGN")}</div><ul class="cpx-row">{panels}</ul></div>{capabilities2.SCRIPT}</section>')
+    ap = _items(d, "approach")
+    if ap:
+        steps = "".join(
+            f'<li class="prx-card" style="--i:{i}"><span class="prx-no" aria-hidden="true">/{i + 1:02d}</span>'
+            f'<span class="prx-big" aria-hidden="true" data-n="{i + 1:02d}"></span>'
+            f'<div class="prx-b"><h3 class="prx-t">{esc(x["title"])}</h3><p class="prx-p">{esc(x.get("text"))}</p></div></li>' for i, x in enumerate(ap))
+        out.append(f'<section class="prx svd-prx" data-screen-label="My approach" style="--n:{len(ap)}"><div class="prx-pin">'
+                   f'<ol class="prx-stage">{steps}</ol><div class="prx-r">{_h2("MY APPROACH", "prx-h")}<div class="prx-foot prx-foot-line"></div></div>'
+                   f'</div>{process2.SCRIPT}</section>')
+    sub = _items(d, "subsectors")
+    if sub:
+        rows = "".join(f'<li class="axs-row"><span class="axs-no" aria-hidden="true">/{i + 1:02d}</span>'
+                       f'<h3 class="axs-rt">{esc(x["title"])}</h3><p class="axs-rd">{esc(x.get("text"))}</p></li>' for i, x in enumerate(sub))
+        out.append(f'<section class="axs axs-light" data-screen-label="Sub-sectors"><div class="axs-in axs-split">'
+                   f'<div class="axs-hd">{_h2("SUB-SECTORS")}</div><ol class="axs-rows">{rows}</ol></div></section>')
+    wy = _items(d, "why")
+    if wy:
+        rows = "".join(f'<li class="svd-why"><span class="axs-no" aria-hidden="true">/{i + 1:02d}</span>'
+                       f'<h3 class="svd-wt">{esc(x["title"])}</h3><p class="svd-wd">{esc(x.get("text"))}</p></li>' for i, x in enumerate(wy))
+        out.append(f'<section class="axs axs-dark" data-screen-label="Why work with me"><div class="axs-in axs-stack">'
+                   f'{_h2("WHY WORK WITH ME")}<div class="svd-two is-solo"><ol class="svd-whys">{rows}</ol></div></div></section>')
     # case studies in this industry
     m = str(d.get("work_match") or "").strip().upper()
     mine = [c for c in cards if m and html.unescape(c["cat"]).upper().startswith(m)]
+    more = (f'<section class="axs axs-light inx-more" data-screen-label="More industries"><div class="axs-in axs-stack">'
+            f'<div class="axs-hd"><span class="pr-tag">/ More industries</span></div><ul class="inx-chips">'
+            + "".join(f'<li><a href="../{o["slug"]}/index.html">{esc(o["name"])}</a></li>' for o in inds if o is not d) + "</ul></div></section>")
     if mine:
-        import work2
         cs = ""
         for c in mine:
             tags = "".join(f'<span class="wkx-tag">{t.strip()}</span>' for t in c["cat"].split("·"))
@@ -231,30 +288,25 @@ def detail_page(stage, d, inds, cards, ctx):
             cs += (f'<{tag} {href + " " if href else ""}class="svd-case wkx-card"><figure class="svd-cimg">{img}'
                    f'<div class="wkx-ov" aria-hidden="true"><div class="wkx-tags">{tags}</div>{work2.VIEW if href else ""}</div></figure>'
                    f'<span class="ds-sr">{c["cat"]}</span><h3 class="svd-ct">{c["title"]}</h3><span class="ds-sr">{c["summary"]} {stats}</span></{tag}>')
-        out.append(f'<section class="axs axs-light svd-feat" data-screen-label="Case studies"><div class="axs-in axs-stack">'
-                   f'<div class="svd-fhd"><span class="pr-tag">/ Selected work</span></div>'
+        out.append(f'<section class="axs axs-light svd-feat" data-screen-label="Featured work"><div class="axs-in axs-stack">'
+                   f'<div class="svd-fhd"><span class="pr-tag">/ Selected work</span><h2 class="svd-fh">{esc(name)} case studies</h2></div>'
                    f'<div class="svd-cases svd-n{min(len(mine), 3)}">{cs}</div></div></section>')
-    # services
-    groups = services_groups(top)
-    gs = "".join(f'<div class="inx-sg"><span class="inx-sh">{gt}</span><ul>' + "".join(f'<li><a href="{u}">{t}</a></li>' for u, t in links) + "</ul></div>"
-                 for gt, links in groups)
-    out.append(f'<section class="axs axs-dark inx-svc" data-screen-label="Services"><div class="axs-in axs-stack">'
-               f'<div class="axs-hd"><span class="pr-tag">/ Services</span></div><div class="inx-sgs">{gs}</div></div></section>')
+    else:
+        out.append(more)
+    out.append(tools_section(stage, slug))
     faqs = [f for f in d.get("faqs") or [] if str(f.get("question") or "").strip() and str(f.get("answer") or "").strip()]
     if faqs:
         rows = "".join(f'<details class="fqx-row"{" open" if i == 0 else ""}><summary class="fqx-q"><span class="fqx-no" aria-hidden="true">/{i + 1:02d}</span>'
                        f'<span class="fqx-qt">{esc(f["question"])}</span><span class="fqx-pm" aria-hidden="true"></span></summary>'
                        f'<div class="fqx-a">{cms.md_html(f["answer"], ctx, p)}</div></details>' for i, f in enumerate(faqs))
-        out.append(f'<section class="fqx svd-faq" data-screen-label="FAQs"><div class="fqx-in"><div class="fqx-hd"><span class="pr-tag">/ FAQs</span></div>'
+        out.append(f'<section class="fqx svd-faq" data-screen-label="FAQs"><div class="fqx-in"><div class="fqx-hd">{_h2("FAQS", "fqx-h")}</div>'
                    f'<div class="fqx-list">{rows}</div></div></section>')
-    # other industries
-    others = "".join(f'<li><a href="../{o["slug"]}/index.html">{esc(o["name"])}</a></li>' for o in inds if o is not d)
-    out.append(f'<section class="axs axs-light inx-more" data-screen-label="More industries"><div class="axs-in axs-stack">'
-               f'<div class="axs-hd"><span class="pr-tag">/ More industries</span></div><ul class="inx-chips">{others}</ul></div></section>')
+    if mine:
+        out.append(more)
     out.append(cta(p))
-    title = d.get("seo_title") or f"{d['name']} UI UX Design | Muhammad Babar"
+    title = d.get("seo_title") or f"{name} UI UX Design | Muhammad Babar"
     desc = d.get("description") or d["summary"]
-    top = head(top, title, desc, url, [("Home", f"{SITE}/"), ("Industries", f"{SITE}/industries/"), (d["name"], None)],
+    top = head(top, title, desc, url, [("Home", f"{SITE}/"), ("Industries", f"{SITE}/industries/"), (name, None)],
                d.get("image"), d.get("image_alt") or "", not has_text)
     return top + "\n  " + "\n".join(out) + foot
 

@@ -3,7 +3,7 @@
   "order": 9,
   "tagline": "Fleet · Supply chain · Tracking",
   "summary": "Optimize logistics and supply chain operations.",
-  "description": "Optimize logistics and supply chain operations.",
+  "description": "Logistics UI UX design for fleet, dispatch and supply chain products: tracking, driver apps and operations dashboards that keep shipments moving on time.",
   "focus": [
     "Fleet & dispatch",
     "Shipment tracking",
@@ -12,8 +12,137 @@
   "image": "/uploads/6b304bde7cd1e9.webp",
   "image_alt": "Truck on a highway at sunset, transportation and logistics industry",
   "work_match": "",
-  "overview": "",
-  "challenges": [],
-  "faqs": [],
-  "draft": false
+  "overview": "Logistics runs on timing. A late truck, a missed scan or an unclear delivery window costs money and customers, and the people dealing with it are often under pressure. Dispatchers watch many moving parts at once, while drivers and warehouse staff use apps one-handed, in poor light and with patchy signal.\n\nI work with founders and product teams on web and mobile logistics products, from early prototypes to a design system engineers can build from directly. My experience designing monitoring dashboards, such as Nimbus, shapes how I surface exceptions, priorities and context, so teams can act before a delay becomes a problem.",
+  "challenges": [
+    {
+      "title": "Too many moving parts",
+      "text": "Dispatchers track vehicles, orders and drivers at once, so the screen has to show what needs action first."
+    },
+    {
+      "title": "Field conditions",
+      "text": "Drivers and warehouse staff use apps in vans, yards and loading bays, with gloves, glare and weak signal."
+    },
+    {
+      "title": "Exception handling",
+      "text": "Delays, failed deliveries and damaged goods need clear flows, not workarounds by phone."
+    },
+    {
+      "title": "Many audiences",
+      "text": "Shippers, carriers, drivers and end customers each need a different view of the same shipment."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Have you designed logistics products before?",
+      "answer": "My closest published work is Nimbus, a monitoring dashboard that surfaces priority and context so teams know where to look. The same thinking applies to dispatch boards and tracking views, and I learn your operation in detail during discovery."
+    },
+    {
+      "question": "Can you design apps that work with weak or no signal?",
+      "answer": "Yes. I design clear syncing, queued and offline states with your engineers, so drivers and warehouse staff always know whether their update has gone through."
+    },
+    {
+      "question": "Do you design for both web and mobile?",
+      "answer": "Yes. Most logistics products need a web console for operations and mobile apps for drivers or customers, so I design them on one shared system."
+    },
+    {
+      "question": "Can you work with our existing design system?",
+      "answer": "Yes. I can extend and clean up an existing system, or create one from scratch with tokens and components that match your codebase."
+    },
+    {
+      "question": "How do we start?",
+      "answer": "Send me a short brief through the contact page. We will have a call about your product, users and timeline, and I will come back with a plan and quote."
+    }
+  ],
+  "draft": false,
+  "headline": "UI UX design for logistics and transportation products",
+  "seo_title": "Logistics UI UX Design | Muhammad Babar, Logistics Designer",
+  "hero_lead": "I design fleet, dispatch and tracking products that help operations teams and drivers see what is happening and act quickly, at the desk and on the road.",
+  "products": [
+    {
+      "title": "Fleet management",
+      "text": "Vehicle status, maintenance and driver assignment on one live view."
+    },
+    {
+      "title": "Dispatch and routing",
+      "text": "Job boards, route planning and reassignment tools for busy operations teams."
+    },
+    {
+      "title": "Driver apps",
+      "text": "Job lists, navigation hand-offs, proof of delivery and status updates designed for use on the move."
+    },
+    {
+      "title": "Shipment tracking",
+      "text": "Live tracking pages and notifications that tell customers where their order is and when it will arrive."
+    },
+    {
+      "title": "Warehouse tools",
+      "text": "Receiving, picking, packing and stock counts on handheld scanners and tablets."
+    },
+    {
+      "title": "Operations dashboards",
+      "text": "On-time performance, exceptions and capacity views that help managers plan the day."
+    }
+  ],
+  "subsectors": [
+    {
+      "title": "Freight & trucking",
+      "text": "Load booking, carrier management and freight visibility."
+    },
+    {
+      "title": "Last-mile delivery",
+      "text": "Courier, parcel and on-demand delivery for retail and food."
+    },
+    {
+      "title": "Warehousing & fulfilment",
+      "text": "Inventory, order fulfilment and warehouse management systems."
+    },
+    {
+      "title": "Fleet & telematics",
+      "text": "Vehicle tracking, fuel, maintenance and driver behaviour data."
+    },
+    {
+      "title": "Passenger transport",
+      "text": "Ride-hailing, shuttles, public transport and booking apps."
+    }
+  ],
+  "approach": [
+    {
+      "title": "Discover",
+      "text": "Interviews with dispatchers, drivers and customers, and a look at how the work runs today, including the spreadsheets and phone calls."
+    },
+    {
+      "title": "Map the flows",
+      "text": "Orders, handovers and exceptions such as failed deliveries mapped end to end before any screens."
+    },
+    {
+      "title": "Design and prototype",
+      "text": "High-fidelity screens and clickable prototypes, reviewed with you every week."
+    },
+    {
+      "title": "Test in context",
+      "text": "Usability sessions on the riskiest flows, with mobile screens tried in realistic field conditions."
+    },
+    {
+      "title": "Hand off",
+      "text": "A documented design system with tokens and components your engineers can build from."
+    }
+  ],
+  "why": [
+    {
+      "title": "Dashboard experience",
+      "text": "I designed Nimbus, a monitoring dashboard built around priority and context, so I know how to surface what needs attention first."
+    },
+    {
+      "title": "Designed for the field",
+      "text": "Large touch targets, high contrast and clear offline states for people on the move."
+    },
+    {
+      "title": "One system, many roles",
+      "text": "Shared components across operations, driver and customer views keep the product consistent."
+    },
+    {
+      "title": "Dev-ready handoff",
+      "text": "Documented specs, tokens and components engineers can build from directly."
+    }
+  ]
 }

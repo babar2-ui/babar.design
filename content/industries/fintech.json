@@ -3,7 +3,7 @@
   "order": 1,
   "tagline": "Payments · Banking · Compliance",
   "summary": "Secure software for banking, payments, and finance.",
-  "description": "Secure software for banking, payments, and finance.",
+  "description": "Fintech UI UX design for banking, payments and trading products: onboarding and KYC flows, dashboards and design systems that build trust and pass compliance.",
   "focus": [
     "Trust & security UX",
     "Onboarding & KYC flows",
@@ -12,8 +12,137 @@
   "image": "/uploads/aa342318c21568.webp",
   "image_alt": "Contactless card payment at a payment terminal, fintech industry",
   "work_match": "FINTECH",
-  "overview": "",
-  "challenges": [],
-  "faqs": [],
-  "draft": false
+  "overview": "Money products live or die on trust. People hand over their identity, their savings and their time, and every unclear screen makes them hesitate. My job is to remove that hesitation: clear onboarding, honest numbers, and flows that explain what is happening with the user’s money at every step.\n\nI work with founders and product teams on web and mobile fintech products, from the first prototype to a design system that engineers can build from directly. Compliance, KYC and security are part of the design from day one, not something bolted on before launch.",
+  "challenges": [
+    {
+      "title": "Onboarding drop-off",
+      "text": "Long KYC steps and unclear document requests make new users leave before their first deposit."
+    },
+    {
+      "title": "Trust and clarity",
+      "text": "Fees, balances and transaction states have to be obvious, or users assume the worst."
+    },
+    {
+      "title": "Dense data",
+      "text": "Traders and finance teams need a lot of numbers on screen without the interface feeling cluttered."
+    },
+    {
+      "title": "Compliance without friction",
+      "text": "Regulatory steps, consent and disclosures have to fit the flow instead of interrupting it."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do you have experience designing fintech products?",
+      "answer": "Yes. I have designed trading, digital wallet and payment products for web and mobile. You can see examples in the case studies on this page."
+    },
+    {
+      "question": "How do you handle KYC and compliance in the design?",
+      "answer": "I map the required checks with your team early, then design them into the onboarding flow with clear explanations, progress and save-and-return, so they feel like part of the product rather than a barrier."
+    },
+    {
+      "question": "Can you work with our existing design system?",
+      "answer": "Yes. I can extend and clean up an existing system, or create one from scratch with tokens and components that match your codebase."
+    },
+    {
+      "question": "Do you design for both web and mobile?",
+      "answer": "Yes. Most fintech products need both, so I design responsive web apps and native-feeling iOS and Android screens that share one system."
+    },
+    {
+      "question": "How do we start?",
+      "answer": "Send me a short brief through the contact page. We will have a call about your product, users and timeline, and I will come back with a plan and quote."
+    }
+  ],
+  "draft": false,
+  "headline": "UI UX design for fintech products",
+  "seo_title": "Fintech UI UX Design | Muhammad Babar, Fintech Product Designer",
+  "hero_lead": "I design banking, payments and trading products that feel simple to use and safe to trust, from the first sign-up screen to the daily dashboard.",
+  "products": [
+    {
+      "title": "Mobile banking apps",
+      "text": "Accounts, cards, transfers and statements designed around what people check every day."
+    },
+    {
+      "title": "Payments and wallets",
+      "text": "Send, request and pay flows with clear confirmation states and receipts."
+    },
+    {
+      "title": "Onboarding and KYC",
+      "text": "Identity checks, document capture and account setup that people actually finish."
+    },
+    {
+      "title": "Trading platforms",
+      "text": "Watchlists, order tickets and charts that stay readable when markets move fast."
+    },
+    {
+      "title": "Finance dashboards",
+      "text": "Portfolio, spending and cash-flow views that turn raw numbers into decisions."
+    },
+    {
+      "title": "Admin and back-office tools",
+      "text": "Review queues, risk flags and customer support tools for operations teams."
+    }
+  ],
+  "subsectors": [
+    {
+      "title": "Digital banking & neobanks",
+      "text": "Everyday accounts, cards and savings for retail customers."
+    },
+    {
+      "title": "Payments & wallets",
+      "text": "Peer-to-peer transfers, merchant payments and digital wallets."
+    },
+    {
+      "title": "Trading & investing",
+      "text": "Brokerage, crypto and investment apps for new and active traders."
+    },
+    {
+      "title": "Lending & credit",
+      "text": "Loan applications, credit checks and repayment tracking."
+    },
+    {
+      "title": "B2B finance & accounting",
+      "text": "Invoicing, expenses and treasury tools for businesses."
+    }
+  ],
+  "approach": [
+    {
+      "title": "Discover",
+      "text": "Workshops, user interviews and a review of the regulatory steps the product has to include."
+    },
+    {
+      "title": "Map the flows",
+      "text": "Onboarding, money movement and edge cases such as failed payments mapped before any screens."
+    },
+    {
+      "title": "Design and prototype",
+      "text": "High-fidelity screens and clickable prototypes, reviewed with you every week."
+    },
+    {
+      "title": "Test with users",
+      "text": "Usability sessions on the riskiest flows to find confusion before launch."
+    },
+    {
+      "title": "Hand off",
+      "text": "A documented design system with tokens and components your engineers can build from."
+    }
+  ],
+  "why": [
+    {
+      "title": "Fintech experience",
+      "text": "I have designed trading, wallet and payment products, so I know where users get stuck with money."
+    },
+    {
+      "title": "Trust built into the UI",
+      "text": "Clear states, plain language and honest numbers in every flow."
+    },
+    {
+      "title": "Compliance-aware design",
+      "text": "KYC, consent and disclosures designed as part of the experience."
+    },
+    {
+      "title": "Dev-ready handoff",
+      "text": "Documented specs, tokens and components engineers can build from directly."
+    }
+  ]
 }

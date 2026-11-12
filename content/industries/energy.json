@@ -3,7 +3,7 @@
   "order": 10,
   "tagline": "Grid · Monitoring · Sustainability",
   "summary": "Energy platforms for monitoring, efficiency, and sustainability.",
-  "description": "Energy platforms for monitoring, efficiency, and sustainability.",
+  "description": "Energy UI UX design for grid, solar, EV charging and utility products: monitoring dashboards, usage analytics and customer apps that make energy data clear.",
   "focus": [
     "Monitoring & telemetry",
     "Usage analytics",
@@ -12,8 +12,137 @@
   "image": "/uploads/959a8773a97849.webp",
   "image_alt": "Wind turbines at sunrise, energy industry",
   "work_match": "",
-  "overview": "",
-  "challenges": [],
-  "faqs": [],
-  "draft": false
+  "overview": "Energy products deal with a lot of data and a lot at stake. Operators watch assets and alarms around the clock, analysts look for patterns in usage, and customers just want to know what they are paying for. When the interface is noisy, important alerts get missed and good data goes unused.\n\nI work with founders and product teams on web and mobile energy products, from early prototypes to a design system engineers can build from directly. My experience designing monitoring dashboards, such as Nimbus, where I redesigned how metrics surface priority and context to cut alert fatigue, shapes how I approach telemetry, alarms and reporting.",
+  "challenges": [
+    {
+      "title": "Alert fatigue",
+      "text": "Operators see so many alarms that the critical ones get lost in the noise."
+    },
+    {
+      "title": "Complex telemetry",
+      "text": "Readings from meters, inverters and sensors have to become something people can act on."
+    },
+    {
+      "title": "Energy literacy",
+      "text": "Most customers do not think in kilowatt-hours, so usage and bills need plain explanations."
+    },
+    {
+      "title": "Credible reporting",
+      "text": "Sustainability and emissions figures need clear sources and methods before people trust them."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Have you designed energy products before?",
+      "answer": "My closest published work is Nimbus, a monitoring dashboard where I redesigned how metrics surface priority and context to cut alert fatigue. The same approach applies to asset monitoring and alarm handling, and I learn your domain in detail during discovery."
+    },
+    {
+      "question": "How do you handle large amounts of telemetry data?",
+      "answer": "I start from the decisions people need to make, then choose the summaries, charts and drill-downs that support them. Raw data stays available, but it is not the first thing people see."
+    },
+    {
+      "question": "Can you design for both operators and consumers?",
+      "answer": "Yes. I can design a detailed console for operations teams and a simple app for customers, built on one shared design system."
+    },
+    {
+      "question": "Do you design for both web and mobile?",
+      "answer": "Yes. Most energy products need a web dashboard and a mobile app for customers or field engineers, so I design both on one system."
+    },
+    {
+      "question": "How do we start?",
+      "answer": "Send me a short brief through the contact page. We will have a call about your product, users and timeline, and I will come back with a plan and quote."
+    }
+  ],
+  "draft": false,
+  "headline": "UI UX design for energy products",
+  "seo_title": "Energy UI UX Design | Muhammad Babar, Energy Product Designer",
+  "hero_lead": "I design energy monitoring, analytics and customer products that turn complex telemetry into clear decisions, for operators in the control room and households at home.",
+  "products": [
+    {
+      "title": "Monitoring dashboards",
+      "text": "Live asset status, alarms and performance views for operations teams."
+    },
+    {
+      "title": "Usage analytics",
+      "text": "Consumption trends, comparisons and forecasts that show where energy goes."
+    },
+    {
+      "title": "Customer apps",
+      "text": "Billing, usage and tariff screens that help households and businesses understand their energy."
+    },
+    {
+      "title": "EV charging apps",
+      "text": "Find, start, pay for and track charging sessions with clear status at each step."
+    },
+    {
+      "title": "Sustainability reporting",
+      "text": "Emissions tracking and report builders that show the data behind every figure."
+    },
+    {
+      "title": "Field service tools",
+      "text": "Work orders, inspections and asset records for engineers on site."
+    }
+  ],
+  "subsectors": [
+    {
+      "title": "Renewables & solar",
+      "text": "Monitoring and performance tools for solar, wind and storage assets."
+    },
+    {
+      "title": "Utilities & retail energy",
+      "text": "Customer accounts, billing and smart meter products."
+    },
+    {
+      "title": "EV charging",
+      "text": "Driver apps and network management for charging operators."
+    },
+    {
+      "title": "Grid & asset management",
+      "text": "Tools for operators managing networks, substations and distributed assets."
+    },
+    {
+      "title": "Carbon & sustainability",
+      "text": "Emissions accounting, ESG reporting and energy efficiency platforms."
+    }
+  ],
+  "approach": [
+    {
+      "title": "Discover",
+      "text": "Workshops and interviews with operators, analysts and customers, and a review of the data the product already collects."
+    },
+    {
+      "title": "Map the data and flows",
+      "text": "Alarms, readings and user tasks mapped so the most important information has a clear place."
+    },
+    {
+      "title": "Design and prototype",
+      "text": "High-fidelity screens and clickable prototypes, reviewed with you every week."
+    },
+    {
+      "title": "Test with users",
+      "text": "Usability sessions on alarm handling and data views to find confusion before launch."
+    },
+    {
+      "title": "Hand off",
+      "text": "A documented design system with tokens and components your engineers can build from."
+    }
+  ],
+  "why": [
+    {
+      "title": "Monitoring experience",
+      "text": "I designed Nimbus, a monitoring dashboard built to cut alert fatigue, so I know how to make alerts worth reading."
+    },
+    {
+      "title": "Data made readable",
+      "text": "Charts, units and comparisons chosen for the person reading them, not the database."
+    },
+    {
+      "title": "Plain-language customer UX",
+      "text": "Bills, tariffs and usage explained in words people understand."
+    },
+    {
+      "title": "Dev-ready handoff",
+      "text": "Documented specs, tokens and components engineers can build from directly."
+    }
+  ]
 }

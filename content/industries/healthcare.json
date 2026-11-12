@@ -3,7 +3,7 @@
   "order": 3,
   "tagline": "Patients · Clinicians · Access",
   "summary": "Digital healthcare solutions for better patient care.",
-  "description": "Digital healthcare solutions for better patient care.",
+  "description": "Healthcare UI UX design for patient apps, booking, records, telehealth and clinical dashboards: accessible products that patients and clinicians can trust.",
   "focus": [
     "Accessibility-first design",
     "Booking & records",
@@ -12,8 +12,137 @@
   "image": "/uploads/488bee2c4308c7.webp",
   "image_alt": "Doctor working at a laptop, healthcare industry",
   "work_match": "HEALTH",
-  "overview": "",
-  "challenges": [],
-  "faqs": [],
-  "draft": false
+  "overview": "Healthcare products are used by people who are often anxious, unwell or short of time. Patients need to book, check results and manage their care without confusion, and clinicians need the right information without extra clicks. Plain language, accessible design and clear status at every step matter more here than almost anywhere.\n\nI work with founders and product teams on web and mobile health products, from the first prototype to a design system that engineers can build from directly. On MediCare, I turned a 9-step booking flow into three taps. Privacy, consent and accessibility are part of the design from day one.",
+  "challenges": [
+    {
+      "title": "Accessibility for everyone",
+      "text": "Patients of every age and ability need readable text, clear contrast and screens that work with assistive tools."
+    },
+    {
+      "title": "Booking friction",
+      "text": "Long forms and unclear availability make patients give up before they book."
+    },
+    {
+      "title": "Clinician time",
+      "text": "Busy staff need key patient information at a glance, not spread across many screens."
+    },
+    {
+      "title": "Privacy and consent",
+      "text": "Sensitive data, permissions and consent have to be clear without slowing care down."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do you have experience designing healthcare products?",
+      "answer": "Yes. I designed MediCare, a patient booking app that turned a 9-step booking flow into three taps. You can see the case study on this page."
+    },
+    {
+      "question": "How do you design for accessibility?",
+      "answer": "I follow WCAG guidelines for contrast, text size, focus states and screen reader support, and check key flows with assistive tools before handoff."
+    },
+    {
+      "question": "How do you handle patient privacy in the design?",
+      "answer": "I work with your team to map what data each screen needs, then design clear consent, permission and sign-in steps. Your legal and compliance team still sets the final rules."
+    },
+    {
+      "question": "Do you design for both patients and clinicians?",
+      "answer": "Yes. Many health products need a patient app and a staff dashboard, so I design both on one shared system."
+    },
+    {
+      "question": "How do we start?",
+      "answer": "Send me a short brief through the contact page. We will have a call about your product, users and timeline, and I will come back with a plan and quote."
+    }
+  ],
+  "draft": false,
+  "headline": "UI UX design for healthcare products",
+  "seo_title": "Healthcare UI UX Design | Muhammad Babar, Health Product Designer",
+  "hero_lead": "I design patient and clinician products that are clear, accessible and calm to use, from booking an appointment to reviewing results and records.",
+  "products": [
+    {
+      "title": "Patient apps",
+      "text": "Appointments, reminders, results and messages in one place patients can rely on."
+    },
+    {
+      "title": "Booking and scheduling",
+      "text": "Find a clinician, pick a slot and confirm in a few clear steps."
+    },
+    {
+      "title": "Telehealth and video consults",
+      "text": "Waiting rooms, calls and follow-up notes that work for patients and clinicians."
+    },
+    {
+      "title": "Health records and results",
+      "text": "Records, test results and prescriptions presented in plain language."
+    },
+    {
+      "title": "Clinical dashboards",
+      "text": "Patient lists, schedules and alerts that show staff what needs attention first."
+    },
+    {
+      "title": "Practice and admin tools",
+      "text": "Rotas, billing and patient intake tools for clinic and front-desk teams."
+    }
+  ],
+  "subsectors": [
+    {
+      "title": "Clinics & hospitals",
+      "text": "Patient portals and staff tools for care providers."
+    },
+    {
+      "title": "Telehealth",
+      "text": "Remote consultations, triage and follow-up care."
+    },
+    {
+      "title": "Digital health & wellness",
+      "text": "Fitness, mental health and condition management apps."
+    },
+    {
+      "title": "Pharmacy & prescriptions",
+      "text": "Repeat prescriptions, refills and medicine reminders."
+    },
+    {
+      "title": "Health admin & insurance",
+      "text": "Claims, cover and practice management software."
+    }
+  ],
+  "approach": [
+    {
+      "title": "Discover",
+      "text": "Workshops and interviews with patients and clinicians, plus a review of privacy and consent requirements."
+    },
+    {
+      "title": "Map the flows",
+      "text": "Booking, results, messaging and edge cases such as cancellations mapped before any screens."
+    },
+    {
+      "title": "Design and prototype",
+      "text": "High-fidelity screens and clickable prototypes, reviewed with you every week."
+    },
+    {
+      "title": "Test with users",
+      "text": "Usability sessions with patients and staff, including accessibility checks on key flows."
+    },
+    {
+      "title": "Hand off",
+      "text": "An accessible design system with tokens and components your engineers can build from."
+    }
+  ],
+  "why": [
+    {
+      "title": "Healthcare experience",
+      "text": "I designed MediCare, a patient booking app that turned a 9-step flow into three taps."
+    },
+    {
+      "title": "Accessibility first",
+      "text": "Readable type, strong contrast and clear focus states built into every screen."
+    },
+    {
+      "title": "Calm, plain-language flows",
+      "text": "Clear wording and status so patients always know what happens next."
+    },
+    {
+      "title": "Dev-ready handoff",
+      "text": "Documented specs, tokens and components engineers can build from directly."
+    }
+  ]
 }

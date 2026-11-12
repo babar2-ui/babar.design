@@ -3,7 +3,7 @@
   "order": 8,
   "tagline": "Audits · Risk · Controls",
   "summary": "Simplify compliance, audits, and risk management.",
-  "description": "Simplify compliance, audits, and risk management.",
+  "description": "Compliance and governance UI UX design for GRC, audit and risk software: control libraries, evidence workflows and risk dashboards teams keep up to date.",
   "focus": [
     "Audit workflows",
     "Risk dashboards",
@@ -12,8 +12,137 @@
   "image": "/uploads/b97453c05f15d6.webp",
   "image_alt": "Team reviewing documents, compliance and governance",
   "work_match": "",
-  "overview": "",
-  "challenges": [],
-  "faqs": [],
-  "draft": false
+  "overview": "Compliance software has a hard job. It has to satisfy auditors and regulators, yet most people using it are busy managers who would rather be doing something else. When the tool is confusing, evidence goes missing, controls drift and every audit turns into a scramble. My job is to make the work obvious: what is due, who owns it and what is still at risk.\n\nI work with founders and product teams on GRC and compliance products, from early prototypes to a design system engineers can build from directly. My experience designing dashboards and risk tools, such as the KADUU intelligence workspace, shapes how I handle dense status data, ownership and clear history.",
+  "challenges": [
+    {
+      "title": "Evidence chasing",
+      "text": "Collecting proof from many owners by email and spreadsheet makes every audit slow and stressful."
+    },
+    {
+      "title": "Framework overlap",
+      "text": "One control often maps to several standards, and the interface has to show that without confusing people."
+    },
+    {
+      "title": "Dense status data",
+      "text": "Risk registers and control lists hold hundreds of items, each with an owner, a status and a due date."
+    },
+    {
+      "title": "Occasional users",
+      "text": "Many people log in only to complete one task a quarter, so every flow has to explain itself."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Have you designed compliance software before?",
+      "answer": "My closest published work is in risk and monitoring tools: KADUU, a dark web intelligence workspace for understanding digital exposure and risk, and Nimbus, a monitoring dashboard built around priority and context. Both solve the same problem compliance tools have, showing what needs attention first."
+    },
+    {
+      "question": "Do I need to explain the frameworks to you?",
+      "answer": "A short walkthrough of the standards your customers care about helps. I ask a lot of questions early, then design around your control model rather than a generic one."
+    },
+    {
+      "question": "Can you design for both compliance teams and occasional users?",
+      "answer": "Yes. I design a detailed workspace for compliance teams and a simpler, task-focused path for owners who only need to upload evidence or approve a policy."
+    },
+    {
+      "question": "Can you work with our existing design system?",
+      "answer": "Yes. I can extend and clean up an existing system, or create one from scratch with tokens and components that match your codebase."
+    },
+    {
+      "question": "How do we start?",
+      "answer": "Send me a short brief through the contact page. We will have a call about your product, users and timeline, and I will come back with a plan and quote."
+    }
+  ],
+  "draft": false,
+  "headline": "UI UX design for compliance and governance software",
+  "seo_title": "Compliance UI UX Design | Muhammad Babar, GRC Product Designer",
+  "hero_lead": "I design audit, risk and policy software that makes compliance work clear and trackable, from the first control library to the board-level risk report.",
+  "products": [
+    {
+      "title": "Control libraries",
+      "text": "Control lists with owners, framework mapping and testing status in one place."
+    },
+    {
+      "title": "Audit workspaces",
+      "text": "Audit plans, requests, findings and evidence review for internal and external audits."
+    },
+    {
+      "title": "Evidence collection",
+      "text": "Upload, request and reminder flows that make it easy for owners to supply proof on time."
+    },
+    {
+      "title": "Risk registers",
+      "text": "Risk scoring, heat maps and treatment plans that stay readable as the register grows."
+    },
+    {
+      "title": "Policy management",
+      "text": "Drafting, approval, version history and staff attestation for company policies."
+    },
+    {
+      "title": "Compliance dashboards",
+      "text": "Readiness, open issues and overdue tasks summarised for teams, executives and boards."
+    }
+  ],
+  "subsectors": [
+    {
+      "title": "GRC platforms",
+      "text": "All-in-one tools for governance, risk and compliance teams."
+    },
+    {
+      "title": "Security compliance",
+      "text": "Readiness and continuous monitoring for standards such as SOC 2 and ISO 27001."
+    },
+    {
+      "title": "Audit management",
+      "text": "Planning, fieldwork and reporting tools for internal audit teams."
+    },
+    {
+      "title": "Risk management",
+      "text": "Enterprise, vendor and third-party risk assessment and tracking."
+    },
+    {
+      "title": "Privacy & data protection",
+      "text": "Consent records, data mapping and subject access request handling."
+    }
+  ],
+  "approach": [
+    {
+      "title": "Discover",
+      "text": "Workshops and interviews with compliance leads, control owners and auditors to see how the work happens today."
+    },
+    {
+      "title": "Map the workflows",
+      "text": "Controls, evidence requests, reviews and sign-offs mapped end to end, including what happens when something is late."
+    },
+    {
+      "title": "Design and prototype",
+      "text": "High-fidelity screens and clickable prototypes, reviewed with you every week."
+    },
+    {
+      "title": "Test with users",
+      "text": "Usability sessions with daily admins and occasional owners to find where tasks stall."
+    },
+    {
+      "title": "Hand off",
+      "text": "A documented design system with tokens and components your engineers can build from."
+    }
+  ],
+  "why": [
+    {
+      "title": "Risk-tool experience",
+      "text": "I have designed dashboards and risk tools such as KADUU and Nimbus, so I know how to show what needs attention first."
+    },
+    {
+      "title": "Clarity for occasional users",
+      "text": "Plain language and guided steps for people who only log in when a task is due."
+    },
+    {
+      "title": "Audit trails by design",
+      "text": "Ownership, history and status built into every screen, so the product tells the audit story."
+    },
+    {
+      "title": "Dev-ready handoff",
+      "text": "Documented specs, tokens and components engineers can build from directly."
+    }
+  ]
 }

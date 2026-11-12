@@ -3,7 +3,7 @@
   "order": 6,
   "tagline": "Storefront · Checkout · Loyalty",
   "summary": "Smart retail solutions that drive growth and sales.",
-  "description": "Smart retail solutions that drive growth and sales.",
+  "description": "Retail and e-commerce UI UX design for storefronts, checkout and seller tools: product pages, carts and loyalty flows that make buying simple for shoppers.",
   "focus": [
     "Storefront & merchandising",
     "Checkout conversion",
@@ -12,8 +12,137 @@
   "image": "/uploads/d61a652e3a5618.webp",
   "image_alt": "Shopper paying online with a credit card, retail industry",
   "work_match": "E-COMMERCE",
-  "overview": "",
-  "challenges": [],
-  "faqs": [],
-  "draft": false
+  "overview": "In retail, every extra step costs a sale. Shoppers leave when they cannot find a product, do not trust the price or get lost in checkout. My job is to make browsing clear and buying simple, with honest prices and no surprises at the last step.\n\nI work with founders and product teams on web and mobile retail products, from the first prototype to a design system engineers can build from directly. On Shelfie, a storefront builder for small retailers, I simplified product listing and checkout for non-technical sellers. I design for both sides of the shop: the people buying and the people selling.",
+  "challenges": [
+    {
+      "title": "Checkout abandonment",
+      "text": "Long forms, surprise costs and forced sign-ups make shoppers leave with a full cart."
+    },
+    {
+      "title": "Finding products",
+      "text": "Weak search, filters and categories hide products people would happily buy."
+    },
+    {
+      "title": "Trust at checkout",
+      "text": "Prices, delivery times and return policies have to be clear before people pay."
+    },
+    {
+      "title": "Non-technical sellers",
+      "text": "Store owners need to list products and manage orders without a learning curve."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do you have experience designing retail products?",
+      "answer": "Yes. I designed Shelfie, a storefront builder for small retailers, where I simplified product listing and checkout for non-technical sellers. You can see it in the case studies on this page."
+    },
+    {
+      "question": "How do you approach checkout design?",
+      "answer": "I start by mapping every step and field, then remove what is not needed. Costs, delivery and returns are shown early, and guest checkout is the default where possible."
+    },
+    {
+      "question": "Can you design seller and admin tools as well as the storefront?",
+      "answer": "Yes. I design both sides, so product listing, inventory and order tools share the same system as the shopper-facing screens."
+    },
+    {
+      "question": "Can you work with Shopify or another existing platform?",
+      "answer": "Yes. I can design within the limits of your platform and theme, or design a custom storefront for your engineers to build."
+    },
+    {
+      "question": "How do we start?",
+      "answer": "Send me a short brief through the contact page. We will have a call about your product, users and timeline, and I will come back with a plan and quote."
+    }
+  ],
+  "draft": false,
+  "headline": "UI UX design for retail and e-commerce",
+  "seo_title": "Retail UI UX Design | Muhammad Babar, E-commerce Product Designer",
+  "hero_lead": "I design storefronts, checkout flows and seller tools that make it easy for shoppers to find, buy and come back, on web and mobile.",
+  "products": [
+    {
+      "title": "Storefronts",
+      "text": "Home, category and collection pages that help shoppers browse with purpose."
+    },
+    {
+      "title": "Product pages",
+      "text": "Images, options, prices and reviews laid out so people can decide quickly."
+    },
+    {
+      "title": "Cart and checkout",
+      "text": "Short, clear checkout flows with guest options and no surprise costs."
+    },
+    {
+      "title": "Mobile shopping apps",
+      "text": "Fast browsing, saved items and one-tap reordering for shoppers on the move."
+    },
+    {
+      "title": "Loyalty and accounts",
+      "text": "Rewards, order history and account screens that give people a reason to return."
+    },
+    {
+      "title": "Seller and admin tools",
+      "text": "Product listing, inventory and order management for store owners and teams."
+    }
+  ],
+  "subsectors": [
+    {
+      "title": "Direct-to-consumer brands",
+      "text": "Online stores for brands that sell straight to their customers."
+    },
+    {
+      "title": "Marketplaces",
+      "text": "Multi-seller platforms that connect buyers with many shops."
+    },
+    {
+      "title": "Storefront builders",
+      "text": "Tools that let small retailers set up and run an online shop."
+    },
+    {
+      "title": "Grocery & quick commerce",
+      "text": "Repeat-order and fast-delivery apps for everyday essentials."
+    },
+    {
+      "title": "Fashion & lifestyle",
+      "text": "Visual, browse-led shopping for clothing, beauty and home."
+    }
+  ],
+  "approach": [
+    {
+      "title": "Discover",
+      "text": "Workshops, shopper and seller interviews, and a review of your current funnel."
+    },
+    {
+      "title": "Map the flows",
+      "text": "Browse, search, cart, checkout and returns mapped, including edge cases such as out-of-stock items."
+    },
+    {
+      "title": "Design and prototype",
+      "text": "High-fidelity screens and clickable prototypes, reviewed with you every week."
+    },
+    {
+      "title": "Test with users",
+      "text": "Usability sessions on product pages and checkout to find friction before launch."
+    },
+    {
+      "title": "Hand off",
+      "text": "A documented design system with tokens and components your engineers can build from."
+    }
+  ],
+  "why": [
+    {
+      "title": "Retail experience",
+      "text": "I designed Shelfie, a storefront builder where I simplified product listing and checkout for non-technical sellers."
+    },
+    {
+      "title": "Checkout-first thinking",
+      "text": "Fewer steps, clear costs and no surprises between cart and confirmation."
+    },
+    {
+      "title": "Both sides of the shop",
+      "text": "Shopper-facing screens and seller tools designed as one system."
+    },
+    {
+      "title": "Dev-ready handoff",
+      "text": "Documented specs, tokens and components engineers can build from directly."
+    }
+  ]
 }

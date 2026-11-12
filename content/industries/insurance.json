@@ -3,7 +3,7 @@
   "order": 7,
   "tagline": "Claims · Policies · Compliance",
   "summary": "Automate claims, policies, and compliance.",
-  "description": "Automate claims, policies, and compliance.",
+  "description": "Insurance UI UX design for quote, policy and claims products: plain-language forms, customer portals and admin tools that make cover easier to buy and use.",
   "focus": [
     "Claims automation",
     "Policy management",
@@ -12,8 +12,137 @@
   "image": "/uploads/39c33f87b3963a.webp",
   "image_alt": "Advisor reviewing an insurance form with a client, insurance industry",
   "work_match": "",
-  "overview": "",
-  "challenges": [],
-  "faqs": [],
-  "draft": false
+  "overview": "Insurance asks people to make important decisions with words they rarely use. Long forms, unclear terms and slow claims leave customers unsure what they are paying for. My job is to make cover easy to understand: plain language, short steps and clear status at every stage.\n\nI work with founders and product teams on web and mobile products, from the first prototype to a design system engineers can build from directly. For insurance, that means designing quotes, policies and claims around real customers, with compliance and disclosures planned into the flow from day one.",
+  "challenges": [
+    {
+      "title": "Long, complex forms",
+      "text": "Quote and claim forms ask for a lot of detail, and people give up when they lose track."
+    },
+    {
+      "title": "Jargon and fine print",
+      "text": "Terms such as excess, exclusions and premiums need plain explanations at the right moment."
+    },
+    {
+      "title": "Claims anxiety",
+      "text": "People claim at stressful times and need to know exactly what happens next."
+    },
+    {
+      "title": "Regulatory disclosures",
+      "text": "Required wording and consent have to be clear without burying the main task."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How do you make long insurance forms easier to complete?",
+      "answer": "I ask only what is needed at each step, group questions logically and show progress. Save-and-return and clear help text stop people losing work or guessing."
+    },
+    {
+      "question": "How do you handle compliance and required wording?",
+      "answer": "I review the required disclosures and consent with your team early, then design them into the flow so they are clear without blocking the main task."
+    },
+    {
+      "question": "Can you design claims journeys?",
+      "answer": "Yes. I design guided claim forms, document and photo upload, and status tracking, so customers always know what happens next."
+    },
+    {
+      "question": "Can you work with our existing design system?",
+      "answer": "Yes. I can extend and clean up an existing system, or create one from scratch with tokens and components that match your codebase."
+    },
+    {
+      "question": "How do we start?",
+      "answer": "Send me a short brief through the contact page. We will have a call about your product, users and timeline, and I will come back with a plan and quote."
+    }
+  ],
+  "draft": false,
+  "headline": "UI UX design for insurance products",
+  "seo_title": "Insurance UI UX Design | Muhammad Babar, Product Designer",
+  "hero_lead": "I design quote, policy and claims experiences that explain cover in plain language and help people get through forms without second-guessing.",
+  "products": [
+    {
+      "title": "Quote and buy flows",
+      "text": "Step-by-step quotes that ask only what is needed and show the price clearly."
+    },
+    {
+      "title": "Policy management",
+      "text": "Customer portals to view cover, update details, renew and download documents."
+    },
+    {
+      "title": "Claims journeys",
+      "text": "Guided claim forms, photo and document upload, and clear status tracking."
+    },
+    {
+      "title": "Mobile insurance apps",
+      "text": "Policy cards, claims and support in a simple app people can use when it matters."
+    },
+    {
+      "title": "Underwriting tools",
+      "text": "Review screens and risk information laid out for faster, clearer decisions."
+    },
+    {
+      "title": "Broker and admin portals",
+      "text": "Dashboards and case views for brokers, agents and operations teams."
+    }
+  ],
+  "subsectors": [
+    {
+      "title": "Insurtech & digital insurers",
+      "text": "Online-first insurers selling cover directly to customers."
+    },
+    {
+      "title": "Health insurance",
+      "text": "Plans, cover details and claims for individuals and employers."
+    },
+    {
+      "title": "Motor & home insurance",
+      "text": "Quotes, renewals and claims for cars, homes and contents."
+    },
+    {
+      "title": "Life & income protection",
+      "text": "Applications and policy management for long-term cover."
+    },
+    {
+      "title": "Brokers & MGAs",
+      "text": "Tools for intermediaries who quote, place and manage policies."
+    }
+  ],
+  "approach": [
+    {
+      "title": "Discover",
+      "text": "Workshops, customer interviews and a review of the disclosures and checks the product has to include."
+    },
+    {
+      "title": "Map the flows",
+      "text": "Quotes, renewals, claims and edge cases such as declined cover mapped before any screens."
+    },
+    {
+      "title": "Design and prototype",
+      "text": "High-fidelity screens and clickable prototypes, reviewed with you every week."
+    },
+    {
+      "title": "Test with users",
+      "text": "Usability sessions on forms and claims to find confusing steps and wording before launch."
+    },
+    {
+      "title": "Hand off",
+      "text": "A documented design system with tokens and components your engineers can build from."
+    }
+  ],
+  "why": [
+    {
+      "title": "Plain-language forms",
+      "text": "Short steps, clear labels and help text that explain terms as people need them."
+    },
+    {
+      "title": "Research with real users",
+      "text": "Interviews and usability sessions with your customers, not assumptions."
+    },
+    {
+      "title": "One design system",
+      "text": "Customer, broker and admin screens that share one consistent system."
+    },
+    {
+      "title": "Dev-ready handoff",
+      "text": "Documented specs, tokens and components engineers can build from directly."
+    }
+  ]
 }
