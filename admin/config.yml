@@ -174,3 +174,67 @@ collections:
       - { name: keywords, label: SEO keywords, widget: string, required: false }
       - { name: og_image, label: Social share image, widget: image, required: false, hint: "Optional, 1200×630. Leave empty to use the cover." }
       - { name: draft, label: Draft (not on the website), widget: boolean, default: false, required: false }
+
+  # ------------------------------------------------------------------ industries
+  - name: industries
+    label: Industries
+    label_singular: Industry
+    description: Pages at babar.info/industries, also listed in the sidebar menu. A page without Overview text stays out of Google until you add it.
+    icon: domain
+    folder: content/industries
+    format: json
+    extension: json
+    create: true
+    slug: "{{slug}}"
+    identifier_field: name
+    summary: "{{order}} · {{name}}"
+    sortable_fields: [order, name]
+    preview_path: /industries/{{slug}}/
+    fields:
+      - { name: name, label: Name, widget: string, hint: "Shown in the menu, the Industries list and as the page headline." }
+      - { name: headline, label: Page headline, widget: string, required: false, hint: "Optional, replaces the name as the H1, e.g. UI UX design for fintech products." }
+      - { name: order, label: Order, widget: number, value_type: int, min: 1, hint: "Position in the menu and the list." }
+      - { name: tagline, label: Focus areas, widget: string, hint: "Short, separated by ·  e.g. Payments · Banking · Compliance" }
+      - { name: summary, label: One-line summary, widget: string, hint: "Under the headline and in the Industries list." }
+      - { name: seo_title, label: SEO title, widget: string, required: false, hint: "Default: <Name> UI UX Design | Muhammad Babar" }
+      - { name: description, label: Meta description, widget: text, required: false, hint: "Shown on Google. About 150–160 characters. Default: the summary." }
+      - name: focus
+        label: What I design
+        label_singular: Item
+        widget: list
+        hint: "Three short items work best."
+        field: { name: item, label: Item, widget: string }
+      - { name: image, label: Image, widget: image }
+      - { name: image_alt, label: Image description, widget: string }
+      - name: work_match
+        label: Case studies to show
+        widget: select
+        required: false
+        options: [FINTECH, HEALTH, SAAS, EDUCATION, E-COMMERCE, SPORTS, DASHBOARD]
+        hint: "Case studies whose category starts with this word appear on the page."
+      - name: overview
+        label: Overview
+        widget: richtext
+        required: false
+        buttons: [bold, italic, link, heading-three, quote, bulleted-list, numbered-list]
+        hint: "The main text of the page. Once this has text, the page is listed on Google."
+      - name: challenges
+        label: Challenges
+        label_singular: Challenge
+        widget: list
+        required: false
+        max: 4
+        summary: "{{title}}"
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: text, label: Text, widget: text, required: false }
+      - name: faqs
+        label: FAQs
+        label_singular: Question
+        widget: list
+        required: false
+        summary: "{{question}}"
+        fields:
+          - { name: question, label: Question, widget: string }
+          - { name: answer, label: Answer, widget: richtext, required: false, buttons: [bold, italic, link, bulleted-list] }
+      - { name: draft, label: Draft (not on the website), widget: boolean, default: false, required: false }

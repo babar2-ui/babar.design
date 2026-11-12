@@ -478,7 +478,8 @@ def place(stage, content):
         out = stage / "work" / d["slug"] / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
         try:
-            out.write_text(case(tpl, d, cases, old_cases, ctx), encoding="utf-8")
+            import industries  # the article shell's own links point from insights/; rebase them for work/<slug>/
+            out.write_text(case(industries.rebase(tpl, "insights/ui-ux-design-trends-2026", f"work/{d['slug']}"), d, cases, old_cases, ctx), encoding="utf-8")
         except ContentError as e:
             raise ContentError(f"work/{d['slug']}: {e}")
         made.append(f"work/{d['slug']}")

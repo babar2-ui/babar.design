@@ -5,7 +5,7 @@
 
 Steps
   1. copy site/source (the original export, never edited) to _build/stage
-  2. add the admin entries (content/insights, content/work, content/uploads)      site/scripts/cms.py
+  2. add the admin entries (content/insights, work, industries, uploads)          site/scripts/cms.py, industries.py
   3. restyle every page in the studio design                                       site/scripts/rx.py
   4. root-absolute links, sitemap.xml, robots.txt                                  site/scripts/mkdist.py
   5. add the admin (admin/) and check that every link and image resolves           site/scripts/refcheck.py
@@ -39,6 +39,13 @@ def main():
         made = cms.place(STAGE, CONTENT)
     except cms.ContentError as e:
         sys.exit(f"\nADMIN ENTRY PROBLEM: {e}\nFix it in babar.info/admin and publish again. The live site was not changed.\n")
+    import industries
+    nav_json = BUILD / "industries-nav.json"
+    try:
+        made += industries.place(STAGE, CONTENT, nav_json)
+    except cms.ContentError as e:
+        sys.exit(f"\nADMIN ENTRY PROBLEM: {e}\nFix it in babar.info/admin and publish again. The live site was not changed.\n")
+    os.environ["RX_INDUSTRIES"] = str(nav_json)  # the sidebar Industries menu (navsub.py)
     print("admin entries:", ", ".join(made) or "none")
 
     run(SCRIPTS / "rx.py", STAGE, LOCAL, ROOT / "site" / "studio" / "rx.css")

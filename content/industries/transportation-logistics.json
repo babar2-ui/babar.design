@@ -1,0 +1,19 @@
+{
+  "name": "Transportation & Logistics",
+  "order": 9,
+  "tagline": "Fleet · Supply chain · Tracking",
+  "summary": "Optimize logistics and supply chain operations.",
+  "description": "Optimize logistics and supply chain operations.",
+  "focus": [
+    "Fleet & dispatch",
+    "Shipment tracking",
+    "Warehouse operations"
+  ],
+  "image": "/uploads/6b304bde7cd1e9.webp",
+  "image_alt": "Truck on a highway at sunset, transportation and logistics industry",
+  "work_match": "",
+  "overview": "",
+  "challenges": [],
+  "faqs": [],
+  "draft": false
+}

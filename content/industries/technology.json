@@ -1,0 +1,19 @@
+{
+  "name": "Technology",
+  "order": 4,
+  "tagline": "Platforms · APIs · AI",
+  "summary": "Build scalable software and AI-powered products.",
+  "description": "Build scalable software and AI-powered products.",
+  "focus": [
+    "Platform & API tooling",
+    "Design systems at scale",
+    "AI product interfaces"
+  ],
+  "image": "/uploads/28d59122860b5c.webp",
+  "image_alt": "Developer pointing at code on a monitor, technology industry",
+  "work_match": "SAAS",
+  "overview": "",
+  "challenges": [],
+  "faqs": [],
+  "draft": false
+}

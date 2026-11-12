@@ -1,0 +1,19 @@
+{
+  "name": "Insurance",
+  "order": 7,
+  "tagline": "Claims · Policies · Compliance",
+  "summary": "Automate claims, policies, and compliance.",
+  "description": "Automate claims, policies, and compliance.",
+  "focus": [
+    "Claims automation",
+    "Policy management",
+    "Quote & underwriting flows"
+  ],
+  "image": "/uploads/39c33f87b3963a.webp",
+  "image_alt": "Advisor reviewing an insurance form with a client, insurance industry",
+  "work_match": "",
+  "overview": "",
+  "challenges": [],
+  "faqs": [],
+  "draft": false
+}
