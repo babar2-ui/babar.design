@@ -10,9 +10,11 @@ Runs on the staged copy of site/source, before rx.py, so every new page gets the
 footer and stylesheet as the rest of the site.
 
 usage (from build.py): cms.place(stage_dir, content_dir)"""
-import datetime, html, json, pathlib, re, shutil, struct
+import datetime, html, json, pathlib, re, shutil, struct, sys
 
-import markdown
+# Python-Markdown 3.7 (BSD licence) is bundled in site/scripts/_vendor, so the build needs no pip install
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent / "_vendor"))
+import markdown  # noqa: E402
 
 SITE = "https://babar.info"
 SLUG = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
@@ -129,9 +131,13 @@ def words(md):
     return len(re.findall(r"[A-Za-z0-9’']+", re.sub(r"!\[[^\]]*\]\([^)]*\)|<[^>]+>|\([^)]*\)", " ", md or "")))
 
 
+# "extra" spelled out: the bundled copy has no package metadata, so extensions load by full module path
+MD_EXT = ("abbr", "attr_list", "def_list", "fenced_code", "footnotes", "md_in_html", "tables", "toc", "sane_lists")
+
+
 def md_html(src, ctx, p):
-    out = markdown.markdown(src or "", extensions=["extra", "toc", "sane_lists"],
-                            extension_configs={"toc": {"permalink": False}}, output_format="html")
+    out = markdown.markdown(src or "", extensions=[f"markdown.extensions.{e}" for e in MD_EXT],
+                            extension_configs={"markdown.extensions.toc": {"permalink": False}}, output_format="html")
     # internal links and images: root-absolute -> relative
     out = re.sub(r'(href|src)="(/[^/"][^"]*|/)"', lambda m: f'{m.group(1)}="{ctx.rel(m.group(2), p)}"', out)
     return out
