@@ -175,6 +175,8 @@ for f in sorted(OUT.rglob("*.html")):
     else:
         for lab in HERO_LABELS:
             k = f'<section class="dsi" data-screen-label="{lab}"'
+            if lab == "Article hero" and rel.parts[0] == "insights":
+                continue  # blog articles: no colour panel, just the article (owner's request)
             if k in h:
                 h = h.replace(k, f'<section class="dsi rx-hero" data-screen-label="{lab}"', 1)
                 break
