@@ -3,7 +3,7 @@
   "order": 4,
   "tagline": "Platforms · APIs · AI",
   "summary": "Build scalable software and AI-powered products.",
-  "description": "Build scalable software and AI-powered products.",
+  "description": "SaaS and technology UI UX design: web apps, dashboards, developer tools and AI product interfaces, built on design systems that grow with your product.",
   "focus": [
     "Platform & API tooling",
     "Design systems at scale",
@@ -12,8 +12,137 @@
   "image": "/uploads/28d59122860b5c.webp",
   "image_alt": "Developer pointing at code on a monitor, technology industry",
   "work_match": "SAAS",
-  "overview": "",
-  "challenges": [],
-  "faqs": [],
-  "draft": false
+  "overview": "Technology products often do powerful things behind confusing screens. New users struggle to see the value, and power users hit walls as features pile up. My job is to make complex systems easy to understand: clear navigation, useful dashboards and AI features that explain what they are doing.\n\nI work with founders and product teams on SaaS web apps and mobile products, from the first prototype to a design system that engineers can build from directly. My work includes KADUU, a dark web intelligence workspace, and Nimbus, a monitoring dashboard teams actually check.",
+  "challenges": [
+    {
+      "title": "Complexity creep",
+      "text": "Each new feature adds settings and screens until the product is hard to learn."
+    },
+    {
+      "title": "Activation and onboarding",
+      "text": "New users leave if they cannot reach a useful result in their first session."
+    },
+    {
+      "title": "Data-heavy screens",
+      "text": "Dashboards, tables and logs have to show a lot of information without turning into noise."
+    },
+    {
+      "title": "Trust in AI features",
+      "text": "Users need to see what the AI did, why it did it and how to correct it."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do you have experience designing SaaS products?",
+      "answer": "Yes. I designed KADUU, a dark web intelligence workspace, and Nimbus, a monitoring dashboard. You can see both case studies on this page."
+    },
+    {
+      "question": "Can you design AI features for our product?",
+      "answer": "Yes. I design AI assistants and AI-assisted workflows with clear inputs, visible results and easy ways to review, edit or undo what the AI does."
+    },
+    {
+      "question": "Can you work with our existing design system?",
+      "answer": "Yes. I can extend and clean up an existing system, or create one from scratch with tokens and components that match your codebase."
+    },
+    {
+      "question": "Can you improve an existing product without a full redesign?",
+      "answer": "Yes. I start with an audit of the current product, then improve the most important flows step by step, so your team can ship changes without a rebuild."
+    },
+    {
+      "question": "How do we start?",
+      "answer": "Send me a short brief through the contact page. We will have a call about your product, users and timeline, and I will come back with a plan and quote."
+    }
+  ],
+  "draft": false,
+  "headline": "UI UX design for SaaS and technology products",
+  "seo_title": "Technology UI UX Design | Muhammad Babar, SaaS & AI Designer",
+  "hero_lead": "I design SaaS platforms, developer tools and AI products that make complex work feel clear, from the first sign-up to the dashboard teams open every day.",
+  "products": [
+    {
+      "title": "SaaS web apps",
+      "text": "Workspaces, navigation and settings structured so teams can find what they need."
+    },
+    {
+      "title": "Dashboards and analytics",
+      "text": "Monitoring, reporting and alert views that show what needs attention first."
+    },
+    {
+      "title": "AI product interfaces",
+      "text": "Assistants, copilots and AI-assisted workflows with clear inputs, outputs and controls."
+    },
+    {
+      "title": "Developer tools and APIs",
+      "text": "Consoles, API keys, docs and usage views for technical users."
+    },
+    {
+      "title": "Onboarding and activation",
+      "text": "Sign-up, setup and empty states that guide users to their first result."
+    },
+    {
+      "title": "Admin and permissions",
+      "text": "Team management, roles, billing and audit logs for account owners."
+    }
+  ],
+  "subsectors": [
+    {
+      "title": "B2B SaaS",
+      "text": "Workflow, collaboration and productivity tools for teams."
+    },
+    {
+      "title": "Cybersecurity & threat intelligence",
+      "text": "Monitoring, investigation and alerting workspaces for security teams."
+    },
+    {
+      "title": "DevOps & monitoring",
+      "text": "Infrastructure, uptime and performance dashboards for engineering teams."
+    },
+    {
+      "title": "AI & machine learning",
+      "text": "Assistants, copilots and model-powered features inside products."
+    },
+    {
+      "title": "Developer platforms & APIs",
+      "text": "Consoles and tools for developers building on your platform."
+    }
+  ],
+  "approach": [
+    {
+      "title": "Discover",
+      "text": "Workshops, user interviews and a review of analytics and support tickets to find where users struggle."
+    },
+    {
+      "title": "Map the flows",
+      "text": "Information architecture, roles and key tasks mapped before any screens, including empty and error states."
+    },
+    {
+      "title": "Design and prototype",
+      "text": "High-fidelity screens and clickable prototypes, reviewed with you every week."
+    },
+    {
+      "title": "Test with users",
+      "text": "Usability sessions with new and experienced users on the flows that matter most."
+    },
+    {
+      "title": "Hand off",
+      "text": "A documented design system with tokens and components that scales as the product grows."
+    }
+  ],
+  "why": [
+    {
+      "title": "SaaS experience",
+      "text": "I designed KADUU and Nimbus, so I know how to make dense, technical products easy to use."
+    },
+    {
+      "title": "AI product design",
+      "text": "Clear inputs, explanations and controls so people trust what AI features do."
+    },
+    {
+      "title": "Design systems at scale",
+      "text": "Reusable components and tokens that keep a growing product consistent."
+    },
+    {
+      "title": "Dev-ready handoff",
+      "text": "Documented specs, tokens and components engineers can build from directly."
+    }
+  ]
 }

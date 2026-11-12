@@ -3,7 +3,7 @@
   "order": 2,
   "tagline": "Property · Projects · Field teams",
   "summary": "Smarter property and construction management software.",
-  "description": "Smarter property and construction management software.",
+  "description": "Real estate and construction UI UX design: property search and listings, project tracking dashboards and field-ready mobile apps for agents and site teams.",
   "focus": [
     "Listing & search flows",
     "Project tracking",
@@ -12,8 +12,137 @@
   "image": "/uploads/21aa66031fd8e3.webp",
   "image_alt": "Glass office towers seen from below, real estate and construction industry",
   "work_match": "",
-  "overview": "",
-  "challenges": [],
-  "faqs": [],
-  "draft": false
+  "overview": "Property and construction software serves very different people. A buyer comparing listings on a phone, a property manager chasing repairs and a site manager logging progress between tasks all need the product to work for them, often in a hurry and away from a desk. My job is to make each of those moments clear and quick.\n\nI work with founders and product teams on web and mobile products, from the first prototype to a design system that engineers can build from directly. I research with the people who will use the product, so field screens, approvals and dashboards fit how the work is actually done.",
+  "challenges": [
+    {
+      "title": "Search that converts",
+      "text": "Buyers and renters give up when filters, maps and listing details are slow or hard to compare."
+    },
+    {
+      "title": "Work away from desks",
+      "text": "Site teams use phones outdoors, with poor signal and little time, so screens must be simple and quick."
+    },
+    {
+      "title": "Many roles, one product",
+      "text": "Owners, tenants, contractors and managers each need a different view of the same property or project."
+    },
+    {
+      "title": "Documents and approvals",
+      "text": "Drawings, contracts and change orders pile up unless the product makes status and ownership obvious."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What kinds of real estate and construction products do you design?",
+      "answer": "Property search and listing platforms, property management portals, construction project dashboards and field apps for site teams, on web and mobile."
+    },
+    {
+      "question": "Can you design apps for teams working on site?",
+      "answer": "Yes. I design field screens with large touch targets, short forms, photo capture and offline states, so people can log work quickly even with poor signal."
+    },
+    {
+      "question": "How do you handle so many different user roles?",
+      "answer": "I map each role and what it needs to see and do early on, then design shared components with role-based views, so the product stays consistent without showing everyone everything."
+    },
+    {
+      "question": "Can you work with our existing design system?",
+      "answer": "Yes. I can extend and clean up an existing system, or create one from scratch with tokens and components that match your codebase."
+    },
+    {
+      "question": "How do we start?",
+      "answer": "Send me a short brief through the contact page. We will have a call about your product, users and timeline, and I will come back with a plan and quote."
+    }
+  ],
+  "draft": false,
+  "headline": "UI UX design for real estate and construction products",
+  "seo_title": "Real Estate UI UX Design | Muhammad Babar, PropTech Designer",
+  "hero_lead": "I design property and construction products that agents, buyers and site teams find easy to use, from listing search to daily progress reports on site.",
+  "products": [
+    {
+      "title": "Property search and listings",
+      "text": "Map and list search, filters, saved searches and listing pages that make comparing homes easy."
+    },
+    {
+      "title": "Property management portals",
+      "text": "Rent, maintenance requests and tenant messages in one place for managers and residents."
+    },
+    {
+      "title": "Construction project dashboards",
+      "text": "Schedules, budgets and progress views that show owners and managers where a project stands."
+    },
+    {
+      "title": "Field and site apps",
+      "text": "Daily logs, photos, snag lists and safety checks designed for quick use on site."
+    },
+    {
+      "title": "Document and approval workflows",
+      "text": "Drawings, RFIs and change orders with clear status, owners and version history."
+    },
+    {
+      "title": "Agent and broker CRMs",
+      "text": "Lead, viewing and deal pipelines that help agents follow up at the right time."
+    }
+  ],
+  "subsectors": [
+    {
+      "title": "Residential sales & rentals",
+      "text": "Portals and apps for buyers, renters and agents."
+    },
+    {
+      "title": "Property management",
+      "text": "Tools for landlords, managers and residents of rental buildings."
+    },
+    {
+      "title": "Commercial real estate",
+      "text": "Leasing, portfolio and asset management for offices, retail and industrial space."
+    },
+    {
+      "title": "Construction management",
+      "text": "Planning, scheduling and cost control for contractors and developers."
+    },
+    {
+      "title": "PropTech & smart buildings",
+      "text": "Access, energy and facilities software for owners and occupiers."
+    }
+  ],
+  "approach": [
+    {
+      "title": "Discover",
+      "text": "Workshops and interviews with agents, managers and site teams to learn how the work really happens."
+    },
+    {
+      "title": "Map the flows",
+      "text": "Roles, permissions and key journeys, such as a viewing request or a change order, mapped before any screens."
+    },
+    {
+      "title": "Design and prototype",
+      "text": "High-fidelity screens and clickable prototypes, reviewed with you every week."
+    },
+    {
+      "title": "Test with users",
+      "text": "Usability sessions with real users, with field screens tested in the conditions they will be used in."
+    },
+    {
+      "title": "Hand off",
+      "text": "A documented design system with tokens and components your engineers can build from."
+    }
+  ],
+  "why": [
+    {
+      "title": "Field-ready mobile UI",
+      "text": "Large touch targets, offline states and short flows for people working on site."
+    },
+    {
+      "title": "Research with real users",
+      "text": "I talk to agents, tenants and site teams before designing, not after launch."
+    },
+    {
+      "title": "One system for every role",
+      "text": "A shared design system keeps web portals and mobile apps consistent across roles."
+    },
+    {
+      "title": "Dev-ready handoff",
+      "text": "Documented specs, tokens and components engineers can build from directly."
+    }
+  ]
 }

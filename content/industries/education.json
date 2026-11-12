@@ -3,7 +3,7 @@
   "order": 5,
   "tagline": "Learning · Engagement · Completion",
   "summary": "Modern EdTech platforms for smarter learning.",
-  "description": "Modern EdTech platforms for smarter learning.",
+  "description": "Education UI UX design for course platforms, learning apps and LMS tools: lesson flows, progress tracking and dashboards that keep learners coming back.",
   "focus": [
     "Course & lesson flows",
     "Progress & assessment",
@@ -12,8 +12,137 @@
   "image": "/uploads/b174261ca57f76.webp",
   "image_alt": "Students learning on laptops, education industry",
   "work_match": "EDUCATION",
-  "overview": "",
-  "challenges": [],
-  "faqs": [],
-  "draft": false
+  "overview": "Learning products compete with every other app on the phone. A confusing lesson screen or a missing next step is often all it takes for a learner to drift away. My job is to keep the path clear: what to do now, how far they have come and what comes next.\n\nI work with founders and product teams on web and mobile education products, from the first prototype to a design system engineers can build from directly. On Learnly, a course platform built for focus, I reworked the learning flow to reduce drop-off between lessons. I bring that same focus on completion to every project.",
+  "challenges": [
+    {
+      "title": "Drop-off between lessons",
+      "text": "Learners lose momentum when the next step is unclear or the flow breaks between lessons."
+    },
+    {
+      "title": "Keeping focus",
+      "text": "Busy screens, notifications and clutter pull attention away from the actual learning."
+    },
+    {
+      "title": "Many user roles",
+      "text": "Students, teachers, parents and admins all need different views of the same content."
+    },
+    {
+      "title": "Showing real progress",
+      "text": "Progress and results have to feel meaningful, or learners stop caring about them."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do you have experience designing education products?",
+      "answer": "Yes. I designed Learnly, a course platform built for focus, where I reworked the learning flow to reduce drop-off between lessons. You can see it in the case studies on this page."
+    },
+    {
+      "question": "How do you keep learners engaged without adding distractions?",
+      "answer": "I focus on clear next steps, visible progress and calm lesson screens. Reminders and rewards support the learning rather than compete with it."
+    },
+    {
+      "question": "Can you design for students, teachers and admins in one product?",
+      "answer": "Yes. I map each role early, then design separate views that share one design system, so the product stays consistent as it grows."
+    },
+    {
+      "question": "Do you design for both web and mobile?",
+      "answer": "Yes. Many learners switch between devices, so I design responsive web apps and native-feeling iOS and Android screens that share one system."
+    },
+    {
+      "question": "How do we start?",
+      "answer": "Send me a short brief through the contact page. We will have a call about your product, users and timeline, and I will come back with a plan and quote."
+    }
+  ],
+  "draft": false,
+  "headline": "UI UX design for education products",
+  "seo_title": "Education UI UX Design | Muhammad Babar, EdTech Product Designer",
+  "hero_lead": "I design course platforms and learning apps that help people stay focused, track their progress and finish what they start, on web and mobile.",
+  "products": [
+    {
+      "title": "Course platforms",
+      "text": "Course pages, lesson players and module structures built around steady progress."
+    },
+    {
+      "title": "Mobile learning apps",
+      "text": "Short lessons, reminders and offline-friendly screens for learning on the go."
+    },
+    {
+      "title": "Progress and assessment",
+      "text": "Quizzes, assignments, grades and progress views that show learners where they stand."
+    },
+    {
+      "title": "Learning management systems",
+      "text": "Class, course and content management tools for teachers and admins."
+    },
+    {
+      "title": "Onboarding and placement",
+      "text": "Sign-up, goal setting and level checks that put learners in the right place quickly."
+    },
+    {
+      "title": "Teacher and admin dashboards",
+      "text": "Class overviews, learner activity and reporting for educators and school teams."
+    }
+  ],
+  "subsectors": [
+    {
+      "title": "Online courses & e-learning",
+      "text": "Self-paced and cohort-based courses for individual learners."
+    },
+    {
+      "title": "K-12 & schools",
+      "text": "Classroom tools and learning apps for students, teachers and parents."
+    },
+    {
+      "title": "Higher education",
+      "text": "Student portals, course tools and learning platforms for universities."
+    },
+    {
+      "title": "Corporate training",
+      "text": "Onboarding, compliance and skills training for teams at work."
+    },
+    {
+      "title": "Language & test prep",
+      "text": "Practice-led apps for languages, exams and certifications."
+    }
+  ],
+  "approach": [
+    {
+      "title": "Discover",
+      "text": "Workshops and interviews with learners and educators to understand goals, habits and blockers."
+    },
+    {
+      "title": "Map the flows",
+      "text": "Learning paths, lesson transitions and return visits mapped before any screens."
+    },
+    {
+      "title": "Design and prototype",
+      "text": "High-fidelity screens and clickable prototypes, reviewed with you every week."
+    },
+    {
+      "title": "Test with users",
+      "text": "Usability sessions with real learners on the flows where people tend to drop off."
+    },
+    {
+      "title": "Hand off",
+      "text": "A documented design system with tokens and components your engineers can build from."
+    }
+  ],
+  "why": [
+    {
+      "title": "Education experience",
+      "text": "I designed Learnly, a course platform where I reworked the learning flow to reduce drop-off between lessons."
+    },
+    {
+      "title": "Built for completion",
+      "text": "Clear next steps, visible progress and fewer distractions in every flow."
+    },
+    {
+      "title": "Designed for every role",
+      "text": "Learner, teacher and admin views that share one consistent system."
+    },
+    {
+      "title": "Dev-ready handoff",
+      "text": "Documented specs, tokens and components engineers can build from directly."
+    }
+  ]
 }
