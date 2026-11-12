@@ -175,6 +175,8 @@ for f in sorted(OUT.rglob("*.html")):
     else:
         for lab in HERO_LABELS:
             k = f'<section class="dsi" data-screen-label="{lab}"'
+            if lab == "Article hero" and rel.parts[0] == "insights":
+                continue  # blog articles: no colour panel, just the article (owner's request)
             if k in h:
                 h = h.replace(k, f'<section class="dsi rx-hero" data-screen-label="{lab}"', 1)
                 break
@@ -187,6 +189,9 @@ for f in sorted(OUT.rglob("*.html")):
         if str(rel) == "services":
             sys.path.insert(0, str(pathlib.Path(__file__).parent)); import services_page
             h = services_page.place(h)
+        if len(rel.parts) == 2 and rel.parts[0] == "insights":
+            sys.path.insert(0, str(pathlib.Path(__file__).parent)); import article_page
+            h = article_page.place(h)
         if len(rel.parts) == 2 and rel.parts[0] == "services":
             sys.path.insert(0, str(pathlib.Path(__file__).parent)); import service_detail
             h = service_detail.place(h)
