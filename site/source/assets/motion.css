@@ -1,0 +1,79 @@
+/* Motion layer: scroll reveals, headline entrance, card hover, counters.
+   Everything here is switched on by motion.js (html.fx-on), so the pages read
+   normally without script and for people who ask for reduced motion. */
+
+/* reading progress */
+.fx-progress {
+  position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 1000;
+  background: linear-gradient(90deg, #8a8a84, #f2f2ef);
+  transform-origin: 0 50%; transform: scaleX(0); pointer-events: none;
+}
+
+/* scroll reveal */
+.fx-on .fx-reveal { opacity: 0; }
+.fx-on .fx-reveal.fx-in { animation: fx-up .9s cubic-bezier(.2, .7, .2, 1) var(--fx-d, 0s) both; }
+@keyframes fx-up { from { opacity: 0; transform: translate3d(0, 28px, 0); } to { opacity: 1; transform: none; } }
+
+.fx-on .fx-img.fx-in { animation: fx-img 1.4s cubic-bezier(.2, .7, .2, 1) var(--fx-d, 0s) both; }
+@keyframes fx-img { from { transform: scale(1.08); } to { transform: none; } }
+
+/* cards in a row: edge wipes in left to right, then icon, title and text rise in turn */
+.fx-on .fx-seq.fx-in { animation: fx-seq 1.4s cubic-bezier(.2, .7, .2, 1) var(--fx-d, 0s) both; }
+@keyframes fx-seq {
+  0% { opacity: 0; clip-path: inset(-24px 100% -24px -24px); }
+  12% { opacity: 1; }
+  55%, 100% { opacity: 1; clip-path: inset(-24px -24px -24px -24px); }
+}
+.fx-on .fx-seq.fx-in > * { animation: fx-up .75s cubic-bezier(.2, .7, .2, 1) calc(var(--fx-d, 0s) + .15s + var(--fx-c, 0) * 90ms) both; }
+.fx-on .fx-seq.fx-in svg [pathLength] { stroke-dasharray: 1; animation: fx-draw 1s ease calc(var(--fx-d, 0s) + .25s) both; }
+@keyframes fx-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+
+/* headline: words rise out of a mask */
+.fx-w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .12em; margin-bottom: -.12em; }
+.fx-w > span { display: inline-block; }
+.fx-on .fx-title .fx-w > span { transform: translate3d(0, 110%, 0); }
+.fx-on .fx-title.fx-in .fx-w > span { animation: fx-rise .95s cubic-bezier(.2, .8, .2, 1) calc(var(--fx-d, 0s) + var(--fx-i, 0) * 55ms) both; }
+@keyframes fx-rise { from { transform: translate3d(0, 110%, 0); } to { transform: none; } }
+
+/* statement: words light up as the paragraph scrolls through the screen */
+.fx-glow-word { transition: color .35s ease, opacity .35s ease; opacity: .28; }
+.fx-glow-word.fx-lit { opacity: 1; }
+
+/* clickable cards lift; their image eases in */
+@media (hover: hover) and (pointer: fine) {
+  .fx-lift {
+    transition: transform .45s cubic-bezier(.2, .7, .2, 1), border-color .3s, background-color .3s,
+                box-shadow .45s, color .3s, opacity .3s !important;
+  }
+  .fx-lift:hover { transform: translate3d(0, -4px, 0); }
+  .fx-lift img { transition: transform 1s cubic-bezier(.2, .7, .2, 1); }
+  .fx-lift:hover img { transform: scale(1.04); }
+
+  /* soft light that follows the pointer across dark cards */
+  .fx-spot { position: relative; }
+  .fx-spot::after {
+    content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+    background: radial-gradient(380px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, .075), transparent 45%);
+    opacity: 0; transition: opacity .35s ease;
+  }
+  .fx-spot:hover::after { opacity: 1; }
+
+  /* buttons drift toward the pointer */
+  .fx-magnet { transition: transform .35s cubic-bezier(.2, .7, .2, 1) !important; }
+}
+
+/* arrows nudge in the direction they point */
+.fx-arrow { display: inline-block; transition: transform .35s cubic-bezier(.2, .7, .2, 1); }
+a:hover .fx-arrow, button:hover .fx-arrow, a:focus-visible .fx-arrow { transform: translateX(4px); }
+a:hover .fx-arrow.fx-ne, a:focus-visible .fx-arrow.fx-ne { transform: translate(3px, -3px); }
+a:hover .fx-arrow.fx-s, a:focus-visible .fx-arrow.fx-s { transform: translateY(3px); }
+a:hover .fx-arrow.fx-w2, a:focus-visible .fx-arrow.fx-w2 { transform: translateX(-4px); }
+
+/* work filter: results settle in */
+.fx-pop { animation: fx-up .55s cubic-bezier(.2, .7, .2, 1) var(--fx-d, 0s) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fx-on .fx-reveal, .fx-on .fx-title .fx-w > span { opacity: 1 !important; transform: none !important; animation: none !important; }
+  .fx-glow-word { opacity: 1; }
+  .fx-progress { display: none; }
+}

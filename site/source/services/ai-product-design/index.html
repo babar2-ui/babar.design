@@ -1,0 +1,856 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>AI Product Design Services | AI UX Designer for SaaS</title><link rel="icon" href="../../favicon.ico" sizes="any"><link rel="icon" href="../../favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<style id="fonts">@font-face{font-family:'Archivo';font-style:normal;font-weight:400 600;font-display:swap;src:url(../../assets/fonts/archivo-vietnamese-e338d01e.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:400 600;font-display:swap;src:url(../../assets/fonts/archivo-latin-ext-7301cde3.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:'Archivo';font-style:normal;font-weight:400 600;font-display:swap;src:url(../../assets/fonts/archivo-latin-65449f16.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}</style><style>
+/* Site-wide responsive layer. Pages are authored with inline desktop styles;
+   these rules adapt them for tablets (<=900px) and phones (<=600px). */
+html,body{overflow-x:clip}
+img,svg,video{max-width:100%}
+.nav-burger{display:none}
+@media (max-width:900px){
+  [style*="padding: 20px 40px;"]{padding:20px 28px 20px 28px!important}
+  [style*="padding: 80px 40px 40px;"]{padding:64px 28px 36px 28px!important}
+  [style*="padding: 120px 40px 60px;"]{padding:88px 28px 48px 28px!important}
+  [style*="padding: 0px 40px 100px;"]{padding:0 28px 80px 28px!important}
+  [style*="padding: 0px 40px 120px;"]{padding:0 28px 88px 28px!important}
+  [style*="padding: 100px 40px;"]{padding:80px 28px 80px 28px!important}
+  [style*="padding: 120px 40px;"]{padding:88px 28px 88px 28px!important}
+  [style*="padding: 120px 40px 40px;"]{padding:88px 28px 36px 28px!important}
+  [style*="padding: 60px 40px 120px;"]{padding:48px 28px 88px 28px!important}
+  [style*="padding: 80px 40px 60px;"]{padding:64px 28px 48px 28px!important}
+  [style*="padding: 0px 40px 60px;"]{padding:0 28px 48px 28px!important}
+  [style*="padding: 80px 40px;"]{padding:64px 28px 64px 28px!important}
+  [style*="padding: 120px 40px 80px;"]{padding:88px 28px 64px 28px!important}
+  [style*="padding: 40px 40px 100px;"]{padding:36px 28px 80px 28px!important}
+  [style*="padding: 100px 40px 120px;"]{padding:80px 28px 88px 28px!important}
+  [style*="padding: 40px 40px 120px;"]{padding:36px 28px 88px 28px!important}
+  [style*="padding: 40px;"]{padding:36px 28px 36px 28px!important}
+  [style*="padding: 140px 40px 80px;"]{padding:96px 28px 64px 28px!important}
+  [style*="padding: 60px 40px 100px;"]{padding:48px 28px 80px 28px!important}
+  [style*="padding: 140px 40px;"]{padding:96px 28px 96px 28px!important}
+  [style*="padding: 80px 40px 120px;"]{padding:64px 28px 88px 28px!important}
+  [style*="padding: 20px 40px 120px;"]{padding:20px 28px 88px 28px!important}
+  [style*="padding: 120px 40px 50px;"]{padding:88px 28px 40px 28px!important}
+  [style*="padding: 20px 40px 40px;"]{padding:20px 28px 36px 28px!important}
+  [style*="padding: 100px 40px 60px;"]{padding:80px 28px 48px 28px!important}
+  [style*="padding: 0px 40px 24px;"]{padding:0 28px 24px 28px!important}
+  [style*="padding: 0px 40px 50px;"]{padding:0 28px 40px 28px!important}
+  [style*="font-size: 340px;"]{font-size:160px!important}
+  [style*="font-size: 88px;"]{font-size:60px!important}
+  [style*="font-size: 72px;"]{font-size:54px!important}
+  [style*="font-size: 64px;"]{font-size:50px!important}
+  [style*="font-size: 56px;"]{font-size:46px!important}
+  [style*="font-size: 52px;"]{font-size:42px!important}
+  [style*="font-size: 48px;"]{font-size:40px!important}
+  [style*="font-size: 44px;"]{font-size:36px!important}
+  [style*="font-size: 40px;"]{font-size:34px!important}
+  [style*="font-size: 38px;"]{font-size:32px!important}
+  [style*="font-size: 36px;"]{font-size:30px!important}
+  [style*="font-size: 30px;"]{font-size:26px!important}
+  [style*="font-size: 28px;"]{font-size:24px!important}
+  [style*="font-size: 26px;"]{font-size:23px!important}
+  [style*="gap: 40px;"]{gap:32px!important}
+  [style*="gap: 48px;"]{gap:36px!important}
+  [style*="gap: 60px;"]{gap:40px!important}
+  [style*="gap: 80px;"]{gap:48px!important}
+  [style*="grid-template-columns: 260px 1fr;"],[style*="grid-template-columns: 200px 1fr;"],[style*="grid-template-columns: 1fr 280px;"],[style*="grid-template-columns: 380px 1fr;"],[style*="grid-template-columns: 1fr 380px;"],[style*="grid-template-columns: 1fr 300px;"],[style*="grid-template-columns: 150px 1fr 1fr;"],[style*="grid-template-columns: minmax(0px, 1.4fr) minmax(0px, 1fr);"],[style*="grid-template-columns: minmax(0px, 1.2fr) minmax(0px, 1fr);"],[style*="grid-template-columns: 80px minmax(0px, 1.2fr) minmax(0px, 1fr);"],[style*="grid-template-columns: minmax(0px, 2fr) minmax(0px, 1fr);"]{grid-template-columns:minmax(0,1fr)!important}
+  [style*="grid-template-columns: repeat(3, 1fr);"],[style*="grid-template-columns: repeat(4, 1fr);"],[style*="grid-template-columns: repeat(5, 1fr);"],[style*="grid-template-columns: repeat(3, minmax(0px, 1fr));"],[style*="grid-template-columns: 1fr 1fr 1fr;"]{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .rs-media{height:auto!important;max-width:100%!important}
+  .rs-case{min-height:0!important;aspect-ratio:3 / 2}
+  .rs-media,.rs-case{width:100%!important;align-self:start!important}
+  [style*="grid-template-columns"]:has(> .rs-case),[style*="grid-template-columns"]:has(> .rs-media){grid-template-columns:minmax(0,1fr)!important}
+  .nav-links{display:none!important}
+  .nav-burger{display:flex!important}
+}
+@media (max-width:600px){
+  [style*="padding: 20px 40px;"]{padding:20px 20px 20px 20px!important}
+  [style*="padding: 80px 40px 40px;"]{padding:48px 20px 28px 20px!important}
+  [style*="padding: 120px 40px 60px;"]{padding:64px 20px 40px 20px!important}
+  [style*="padding: 0px 40px 100px;"]{padding:0 20px 56px 20px!important}
+  [style*="padding: 0px 40px 120px;"]{padding:0 20px 64px 20px!important}
+  [style*="padding: 100px 40px;"]{padding:56px 20px 56px 20px!important}
+  [style*="padding: 120px 40px;"]{padding:64px 20px 64px 20px!important}
+  [style*="padding: 120px 40px 40px;"]{padding:64px 20px 28px 20px!important}
+  [style*="padding: 60px 40px 120px;"]{padding:40px 20px 64px 20px!important}
+  [style*="padding: 80px 40px 60px;"]{padding:48px 20px 40px 20px!important}
+  [style*="padding: 0px 40px 60px;"]{padding:0 20px 40px 20px!important}
+  [style*="padding: 80px 40px;"]{padding:48px 20px 48px 20px!important}
+  [style*="padding: 120px 40px 80px;"]{padding:64px 20px 48px 20px!important}
+  [style*="padding: 40px 40px 100px;"]{padding:28px 20px 56px 20px!important}
+  [style*="padding: 100px 40px 120px;"]{padding:56px 20px 64px 20px!important}
+  [style*="padding: 40px 40px 120px;"]{padding:28px 20px 64px 20px!important}
+  [style*="padding: 40px;"]{padding:28px 20px 28px 20px!important}
+  [style*="padding: 140px 40px 80px;"]{padding:72px 20px 48px 20px!important}
+  [style*="padding: 60px 40px 100px;"]{padding:40px 20px 56px 20px!important}
+  [style*="padding: 140px 40px;"]{padding:72px 20px 72px 20px!important}
+  [style*="padding: 80px 40px 120px;"]{padding:48px 20px 64px 20px!important}
+  [style*="padding: 20px 40px 120px;"]{padding:20px 20px 64px 20px!important}
+  [style*="padding: 120px 40px 50px;"]{padding:64px 20px 32px 20px!important}
+  [style*="padding: 20px 40px 40px;"]{padding:20px 20px 28px 20px!important}
+  [style*="padding: 100px 40px 60px;"]{padding:56px 20px 40px 20px!important}
+  [style*="padding: 0px 40px 24px;"]{padding:0 20px 24px 20px!important}
+  [style*="padding: 0px 40px 50px;"]{padding:0 20px 32px 20px!important}
+  [style*="font-size: 340px;"]{font-size:110px!important}
+  [style*="font-size: 88px;"]{font-size:44px!important}
+  [style*="font-size: 72px;"]{font-size:40px!important}
+  [style*="font-size: 64px;"]{font-size:38px!important}
+  [style*="font-size: 56px;"]{font-size:36px!important}
+  [style*="font-size: 52px;"]{font-size:34px!important}
+  [style*="font-size: 48px;"]{font-size:32px!important}
+  [style*="font-size: 44px;"]{font-size:30px!important}
+  [style*="font-size: 40px;"]{font-size:28px!important}
+  [style*="font-size: 38px;"]{font-size:27px!important}
+  [style*="font-size: 36px;"]{font-size:26px!important}
+  [style*="font-size: 30px;"]{font-size:22px!important}
+  [style*="font-size: 28px;"]{font-size:21px!important}
+  [style*="font-size: 26px;"]{font-size:20px!important}
+  [style*="gap: 40px;"]{gap:24px!important}
+  [style*="gap: 48px;"]{gap:28px!important}
+  [style*="gap: 60px;"]{gap:32px!important}
+  [style*="gap: 80px;"]{gap:32px!important}
+  [style*="grid-template-columns"]{grid-template-columns:minmax(0,1fr)!important}
+  [style*="grid-template-columns: repeat(4, 1fr);"],[style*="grid-template-columns: repeat(5, 1fr);"]{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .rs-keep2{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  [style*="display: flex"]:has(> a[style*="border-radius: 4px"]){flex-wrap:wrap!important}
+  a[style*="border-radius: 4px"][style*="padding: 1"]{white-space:nowrap}
+}
+/* Phone menu */
+.nav-burger{width:40px;height:40px;align-items:center;justify-content:center;flex-direction:column;gap:5px;background:transparent;border:1px solid #2a2a26;border-radius:6px;cursor:pointer;padding:0}
+.nav-burger span{display:block;width:18px;height:1.5px;background:#f2f2ef;transition:transform .2s,opacity .2s}
+.nav-burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.nav-drawer{position:absolute;top:100%;left:0;right:0;height:calc(100vh - 81px);height:calc(100dvh - 81px);background:#0a0a0a;overflow-y:auto;padding:12px 20px 40px;box-sizing:border-box;z-index:99}
+.nav-drawer a{color:#f2f2ef;text-decoration:none}
+.nav-drawer .nd-top{display:block;font-size:22px;font-weight:500;letter-spacing:-0.01em;padding:16px 0;border-bottom:1px solid #1c1c1a}
+.nav-drawer .nd-group{padding:18px 0 6px;border-bottom:1px solid #1c1c1a}
+.nav-drawer .nd-head{font-size:11px;letter-spacing:.12em;color:#8a8a84;margin:0 0 6px}
+.nav-drawer .nd-sub{display:block;font-size:15px;color:#c9c9c4;padding:9px 0}
+.nav-drawer .nd-cta{display:block;text-align:center;background:#f2f2ef;color:#0a0a0a;padding:15px;border-radius:6px;font-weight:500;margin-top:28px}
+@media (min-width:901px){.nav-drawer{display:none!important}}
+@media (max-width:900px){.nav-spacer{height:81px!important}}
+</style><style>html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}</style><meta name="description" content="AI product and UX design for chatbots, AI agents, copilots and LLM apps: interaction models, trust patterns, human-in-the-loop flows and polished UI.">
+<link rel="canonical" href="https://babar.info/services/ai-product-design/">
+<link rel="alternate" hreflang="en" href="https://babar.info/services/ai-product-design/">
+<link rel="alternate" hreflang="x-default" href="https://babar.info/services/ai-product-design/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Muhammad Babar">
+<meta property="og:title" content="AI Product Design Services | AI UX Designer for SaaS">
+<meta property="og:description" content="AI product and UX design for chatbots, AI agents, copilots and LLM apps: interaction models, trust patterns, human-in-the-loop flows and polished UI.">
+<meta property="og:url" content="https://babar.info/services/ai-product-design/">
+<meta property="og:image" content="https://babar.info/uploads/og/og-services-ai-product-design-2b8606a5.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AI Product Design">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Product Design Services | AI UX Designer for SaaS">
+<meta name="twitter:description" content="AI product and UX design for chatbots, AI agents, copilots and LLM apps: interaction models, trust patterns, human-in-the-loop flows and polished UI.">
+<meta name="twitter:image" content="https://babar.info/uploads/og/og-services-ai-product-design-2b8606a5.jpg">
+<meta name="twitter:image:alt" content="AI Product Design"><meta name="robots" content="index,follow"><style>
+  html,body{margin:0;padding:0;background:#0a0a0a;color:#f2f2ef;font-family:'Archivo',sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  a:hover{color:#ffffff}
+
+  /* My approach — process rail, the same diamond-and-line marker the home and
+     about pages use, recoloured for this section's light background. */
+  .svc-steps{list-style:none;margin:0;padding:0;position:relative;display:flex;flex-direction:column;gap:26px;max-width:660px}
+  .svc-steps::before{content:"";position:absolute;left:5px;top:9px;bottom:9px;width:1px;background:linear-gradient(180deg,#b4b4ac,#d6d6d0)}
+  .svc-step{position:relative;padding-left:32px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 24px}
+  .svc-step::before{content:"";position:absolute;left:0;top:7px;width:11px;height:11px;box-sizing:border-box;border:1px solid #adada5;background:#f4f4f1;transform:rotate(45deg);transition:border-color .18s,background .18s}
+  .svc-step:first-child::before{background:#0a0a0a;border-color:#0a0a0a}
+  .svc-step:hover::before{border-color:#6b6b66}
+  .svc-step-t{font-size:18px;font-weight:500;color:#0a0a0a;letter-spacing:-.01em}
+  .svc-step-d{font-size:13px;color:#6b6b66;max-width:400px;text-align:right;text-wrap:pretty}
+  @media (max-width:600px){.svc-step-d{text-align:left;flex-basis:100%}}
+
+  /* Featured work - the same sticky card stack the home page uses, on light */
+  .svc-case{position:relative;background:#f4f4f1;border:1px solid #e2e2dc;border-radius:14px;padding:20px}
+  @media (min-width:900px){
+    .svc-case{position:sticky;box-shadow:0 -14px 34px rgba(0,0,0,.14)}
+    .svc-case:nth-child(1){top:100px}
+    .svc-case:nth-child(2){top:118px}
+    .svc-case:nth-child(3){top:136px}
+  }
+</style><script type="application/ld+json" id="svc-schema">{"@context":"https://schema.org","@graph":[{"@type":"Service","name":"AI Product Design","serviceType":"AI Product Design","provider":{"@type":"Person","name":"Muhammad Babar","jobTitle":"UI UX Designer"},"description":"End-to-end AI UX design for chatbots, AI agents, copilots and LLM apps — from model capability to an interface that sets expectations, shows its reasoning, and keeps humans in control.","areaServed":"Worldwide"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://babar.info/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://babar.info/services/"},{"@type":"ListItem","position":3,"name":"AI Product Design"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is AI product design?","acceptedAnswer":{"@type":"Answer","text":"It's designing the experience layer around a model: how users express intent, how output is presented and verified, and how people stay in control. It covers interaction model, states, trust signals, and recovery paths."}},{"@type":"Question","name":"Do you work with our ML or engineering team?","acceptedAnswer":{"@type":"Answer","text":"Yes. I work directly with ML and product engineers to understand model behavior, latency, and failure modes, and design within those realities."}},{"@type":"Question","name":"Can you design an AI feature inside an existing product?","acceptedAnswer":{"@type":"Answer","text":"Often the better move. I design AI features that inherit your existing patterns so they feel native rather than bolted on."}},{"@type":"Question","name":"How do you handle hallucinations in the UX?","acceptedAnswer":{"@type":"Answer","text":"With citations, confidence framing, editable output, and clear recovery paths — the interface should make verification easy rather than pretend the model is perfect."}}]}]}</script><style id="site-css">/* Static-site behaviour layer. The page markup is prerendered; this covers the
+   few things the design's runtime used to do in the browser. */
+
+/* Mega-menu: the inner panel keeps its own absolute positioning against the
+   fixed header, so these wrappers stay out of the way. */
+.nav-has-menu { position: static; }
+.nav-mega { position: static; }
+
+/* Empty image slots — placeholders for work that has no image yet. */
+.slot-empty {
+  display: flex; align-items: center; justify-content: center;
+  border: 1px dashed #2a2a26; border-radius: 8px;
+  background: #0f0f0e; color: #6f6f6a;
+  font: 500 13px/1.4 'Archivo', system-ui, sans-serif;
+  text-align: center; padding: 16px; box-sizing: border-box;
+}
+.slot-empty span { max-width: 22ch; }
+
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid #f2f2ef; outline-offset: 2px; border-radius: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001s !important; transition-duration: .001s !important; }
+}
+
+/* hidden-wins: elements hidden by script (e.g. filtered-out case studies) must disappear even
+   when their inline style sets a display value */
+[hidden] { display: none !important; }
+
+/* reCAPTCHA: Netlify fills this slot at deploy. Keep the empty slot from adding
+   a gap where it isn't filled (local copies), and fit the fixed 304px widget on
+   the narrowest phones. */
+.om-captcha:empty { display: none; }
+@media (max-width: 380px) {
+  .om-form [data-netlify-recaptcha], .om-form .g-recaptcha { transform: scale(.88); transform-origin: 0 0; height: 69px; }
+}
+
+/* a marquee only loops once script has added its second copy */
+[data-marquee]:not([data-marquee="ready"]) { animation-play-state: paused !important; }
+</style><style id="motion-css">/* Motion layer: scroll reveals, headline entrance, card hover, counters.
+   Everything here is switched on by motion.js (html.fx-on), so the pages read
+   normally without script and for people who ask for reduced motion. */
+
+/* reading progress */
+.fx-progress {
+  position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 1000;
+  background: linear-gradient(90deg, #8a8a84, #f2f2ef);
+  transform-origin: 0 50%; transform: scaleX(0); pointer-events: none;
+}
+
+/* scroll reveal */
+.fx-on .fx-reveal { opacity: 0; }
+.fx-on .fx-reveal.fx-in { animation: fx-up .9s cubic-bezier(.2, .7, .2, 1) var(--fx-d, 0s) both; }
+@keyframes fx-up { from { opacity: 0; transform: translate3d(0, 28px, 0); } to { opacity: 1; transform: none; } }
+
+.fx-on .fx-img.fx-in { animation: fx-img 1.4s cubic-bezier(.2, .7, .2, 1) var(--fx-d, 0s) both; }
+@keyframes fx-img { from { transform: scale(1.08); } to { transform: none; } }
+
+/* cards in a row: edge wipes in left to right, then icon, title and text rise in turn */
+.fx-on .fx-seq.fx-in { animation: fx-seq 1.4s cubic-bezier(.2, .7, .2, 1) var(--fx-d, 0s) both; }
+@keyframes fx-seq {
+  0% { opacity: 0; clip-path: inset(-24px 100% -24px -24px); }
+  12% { opacity: 1; }
+  55%, 100% { opacity: 1; clip-path: inset(-24px -24px -24px -24px); }
+}
+.fx-on .fx-seq.fx-in > * { animation: fx-up .75s cubic-bezier(.2, .7, .2, 1) calc(var(--fx-d, 0s) + .15s + var(--fx-c, 0) * 90ms) both; }
+.fx-on .fx-seq.fx-in svg [pathLength] { stroke-dasharray: 1; animation: fx-draw 1s ease calc(var(--fx-d, 0s) + .25s) both; }
+@keyframes fx-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+
+/* headline: words rise out of a mask */
+.fx-w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .12em; margin-bottom: -.12em; }
+.fx-w > span { display: inline-block; }
+.fx-on .fx-title .fx-w > span { transform: translate3d(0, 110%, 0); }
+.fx-on .fx-title.fx-in .fx-w > span { animation: fx-rise .95s cubic-bezier(.2, .8, .2, 1) calc(var(--fx-d, 0s) + var(--fx-i, 0) * 55ms) both; }
+@keyframes fx-rise { from { transform: translate3d(0, 110%, 0); } to { transform: none; } }
+
+/* statement: words light up as the paragraph scrolls through the screen */
+.fx-glow-word { transition: color .35s ease, opacity .35s ease; opacity: .28; }
+.fx-glow-word.fx-lit { opacity: 1; }
+
+/* clickable cards lift; their image eases in */
+@media (hover: hover) and (pointer: fine) {
+  .fx-lift {
+    transition: transform .45s cubic-bezier(.2, .7, .2, 1), border-color .3s, background-color .3s,
+                box-shadow .45s, color .3s, opacity .3s !important;
+  }
+  .fx-lift:hover { transform: translate3d(0, -4px, 0); }
+  .fx-lift img { transition: transform 1s cubic-bezier(.2, .7, .2, 1); }
+  .fx-lift:hover img { transform: scale(1.04); }
+
+  /* soft light that follows the pointer across dark cards */
+  .fx-spot { position: relative; }
+  .fx-spot::after {
+    content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+    background: radial-gradient(380px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, .075), transparent 45%);
+    opacity: 0; transition: opacity .35s ease;
+  }
+  .fx-spot:hover::after { opacity: 1; }
+
+  /* buttons drift toward the pointer */
+  .fx-magnet { transition: transform .35s cubic-bezier(.2, .7, .2, 1) !important; }
+}
+
+/* arrows nudge in the direction they point */
+.fx-arrow { display: inline-block; transition: transform .35s cubic-bezier(.2, .7, .2, 1); }
+a:hover .fx-arrow, button:hover .fx-arrow, a:focus-visible .fx-arrow { transform: translateX(4px); }
+a:hover .fx-arrow.fx-ne, a:focus-visible .fx-arrow.fx-ne { transform: translate(3px, -3px); }
+a:hover .fx-arrow.fx-s, a:focus-visible .fx-arrow.fx-s { transform: translateY(3px); }
+a:hover .fx-arrow.fx-w2, a:focus-visible .fx-arrow.fx-w2 { transform: translateX(-4px); }
+
+/* work filter: results settle in */
+.fx-pop { animation: fx-up .55s cubic-bezier(.2, .7, .2, 1) var(--fx-d, 0s) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fx-on .fx-reveal, .fx-on .fx-title .fx-w > span { opacity: 1 !important; transform: none !important; animation: none !important; }
+  .fx-glow-word { opacity: 1; }
+  .fx-progress { display: none; }
+}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://babar.info/#person", "name": "Muhammad Babar", "url": "https://babar.info/about/"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://babar.info/"}, {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://babar.info/services/"}, {"@type": "ListItem", "position": 3, "name": "AI Product Design"}]}, {"@type": "Service", "name": "AI Product Design", "serviceType": "AI Product Design", "url": "https://babar.info/services/ai-product-design/", "description": "AI product and UX design for chatbots, AI agents, copilots and LLM apps: interaction models, trust patterns, human-in-the-loop flows and polished UI.", "provider": {"@id": "https://babar.info/#person"}, "areaServed": "Worldwide", "image": "https://babar.info/uploads/og/og-services-ai-product-design-2b8606a5.jpg"}, {"@type": "FAQPage", "url": "https://babar.info/services/ai-product-design/", "mainEntity": [{"@type": "Question", "name": "What is AI product design?", "acceptedAnswer": {"@type": "Answer", "text": "It's designing the experience layer around a model: how users express intent, how output is presented and verified, and how people stay in control. It covers interaction model, states, trust signals, and recovery paths."}}, {"@type": "Question", "name": "Do you work with our ML or engineering team?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. I work directly with ML and product engineers to understand model behavior, latency, and failure modes, and design within those realities."}}, {"@type": "Question", "name": "Can you design an AI feature inside an existing product?", "acceptedAnswer": {"@type": "Answer", "text": "Often the better move. I design AI features that inherit your existing patterns so they feel native rather than bolted on."}}, {"@type": "Question", "name": "How do you handle hallucinations in the UX?", "acceptedAnswer": {"@type": "Answer", "text": "With citations, confidence framing, editable output, and clear recovery paths — the interface should make verification easy rather than pretend the model is perfect."}}, {"@type": "Question", "name": "How do you design for AI that can be wrong?", "acceptedAnswer": {"@type": "Answer", "text": "I design for uncertainty from the start: visible sources and confidence, easy ways to edit, retry or undo, a clear handoff to a human, and states for slow, partial and failed responses. That way users keep their trust even when the model makes a mistake."}}]}]}
+</script>
+<style id="ds-css">
+.ds .dsw{background:#ecebe8!important;color:#0a0a0a!important}
+.ds .dsi,.ds .dsk{background-color:#ecebe8!important;color:#0a0a0a!important}
+.ds .dsi [style^="color: rgb(242, 242, 239)"],.ds .dsi [style*="; color: rgb(242, 242, 239)"]{color:#0a0a0a!important}
+.ds .dsi [style^="color: rgb(201, 201, 196)"],.ds .dsi [style*="; color: rgb(201, 201, 196)"]{color:#3a3a36!important}
+.ds .dsi [style^="color: rgb(230, 230, 225)"],.ds .dsi [style*="; color: rgb(230, 230, 225)"]{color:#2a2a27!important}
+.ds .dsi [style^="color: rgb(214, 214, 209)"],.ds .dsi [style*="; color: rgb(214, 214, 209)"]{color:#3a3a36!important}
+.ds .dsi [style^="color: rgb(154, 154, 148)"],.ds .dsi [style*="; color: rgb(154, 154, 148)"]{color:#55554f!important}
+.ds .dsi [style^="color: rgb(138, 138, 132)"],.ds .dsi [style*="; color: rgb(138, 138, 132)"]{color:#62625c!important}
+.ds .dsi [style^="color: rgb(107, 107, 102)"],.ds .dsi [style*="; color: rgb(107, 107, 102)"]{color:#62625c!important}
+.ds .dsi [style^="color: rgb(90, 90, 84)"],.ds .dsi [style*="; color: rgb(90, 90, 84)"]{color:#62625c!important}
+.ds .dsi [style^="color: rgb(10, 10, 10)"],.ds .dsi [style*="; color: rgb(10, 10, 10)"]{color:#f2f2ef!important}
+.ds .dsi [style*="background: rgb(17, 17, 16)"]{background:#f7f7f5!important}
+.ds .dsi [style*="background: rgb(15, 15, 14)"]{background:#f7f7f5!important}
+.ds .dsi [style*="background: rgb(22, 22, 20)"]{background:#f7f7f5!important}
+.ds .dsi [style*="background: rgb(20, 20, 19)"]{background:#f7f7f5!important}
+.ds .dsi [style*="background: rgb(26, 26, 24)"]{background:#f7f7f5!important}
+.ds .dsi [style*="background: rgb(242, 242, 239)"]{background:#0a0a0a!important;color:#f2f2ef!important}
+.ds .dsi [style*="background: rgb(10, 10, 10)"]{background:#f7f7f5!important}
+.ds .dsi [style*="rgb(34, 34, 32)"]{border-color:#d3d2cc!important}
+.ds .dsi [style*="rgb(42, 42, 38)"]{border-color:#d3d2cc!important}
+.ds .dsi [style*="rgb(28, 28, 26)"]{border-color:#d3d2cc!important}
+.ds .dsi [style*="rgb(58, 58, 54)"]{border-color:#d3d2cc!important}
+.ds .dsi svg[stroke='#f2f2ef'],.ds .dsi svg [stroke='#f2f2ef']{stroke:#0a0a0a}
+.ds .dsi svg[fill='#f2f2ef'],.ds .dsi svg [fill='#f2f2ef']{fill:#0a0a0a}
+.ds .dsk [style*="background: rgb(255, 255, 255)"],.ds .dsk [style*="background: rgb(244, 244, 241)"]{background:#f7f7f5!important}
+.ds .ds-pill{display:inline-block!important;width:max-content;max-width:100%;height:max-content;align-self:start;justify-self:start;border:1px dashed #c4c3bd;border-radius:100px;padding:8px 18px!important;font-size:12px!important;letter-spacing:.08em!important;line-height:1.4!important;color:#4a4a44!important;background:transparent!important;white-space:normal}
+:is(.ds .dsi,.ds .dsk) h1{font-weight:600!important;letter-spacing:-.04em!important}
+:is(.ds .dsi,.ds .dsk) h2{font-weight:600!important;letter-spacing:-.03em!important}
+:is(.ds .dsi,.ds .dsk) [style*="font-size: 30px"],:is(.ds .dsi,.ds .dsk) [style*="font-size: 32px"],:is(.ds .dsi,.ds .dsk) [style*="font-size: 34px"]{font-weight:500!important;letter-spacing:-.025em!important}
+:is(.ds .dsi,.ds .dsk) [style*="display: grid"] > [style*="border: 1px solid"],:is(.ds .dsi,.ds .dsk) [style*="display: grid"] > [style*="border-top: 1px solid"],:is(.ds .dsi,.ds .dsk) [style*="display: grid"] > [style*="background: rgb(17, 17, 16)"],:is(.ds .dsi,.ds .dsk) [style*="display: grid"] > [style*="background: rgb(255, 255, 255)"]{background:#f7f7f5!important;border:0!important;border-radius:18px!important;padding:26px!important}
+:is(.ds .dsi,.ds .dsk) [style*="display: grid"]:has(> [style*="border: 1px solid"]:nth-child(2)),:is(.ds .dsi,.ds .dsk) [style*="display: grid"]:has(> [style*="border-top: 1px solid"]:nth-child(2)),:is(.ds .dsi,.ds .dsk) [style*="display: grid"]:has(> [style*="background: rgb(17, 17, 16)"]:nth-child(2)),:is(.ds .dsi,.ds .dsk) [style*="display: grid"]:has(> [style*="background: rgb(255, 255, 255)"]:nth-child(2)){background:#dfded9!important;padding:8px!important;border-radius:28px!important;gap:8px!important}
+:is(.ds .dsi,.ds .dsk) :not([style*="display: grid"]):not([class]):has(> [style*="border-top: 1px solid"]:nth-child(3)){background:#dfded9!important;padding:8px!important;border-radius:28px!important;display:flex!important;flex-direction:column!important;gap:8px!important;border:0!important}
+:is(.ds .dsi,.ds .dsk) :not([style*="display: grid"]):not([class]):has(> [style*="border-top: 1px solid"]:nth-child(3)) > [style*="border-top: 1px solid"]{background:#f7f7f5!important;border:0!important;border-radius:18px!important;padding:22px 26px!important;margin:0!important}
+:is(.ds .dsi,.ds .dsk) .about-stats{background:#dfded9!important;padding:8px!important;border-radius:28px!important;gap:8px!important}
+:is(.ds .dsi,.ds .dsk) .about-stats > [style*="border-top: 1px solid"]{background:#f7f7f5!important;border:0!important;border-radius:18px!important;padding:22px 24px!important}
+.ds [data-screen-label="Service list"]{gap:10px!important}
+.ds [data-screen-label="Service list"] > [style*="border-top: 1px solid"]{background:#f7f7f5!important;border:0!important;border-radius:24px!important;padding:44px 40px!important}
+.ds .dsc .ds-pill{color:#a3a39d!important;border-color:#3d3d39!important}
+.ds .dsi[style*="rgb(34, 34, 32)"],.ds .dsi[style*="rgb(42, 42, 38)"]{border-color:#d3d2cc!important}
+.ds .dsi [style*="solid rgb(242, 242, 239)"]{border-color:#0a0a0a!important}
+.ds section.work-filter{box-shadow:0 0 0 100vmax #ecebe8!important}.ds section.work-filter.is-stuck{border-bottom-color:#d3d2cc!important}
+.ds footer{background:#0a0a0a!important;color:#f2f2ef!important}
+.ds [data-screen-label="Hero"]:not(.dsi){background:#0a0a0a!important;color:#f2f2ef!important}
+.ds :is(.dsi,.dsk,.dsc,.ab,.pr,.sv,.cp,.tm,.pc,.bl):not(.work-filter),.ds :is(.dsi,.dsk,.dsc,.ab,.pr,.sv,.cp,.tm,.pc,.bl) *{box-shadow:none!important}
+.ds header [style*="box-shadow: rgba(0, 0, 0, 0.5)"]{box-shadow:0 12px 32px rgba(0,0,0,.16)!important}
+.ds .nav-spacer{background:#0a0a0a!important}
+.ds header[style*="background: rgba(10, 10, 10, 0.72)"]{background:rgba(10,10,10,.92)!important}
+:is(.ds .dsi,.ds .dsk) .om-case,:is(.ds .dsi,.ds .dsk) .svc-case{background:#dfded9!important;border:0!important;padding:8px!important;border-radius:28px!important}
+.ds h1{font-size:64px!important}
+.ds h2:not(.ds-sr){font-size:48px!important;line-height:1.08!important;font-weight:600!important;letter-spacing:-.03em!important}
+@media (max-width:900px){.ds h1{font-size:46px!important}.ds h2:not(.ds-sr){font-size:36px!important}}
+@media (max-width:600px){.ds h1{font-size:34px!important}.ds h2:not(.ds-sr){font-size:28px!important}}
+.ds .ds-sr{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:is(.ds .dsi,.ds .dsk) [style*="border-radius: 8px"],:is(.ds .dsi,.ds .dsk) [style*="border-radius: 10px"],:is(.ds .dsi,.ds .dsk) [style*="border-radius: 12px"]{border-radius:20px!important}
+:is(.ds .dsi,.ds .dsk) a[style*="border-radius: 4px"],:is(.ds .dsi,.ds .dsk) button[style*="border-radius: 4px"]{border-radius:100px!important;padding:14px 24px!important}
+.ds .dsc a[style*="border-radius: 4px"],.ds .dsc button[style*="border-radius: 4px"]{border-radius:100px!important}
+:is(.ds .dsi,.ds .dsk) input,:is(.ds .dsi,.ds .dsk) textarea,:is(.ds .dsi,.ds .dsk) select{border-radius:14px!important}
+:is(.ds .dsi,.ds .dsk) details{background:#f7f7f5!important;border:0!important;border-radius:18px!important;padding-left:26px!important;padding-right:26px!important;margin:0 0 8px!important}
+:is(.ds .dsi,.ds .dsk) :has(> details:nth-of-type(2)){background:#dfded9;padding:8px 8px 0!important;border-radius:28px;border:0!important}
+.ds .dsc{background:#0a0a0a!important;color:#f2f2ef!important;border-radius:28px!important;max-width:1200px!important;width:calc(100% - 80px)!important;margin:40px auto 120px!important;box-sizing:border-box}
+@media (max-width:600px){.ds .dsc{width:calc(100% - 24px)!important;border-radius:22px!important;margin:24px auto 80px!important}.ds .ds-pill{padding:7px 14px!important}}
+</style></head><body class="ds">
+
+
+
+
+
+
+
+
+
+
+
+<div id="dc-root"><div class="sc-host" data-sc-name="p"><div class="sc-host" data-sc-name="Service Page"><div class="dsw" style="background: rgb(10, 10, 10); color: rgb(242, 242, 239); font-family: Archivo, sans-serif;">
+  <div class="sc-host" data-sc-name="Nav"><div class="nav-spacer" style="height: 75px;"></div><header style="position: fixed; top: 0px; left: 0px; right: 0px; z-index: 100; font-family: Archivo, sans-serif; color: rgb(242, 242, 239); background: rgba(10, 10, 10, 0.72); backdrop-filter: blur(14px); border-bottom: 1px solid rgb(28, 28, 26);">
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 40px;">
+    <a href="../../index.html" aria-label="Babar — home" style="display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 18px; letter-spacing: -0.02em; color: rgb(242, 242, 239); text-decoration: none;"><svg class="brand-mark" viewBox="0 0 1382 247" fill="currentColor" role="img" aria-label="Babar" style="display:block;height:18px;width:auto"><path d="M581.416 0.457264L677.054 0.360264C694.234 0.320264 715.364 -0.754738 732.244 1.21126C794.094 8.41526 820.944 82.1003 768.314 122.05C769.224 122.798 770.124 123.555 771.024 124.322C800.794 149.858 805.144 190.596 779.454 220.762C767.094 235.242 745.643 245.335 726.604 245.628C683.594 246.236 640.534 245.253 597.497 245.983C589.92 246.112 577.606 246.731 571.649 241.309C569.04 238.888 567.513 235.52 567.414 231.962C567.293 227.914 568.843 223.994 571.699 221.123C578.679 214.053 606.33 216.314 616.844 216.328L687.144 216.431C714.114 216.695 747.064 222.309 760.314 192.419C764.604 182.804 764.844 171.871 761.004 162.071C757.294 152.678 750.014 144.132 740.564 140.2C735.624 138.191 730.413 136.918 725.104 136.421C715.393 135.42 695.454 135.99 685.164 136.008L608.276 136.314C599.133 136.358 589.599 136.936 580.608 135.342C571.195 133.673 563.555 125.875 568.69 116.2C570.604 112.543 573.926 109.824 577.889 108.671C588.001 105.786 601.121 107.172 611.614 107.201C633.714 107.261 722.724 109.943 736.794 105.297C747.384 101.796 755.684 94.1083 760.564 84.1253C764.684 75.7123 764.754 65.7833 761.734 57.0023C758.034 46.2463 748.754 36.4103 738.034 32.4243C723.574 27.0463 628.554 29.3902 606.197 29.5412C596.64 29.6062 583.393 31.7823 574.667 27.3593C571.392 25.6993 568.658 23.1353 567.6 19.5353C566.493 15.7703 567.531 11.6393 569.492 8.33927C572.324 3.57627 576.348 1.84126 581.416 0.457264Z"/><path d="M13.3817 0.508356L105.211 0.400354C121.972 0.338354 142.425 -0.791641 158.749 1.04536C220.76 8.02236 246.304 81.8214 194.926 122.262C196.656 123.571 198.35 124.926 200.007 126.325C212.186 136.693 221.597 156.13 222.421 172.079C224.415 210.708 194.129 243.811 155.447 245.486C132.999 246.457 110.428 245.44 87.9527 245.681C63.7927 245.527 39.4497 246.427 15.3217 245.667C11.7157 245.553 7.09467 243.838 4.41967 241.454C1.65367 238.982 0.0526629 235.462 0.00866286 231.752C-0.0663371 227.817 1.44167 224.017 4.19467 221.204C11.2447 214.122 37.1567 216.291 47.4297 216.31L114.394 216.481C142.018 216.753 175.688 222.798 188.181 191.324C192.254 181.272 192.101 170.002 187.757 160.064C183.536 150.418 176.027 143.012 166.171 139.303C148.878 132.794 63.2567 136.156 37.9157 136.307C29.0817 136.36 16.2557 137.911 8.04467 134.482C4.94567 133.188 2.33766 130.526 1.06866 127.424C-0.34834 123.964 -0.349342 119.405 1.25366 116C2.93366 112.433 6.47269 109.725 10.2277 108.667C20.1117 105.883 32.4957 107.213 42.7427 107.238C64.7437 107.291 151.908 109.983 165.356 105.285C175.021 101.865 182.897 94.6904 187.2 85.3854C191.659 75.9184 192.149 65.0613 188.561 55.2313C184.806 44.8653 176.708 36.6574 166.393 32.7624C141.277 23.2624 59.6137 32.8484 28.1007 29.8204C15.5367 28.6124 -6.38933 31.1954 1.77667 8.73837C3.59467 3.74137 8.91568 1.87736 13.3817 0.508356Z"/><path d="M1156.07 0.557381C1198.32 -0.191619 1241.65 1.13737 1283.98 0.553368C1311.05 0.180368 1335.3 4.74038 1355.18 24.9234C1367.06 36.8014 1373.66 52.9474 1373.52 69.7404C1373.24 103.177 1344.59 129.057 1313.2 134.538C1303.35 136.259 1295.87 136.249 1285.97 136.131C1316.54 173.222 1350.94 209.057 1381.56 245.954C1344.43 246.112 1342.75 249.492 1318.62 221.634L1300.9 201.556L1242 136.137C1227.69 136.109 1159.88 138.276 1150.88 134.674C1147.42 133.291 1144.32 130.949 1142.86 127.43C1141.52 124.183 1141.12 119.92 1142.59 116.651C1144.84 111.66 1150.38 109.278 1155.43 108.182C1165.5 105.993 1177.09 107.226 1187.4 107.262C1211.51 107.346 1296.67 110.365 1313.12 104.457C1323.03 100.898 1332.24 93.9254 1336.77 84.2274C1341.22 74.6974 1340.72 64.7724 1337.13 55.0744C1332.83 43.4554 1321.99 35.5684 1310.44 32.0024C1292.44 26.4444 1206.13 29.6594 1182.57 29.7684C1172.21 29.8164 1158.73 31.4934 1149.2 26.9074C1146.03 25.3804 1143.07 22.8424 1142 19.3764C1140.97 16.0024 1141.67 11.9764 1143.31 8.90937C1146.18 3.53337 1150.61 2.10938 1156.07 0.557381Z"/><path d="M960.984 6.22143C981.184 5.45743 988.704 25.9574 998.274 41.3694C1007.22 55.8204 1016.24 70.2244 1025.34 84.5824L1126.54 245.908C1090.75 245.106 1093.95 251.363 1074.21 220.434L1049.89 182.187L965.754 49.6004L964.814 48.7864C959.684 50.7384 853.554 228.26 840.904 241.122C833.844 248.308 810.503 245.918 802.833 245.748C836.853 193.27 870.284 140.415 903.124 87.1934L934.174 37.1214C942.234 24.1824 946.534 12.1244 960.984 6.22143Z"/><path d="M384.909 6.23126C391.396 6.03226 398.185 6.25526 402.639 11.7003C410.269 21.0293 416.445 32.3413 422.663 42.6823C431.901 58.1273 441.218 73.5242 450.614 88.8732L547.453 245.934C537.948 245.563 515.011 248.684 508.985 240.171C495.567 221.214 483.486 200.596 471.199 180.814L389.449 48.6873C385.901 51.3553 371.58 75.2003 368.082 80.7953L298.069 191.983C288.394 207.235 276.066 228.418 264.678 241.865C259.768 247.662 235.919 245.97 227.347 245.791C263.049 194.071 299.637 133.253 333.15 79.3213L359.776 35.9743C367.392 23.5513 371.308 12.2743 384.909 6.23126Z"/></svg></a>
+    <nav class="nav-links" style="display: flex; align-items: center; gap: 28px; font-size: 13px; color: rgb(201, 201, 196);">
+      <a href="../../about/index.html" class="scp5" style="color: rgb(201, 201, 196); text-decoration: none; padding-bottom: 4px; border-bottom: 1px solid transparent;">About</a>
+      <div class="nav-has-menu" style="position: static;">
+        <a href="../index.html" class="scp5" style="display: flex; align-items: center; gap: 6px; color: rgb(201, 201, 196); text-decoration: none; padding: 10px 0px; border-bottom: 1px solid transparent;">Services <span style="font-size: 9px;"><span class="sc-interp">▼</span></span></a>
+        
+      <div class="nav-mega" hidden=""><div style="position: absolute; top: 100%; left: 0px; right: 0px; height: 70vh; display: flex; flex-direction: column; background: rgb(15, 15, 14); border-bottom: 1px solid rgb(34, 34, 32); box-shadow: rgba(0, 0, 0, 0.5) 0px 24px 48px;">
+            <div style="flex: 1 1 0%; width: 100%; max-width: 1200px; margin: 0px auto; padding: 60px 40px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 48px; align-content: start; box-sizing: border-box;">
+              <div>
+                <a href="../index.html" class="scp5" style="display: block; font-size: 15px; font-weight: 600; color: rgb(242, 242, 239); text-decoration: none; padding-bottom: 16px; border-bottom: 1px solid rgb(34, 34, 32); margin-bottom: 22px;">✳&nbsp; UI UX Design</a>
+                <div style="display: flex; flex-direction: column; gap: 18px; font-size: 14px;">
+                  <a href="../ux-research/index.html" class="scp5" style="display: flex; align-items: center; gap: 12px; color: rgb(201, 201, 196); text-decoration: none; font-weight: 500;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1" style="flex-shrink: 0;"><path d="M4 4 L16 16"></path><path d="M16 4 L4 16"></path><circle cx="10" cy="10" r="2.4" fill="currentColor" stroke="none"></circle></svg><span>UX Research &amp; Strategy</span></a>
+                  <a href="../wireframing-prototyping/index.html" class="scp5" style="display: flex; align-items: center; gap: 12px; color: rgb(201, 201, 196); text-decoration: none; font-weight: 500;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1" style="flex-shrink: 0;"><rect x="3.5" y="4.5" width="13" height="11"></rect><path d="M3.5 8.2 H16.5"></path><circle cx="5.9" cy="6.3" r="0.9" fill="currentColor" stroke="none"></circle></svg><span>Wireframing &amp; Prototyping</span></a>
+                  <a href="../mobile-app-design/index.html" class="scp5" style="display: flex; align-items: center; gap: 12px; color: rgb(201, 201, 196); text-decoration: none; font-weight: 500;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1" style="flex-shrink: 0;"><circle cx="10" cy="10" r="6.5"></circle><circle cx="8.4" cy="7.6" r="3"></circle><circle cx="15.6" cy="12.6" r="1.3" fill="currentColor" stroke="none"></circle></svg><span>Web &amp; Mobile App Design</span></a>
+                  <a href="../design-systems/index.html" class="scp5" style="display: flex; align-items: center; gap: 12px; color: rgb(201, 201, 196); text-decoration: none; font-weight: 500;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1" style="flex-shrink: 0;"><circle cx="10" cy="10" r="6.5"></circle><ellipse cx="10" cy="10" rx="6.5" ry="2.2"></ellipse><circle cx="10" cy="10" r="1.3" fill="currentColor" stroke="none"></circle></svg><span>Design Systems</span></a>
+                  <a href="../saas-product-design/index.html" class="scp5" style="display: flex; align-items: center; gap: 12px; color: rgb(201, 201, 196); text-decoration: none; font-weight: 500;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1" style="flex-shrink: 0;"><path d="M10 3 L17 10 L10 17 L3 10 Z"></path><circle cx="10" cy="10" r="1.6" fill="currentColor" stroke="none"></circle></svg><span>SaaS Product Design</span></a>
+                  <a href="../fintech-app-design/index.html" class="scp5" style="display: flex; align-items: center; gap: 12px; color: rgb(201, 201, 196); text-decoration: none; font-weight: 500;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1" style="flex-shrink: 0;"><rect x="2.5" y="5" width="15" height="10.5" rx="1.5"></rect><path d="M2.5 8.5 H17.5"></path><path d="M5.5 12.5 H9"></path></svg><span>Fintech App Design</span></a>
+                </div>
+              </div>
+              <div>
+                <a href="../index.html" class="scp5" style="display: block; font-size: 15px; font-weight: 600; color: rgb(242, 242, 239); text-decoration: none; padding-bottom: 16px; border-bottom: 1px solid rgb(34, 34, 32); margin-bottom: 22px;">✳&nbsp; No Code Design</a>
+                <div style="display: flex; flex-direction: column; gap: 18px; font-size: 14px;">
+                  <a href="../framer-websites/index.html" class="scp5" style="display: flex; align-items: center; gap: 12px; color: rgb(201, 201, 196); text-decoration: none; font-weight: 500;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1" style="flex-shrink: 0;"><path d="M4 15.5 L10 5.5 L16 15.5 Z"></path><circle cx="10" cy="2.8" r="1.3" fill="currentColor" stroke="none"></circle></svg><span>Framer Websites</span></a>
+                  <a href="../webflow-development/index.html" class="scp5" style="display: flex; align-items: center; gap: 12px; color: rgb(201, 201, 196); text-decoration: none; font-weight: 500;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1" style="flex-shrink: 0;"><circle cx="7.4" cy="10" r="4.6"></circle><circle cx="12.6" cy="10" r="4.6"></circle><circle cx="10" cy="10" r="1.2" fill="currentColor" stroke="none"></circle></svg><span>Webflow Development</span></a>
+                </div>
+              </div>
+              <div>
+                <a href="../index.html" class="scp5" style="display: block; font-size: 15px; font-weight: 600; color: rgb(242, 242, 239); text-decoration: none; padding-bottom: 16px; border-bottom: 1px solid rgb(34, 34, 32); margin-bottom: 22px;">✳&nbsp; AI Design</a>
+                <div style="display: flex; flex-direction: column; gap: 18px; font-size: 14px;">
+                  <a href="../claude-design/index.html" class="scp5" style="display: flex; align-items: center; gap: 12px; color: rgb(201, 201, 196); text-decoration: none; font-weight: 500;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1" style="flex-shrink: 0;"><path d="M10 3 V17"></path><path d="M4 6.5 L16 13.5"></path><path d="M16 6.5 L4 13.5"></path><circle cx="10" cy="10" r="1.9" fill="currentColor" stroke="none"></circle></svg><span>Claude Design</span></a>
+                  <a href="index.html" class="scp5" style="display: flex; align-items: center; gap: 12px; color: rgb(201, 201, 196); text-decoration: none; font-weight: 500;"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1" style="flex-shrink: 0;"><circle cx="10" cy="10" r="6.5"></circle><path d="M10 5.4 L14 13 H6 Z"></path></svg><span>AI Product Design</span></a>
+                </div>
+              </div>
+            </div>
+            <div style="border-top: 1px solid rgb(28, 28, 26);">
+              <div style="max-width: 1200px; margin: 0px auto; padding: 16px 40px; display: flex; justify-content: space-between; align-items: center; font-size: 13px;">
+                <span style="color: rgb(138, 138, 132);">Not sure what you need? I'll help you scope it.</span>
+                <a href="../index.html" class="scp5" style="color: rgb(242, 242, 239); text-decoration: none; font-weight: 500;">View all services →</a>
+              </div>
+            </div>
+          </div></div></div>
+      <a href="../../work/index.html" class="scp5" style="color: rgb(201, 201, 196); text-decoration: none; padding-bottom: 4px; border-bottom: 1px solid transparent;">Work</a>
+      <a href="../../insights/index.html" class="scp5" style="color: rgb(201, 201, 196); text-decoration: none; padding-bottom: 4px; border-bottom: 1px solid transparent;">Insights</a>
+      <a href="../../faq/index.html" class="scp5" style="color: rgb(201, 201, 196); text-decoration: none; padding-bottom: 4px; border-bottom: 1px solid transparent;">FAQ</a>
+      <a href="../../contact/index.html" class="scp0" style="background: rgb(242, 242, 239); color: rgb(10, 10, 10); padding: 10px 18px; border-radius: 4px; font-weight: 500; text-decoration: none;">Contact me</a>
+    </nav>
+    <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-drawer"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav-drawer" id="nav-drawer" hidden="">
+    <a class="nd-top" href="../../about/index.html">About</a>
+    <div class="nd-group">
+      <div class="nd-head">✳ UI UX DESIGN</div>
+      <a class="nd-sub" href="../ux-research/index.html">UX Research &amp; Strategy</a>
+      <a class="nd-sub" href="../wireframing-prototyping/index.html">Wireframing &amp; Prototyping</a>
+      <a class="nd-sub" href="../mobile-app-design/index.html">Web &amp; Mobile App Design</a>
+      <a class="nd-sub" href="../design-systems/index.html">Design Systems</a>
+      <a class="nd-sub" href="../saas-product-design/index.html">SaaS Product Design</a>
+      <a class="nd-sub" href="../fintech-app-design/index.html">Fintech App Design</a>
+    </div>
+    <div class="nd-group">
+      <div class="nd-head">✳ NO CODE DESIGN</div>
+      <a class="nd-sub" href="../framer-websites/index.html">Framer Websites</a>
+      <a class="nd-sub" href="../webflow-development/index.html">Webflow Development</a>
+    </div>
+    <div class="nd-group">
+      <div class="nd-head">✳ AI DESIGN</div>
+      <a class="nd-sub" href="../claude-design/index.html">Claude Design</a>
+      <a class="nd-sub" href="index.html">AI Product Design</a>
+    </div>
+    <a class="nd-top" href="../index.html">All services</a>
+    <a class="nd-top" href="../../work/index.html">Work</a>
+    <a class="nd-top" href="../../insights/index.html">Insights</a>
+    <a class="nd-top" href="../../faq/index.html">FAQ</a>
+    <a class="nd-cta" href="../../contact/index.html">Contact me</a>
+  </div></header></div>
+
+  <section class="dsi" data-screen-label="Hero" style="padding: 80px 40px 60px; max-width: 1200px; margin: 0px auto;">
+    <nav aria-label="Breadcrumb" style="display: flex; gap: 8px; font-size: 13px; color: rgb(138, 138, 132);"><a href="../../index.html" class="scp5">Home</a><span>/</span><a href="../index.html" class="scp5">Services</a><span>/</span><span style="color: rgb(201, 201, 196);"><span class="sc-interp">AI Product Design</span></span></nav>
+    <div class="ds-pill" style="font-size: 12px; letter-spacing: 0.12em; color: rgb(138, 138, 132); margin: 32px 0px 24px;">/ <span class="sc-interp">AI DESIGN · AI PRODUCT DESIGN</span></div>
+    <h1 style="margin: 0px 0px 24px; font-size: 72px; line-height: 1.05; letter-spacing: -0.03em; font-weight: 500; max-width: 940px; text-wrap: pretty;"><span class="sc-interp">AI Product Designer</span></h1>
+    <p style="margin: 0px 0px 32px; font-size: 15px; line-height: 1.7; color: rgb(154, 154, 148); max-width: 560px;"><span class="sc-interp">AI product design that people actually trust and keep using. End-to-end AI UX design for chatbots, AI agents, copilots and LLM apps — from model capability to an interface that sets expectations, shows its reasoning, and keeps humans in control.</span></p>
+    <div style="display: flex; gap: 12px;">
+      <a href="../../contact/index.html" class="scp0" style="background: rgb(242, 242, 239); color: rgb(10, 10, 10); padding: 14px 24px; border-radius: 4px; font-size: 14px; font-weight: 500;"><span class="sc-interp">Book an AI design call</span></a>
+      <a href="../../work/index.html" class="scp1" style="border: 1px solid rgb(58, 58, 54); padding: 14px 24px; border-radius: 4px; font-size: 14px; color: rgb(230, 230, 225);">See related work</a>
+    </div>
+  </section>
+
+  <section class="dsi" data-screen-label="Cover" style="padding: 0px 40px 100px; max-width: 1200px; margin: 0px auto;">
+    
+    <div class="rs-media" style="height: 600px; aspect-ratio: 1200 / 600; border-radius: 8px; overflow: hidden; position: relative;">
+      <div style="position: absolute; inset: 0px;"><img fetchpriority="high" width="1336" height="668" src="../../uploads/7ace8af104202c.webp" alt="Tasky AI productivity SaaS landing page UI design" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+    </div>
+    
+  </section>
+
+  <section class="dsi" data-screen-label="Overview" style="padding: 0px 40px 120px; max-width: 1200px; margin: 0px auto; display: grid; grid-template-columns: 260px 1fr; gap: 40px;">
+    <div class="ds-pill" style="font-size: 12px; letter-spacing: 0.12em; color: rgb(138, 138, 132);">/ OVERVIEW</div>
+    <div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start;">
+      <div style="flex: 1 1 340px;">
+        <p style="margin: 0px 0px 24px; font-size: 30px; line-height: 1.35; letter-spacing: -0.01em; max-width: 640px; text-wrap: pretty;"><span class="sc-interp">AI products don't fail on model quality. They fail on unclear intent, invisible reasoning, and misplaced trust.</span></p>
+        <p style="margin: 0px; font-size: 14px; line-height: 1.7; color: rgb(154, 154, 148); max-width: 560px;"><span class="sc-interp">I design AI-native and generative AI products where the interface does the hard work: framing what the system can do, making outputs reviewable, and handling uncertainty gracefully. From first prompt to production workflow, AI product design turns raw model capability into a product people adopt and return to.</span></p>
+      </div>
+      
+      <div class="rs-media" style="flex: 1 1 260px; max-width: 480px; height: 290px; aspect-ratio: 386 / 290; border-radius: 8px; overflow: hidden; position: relative;">
+        <div style="position: absolute; inset: 0px;"><img decoding="async" width="960" height="720" src="../../uploads/a1842d41d3868f.webp" alt="Worky team productivity SaaS dashboard UI design" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      </div>
+      
+    </div>
+  </section>
+
+  <section class="dsk" data-screen-label="The challenge" style="background: rgb(244, 244, 241); color: rgb(10, 10, 10); padding: 100px 40px;">
+    <div style="max-width: 1200px; margin: 0px auto; display: grid; grid-template-columns: 260px 1fr; gap: 40px;">
+      <div class="ds-pill" style="font-size: 12px; letter-spacing: 0.12em; color: rgb(107, 107, 102);">/ THE CHALLENGE</div>
+      <div>
+        <p style="margin: 0px 0px 40px; font-size: 30px; line-height: 1.35; letter-spacing: -0.01em; max-width: 640px; text-wrap: pretty;"><span class="sc-interp">Where AI products lose people.</span></p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; font-size: 14px;">
+          
+            <div style="background: rgb(255, 255, 255); border: 1px solid rgb(226, 226, 220); border-radius: 8px; padding: 24px;"><div style="font-weight: 500; margin-bottom: 8px;"><span class="sc-interp">Users don't know what to ask</span></div><p style="margin: 0px; color: rgb(107, 107, 102); line-height: 1.7;"><span class="sc-interp">A blank prompt box is not an interface. Without affordances, adoption stalls on day one.</span></p></div>
+          
+            <div style="background: rgb(255, 255, 255); border: 1px solid rgb(226, 226, 220); border-radius: 8px; padding: 24px;"><div style="font-weight: 500; margin-bottom: 8px;"><span class="sc-interp">Output feels like a black box</span></div><p style="margin: 0px; color: rgb(107, 107, 102); line-height: 1.7;"><span class="sc-interp">No sources, no reasoning, no confidence — so users can't tell good answers from bad ones.</span></p></div>
+          
+            <div style="background: rgb(255, 255, 255); border: 1px solid rgb(226, 226, 220); border-radius: 8px; padding: 24px;"><div style="font-weight: 500; margin-bottom: 8px;"><span class="sc-interp">Errors break trust permanently</span></div><p style="margin: 0px; color: rgb(107, 107, 102); line-height: 1.7;"><span class="sc-interp">One confident hallucination without a recovery path and the user stops coming back.</span></p></div>
+          
+            <div style="background: rgb(255, 255, 255); border: 1px solid rgb(226, 226, 220); border-radius: 8px; padding: 24px;"><div style="font-weight: 500; margin-bottom: 8px;"><span class="sc-interp">The demo wows, the workflow doesn't</span></div><p style="margin: 0px; color: rgb(107, 107, 102); line-height: 1.7;"><span class="sc-interp">It impresses in a sales call but never fits into how the work really gets done.</span></p></div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dsi" data-screen-label="What I do" style="padding: 120px 40px; max-width: 1200px; margin: 0px auto; display: grid; grid-template-columns: 260px 1fr; gap: 40px;">
+    <div class="ds-pill" style="font-size: 12px; letter-spacing: 0.12em; color: rgb(138, 138, 132);">/ WHAT I DO</div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+      
+        <div class="scp6" style="background: rgb(17, 17, 16); border: 1px solid rgb(34, 34, 32); border-radius: 8px; padding: 28px;"><div style="font-size: 16px; font-weight: 500; margin-bottom: 10px;"><span class="sc-interp">AI product &amp; agent UX</span></div><p style="margin: 0px; font-size: 13px; line-height: 1.6; color: rgb(154, 154, 148);"><span class="sc-interp">Interaction models for AI agents, copilots, chatbots and assistants that fit real workflows.</span></p></div>
+      
+        <div class="scp6" style="background: rgb(17, 17, 16); border: 1px solid rgb(34, 34, 32); border-radius: 8px; padding: 28px;"><div style="font-size: 16px; font-weight: 500; margin-bottom: 10px;"><span class="sc-interp">Conversational &amp; chat interfaces</span></div><p style="margin: 0px; font-size: 13px; line-height: 1.6; color: rgb(154, 154, 148);"><span class="sc-interp">Prompt affordances, suggested actions, streaming states, and multi-turn context.</span></p></div>
+      
+        <div class="scp6" style="background: rgb(17, 17, 16); border: 1px solid rgb(34, 34, 32); border-radius: 8px; padding: 28px;"><div style="font-size: 16px; font-weight: 500; margin-bottom: 10px;"><span class="sc-interp">Trust, transparency &amp; citations</span></div><p style="margin: 0px; font-size: 13px; line-height: 1.6; color: rgb(154, 154, 148);"><span class="sc-interp">Confidence signals, sources, and explainability patterns that make output verifiable.</span></p></div>
+      
+        <div class="scp6" style="background: rgb(17, 17, 16); border: 1px solid rgb(34, 34, 32); border-radius: 8px; padding: 28px;"><div style="font-size: 16px; font-weight: 500; margin-bottom: 10px;"><span class="sc-interp">Human-in-the-loop design</span></div><p style="margin: 0px; font-size: 13px; line-height: 1.6; color: rgb(154, 154, 148);"><span class="sc-interp">Review, edit, approve, and undo flows so people stay accountable for outcomes.</span></p></div>
+      
+        <div class="scp6" style="background: rgb(17, 17, 16); border: 1px solid rgb(34, 34, 32); border-radius: 8px; padding: 28px;"><div style="font-size: 16px; font-weight: 500; margin-bottom: 10px;"><span class="sc-interp">AI onboarding &amp; first-run</span></div><p style="margin: 0px; font-size: 13px; line-height: 1.6; color: rgb(154, 154, 148);"><span class="sc-interp">Guided starts that teach capability and set accurate expectations fast.</span></p></div>
+      
+        <div class="scp6" style="background: rgb(17, 17, 16); border: 1px solid rgb(34, 34, 32); border-radius: 8px; padding: 28px;"><div style="font-size: 16px; font-weight: 500; margin-bottom: 10px;"><span class="sc-interp">Prototypes for model testing</span></div><p style="margin: 0px; font-size: 13px; line-height: 1.6; color: rgb(154, 154, 148);"><span class="sc-interp">Clickable and live prototypes that let you evaluate UX and model behavior together.</span></p></div>
+      
+    </div>
+  </section>
+
+  <section class="dsk" data-screen-label="My approach" style="background: rgb(244, 244, 241); color: rgb(10, 10, 10); padding: 100px 40px;">
+    <div style="max-width: 1200px; margin: 0px auto; display: grid; grid-template-columns: 260px 1fr; gap: 40px;">
+      <div class="ds-pill" style="font-size: 12px; letter-spacing: 0.12em; color: rgb(107, 107, 102);">/ MY APPROACH</div>
+      <div>
+        
+        <div class="rs-media" style="height: 500px; aspect-ratio: 900 / 500; border-radius: 8px; overflow: hidden; position: relative; margin-bottom: 40px;">
+          <div style="position: absolute; inset: 0px;"><img srcset="../../uploads/405d83ce25829e-w480.webp 480w, ../../uploads/405d83ce25829e-w800.webp 800w, ../../uploads/405d83ce25829e-w1200.webp 1200w, ../../uploads/405d83ce25829e.webp 1536w" sizes="(max-width: 600px) 90vw, 900px" decoding="async" width="1536" height="853" src="../../uploads/405d83ce25829e.webp" alt="Savee savings goals mobile app UI design" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+        </div>
+        
+        <ol class="svc-steps">
+          
+            <li class="svc-step"><span class="svc-step-t"><span class="sc-interp">Capability mapping</span></span><span class="svc-step-d"><span class="sc-interp">What the model can reliably do, and where it needs guardrails.</span></span></li>
+          
+            <li class="svc-step"><span class="svc-step-t"><span class="sc-interp">Interaction model</span></span><span class="svc-step-d"><span class="sc-interp">Choose the shape: chat, inline copilot, background agent, or hybrid.</span></span></li>
+          
+            <li class="svc-step"><span class="svc-step-t"><span class="sc-interp">Trust layer</span></span><span class="svc-step-d"><span class="sc-interp">Design confidence, sources, states, and failure recovery.</span></span></li>
+          
+            <li class="svc-step"><span class="svc-step-t"><span class="sc-interp">Prototype &amp; test</span></span><span class="svc-step-d"><span class="sc-interp">Test with real prompts and real users, then tighten before build.</span></span></li>
+          
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="dsi" data-screen-label="What you get" style="padding: 120px 40px 60px; max-width: 1200px; margin: 0px auto; display: grid; grid-template-columns: 260px 1fr; gap: 40px;">
+    <div class="ds-pill" style="font-size: 12px; letter-spacing: 0.12em; color: rgb(138, 138, 132);">/ WHAT YOU GET</div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; font-size: 14px;">
+      
+        <div style="border-top: 1px solid rgb(42, 42, 38); padding-top: 16px;"><div style="font-weight: 500; margin-bottom: 8px;"><span class="sc-interp">AI UX architecture</span></div><div style="color: rgb(138, 138, 132); line-height: 1.7;"><span class="sc-interp">Interaction model, state map, and prompt-to-output flows.</span></div></div>
+      
+        <div style="border-top: 1px solid rgb(42, 42, 38); padding-top: 16px;"><div style="font-weight: 500; margin-bottom: 8px;"><span class="sc-interp">High-fidelity screens</span></div><div style="color: rgb(138, 138, 132); line-height: 1.7;"><span class="sc-interp">Production-ready designs including empty, loading, and error states.</span></div></div>
+      
+        <div style="border-top: 1px solid rgb(42, 42, 38); padding-top: 16px;"><div style="font-weight: 500; margin-bottom: 8px;"><span class="sc-interp">Trust &amp; guardrail patterns</span></div><div style="color: rgb(138, 138, 132); line-height: 1.7;"><span class="sc-interp">A reusable set of transparency, review, and recovery components.</span></div></div>
+      
+    </div>
+  </section>
+
+  <section class="dsi" data-screen-label="Benefits" style="padding: 60px 40px 120px; max-width: 1200px; margin: 0px auto; display: grid; grid-template-columns: 260px 1fr; gap: 40px;">
+    <div class="ds-pill" style="font-size: 12px; letter-spacing: 0.12em; color: rgb(138, 138, 132);">/ BENEFITS</div>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;">
+      
+        <div style="border-top: 1px solid rgb(42, 42, 38); padding-top: 20px;"><div style="font-size: 36px; font-weight: 500; letter-spacing: -0.02em;"><span class="sc-interp">Faster</span></div><div style="font-size: 12px; color: rgb(138, 138, 132); margin-top: 6px;"><span class="sc-interp">Time to first useful output</span></div></div>
+      
+        <div style="border-top: 1px solid rgb(42, 42, 38); padding-top: 20px;"><div style="font-size: 36px; font-weight: 500; letter-spacing: -0.02em;"><span class="sc-interp">Higher</span></div><div style="font-size: 12px; color: rgb(138, 138, 132); margin-top: 6px;"><span class="sc-interp">Trust and repeat usage</span></div></div>
+      
+        <div style="border-top: 1px solid rgb(42, 42, 38); padding-top: 20px;"><div style="font-size: 36px; font-weight: 500; letter-spacing: -0.02em;"><span class="sc-interp">Fewer</span></div><div style="font-size: 12px; color: rgb(138, 138, 132); margin-top: 6px;"><span class="sc-interp">Escalations and bad outputs shipped</span></div></div>
+      
+        <div style="border-top: 1px solid rgb(42, 42, 38); padding-top: 20px;"><div style="font-size: 36px; font-weight: 500; letter-spacing: -0.02em;"><span class="sc-interp">Clearer</span></div><div style="font-size: 12px; color: rgb(138, 138, 132); margin-top: 6px;"><span class="sc-interp">Value story for buyers</span></div></div>
+      
+    </div>
+  </section>
+
+  <section class="dsk" data-screen-label="Who it's for" style="background: rgb(244, 244, 241); color: rgb(10, 10, 10); padding: 100px 40px;">
+    <div style="max-width: 1200px; margin: 0px auto; display: grid; grid-template-columns: 260px 1fr; gap: 40px;">
+      <div class="ds-pill" style="font-size: 12px; letter-spacing: 0.12em; color: rgb(107, 107, 102);">/ WHO IT'S FOR</div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; font-size: 14px;">
+        
+          <div style="background: rgb(255, 255, 255); border: 1px solid rgb(226, 226, 220); border-radius: 8px; padding: 24px;"><div style="font-weight: 500; margin-bottom: 8px;"><span class="sc-interp">AI-native startups</span></div><p style="margin: 0px; color: rgb(107, 107, 102); line-height: 1.7;"><span class="sc-interp">Turn a strong model into a product with a defensible experience layer.</span></p></div>
+        
+          <div style="background: rgb(255, 255, 255); border: 1px solid rgb(226, 226, 220); border-radius: 8px; padding: 24px;"><div style="font-weight: 500; margin-bottom: 8px;"><span class="sc-interp">SaaS teams adding AI</span></div><p style="margin: 0px; color: rgb(107, 107, 102); line-height: 1.7;"><span class="sc-interp">Introduce copilots and automation without confusing your existing users.</span></p></div>
+        
+          <div style="background: rgb(255, 255, 255); border: 1px solid rgb(226, 226, 220); border-radius: 8px; padding: 24px;"><div style="font-weight: 500; margin-bottom: 8px;"><span class="sc-interp">Enterprise AI platforms</span></div><p style="margin: 0px; color: rgb(107, 107, 102); line-height: 1.7;"><span class="sc-interp">Design for oversight, auditability, and multi-role accountability.</span></p></div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section class="dsi" data-screen-label="Why work with me" style="padding: 120px 40px; max-width: 1200px; margin: 0px auto; display: grid; grid-template-columns: 260px 1fr; gap: 40px;">
+    <div class="ds-pill" style="font-size: 12px; letter-spacing: 0.12em; color: rgb(138, 138, 132);">/ WHY WORK WITH ME</div>
+    <div>
+      <p style="margin: 0px 0px 32px; font-size: 30px; line-height: 1.35; letter-spacing: -0.01em; max-width: 640px; text-wrap: pretty;"><span class="sc-interp">AI design grounded in shipped products, not speculative concepts.</span></p>
+      <div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start;">
+        <div style="display: flex; flex-direction: column; flex: 1 1 340px; max-width: 640px; border-bottom: 1px solid rgb(34, 34, 32);">
+          
+            <div style="border-top: 1px solid rgb(34, 34, 32); padding: 20px 0px; display: grid; grid-template-columns: 200px 1fr; gap: 20px;"><span style="font-size: 14px; font-weight: 500;"><span class="sc-interp">Designer who ships</span></span><span style="font-size: 14px; color: rgb(154, 154, 148); line-height: 1.6;"><span class="sc-interp">I work inside real product constraints, so what I hand over gets built — not reinterpreted.</span></span></div>
+          
+            <div style="border-top: 1px solid rgb(34, 34, 32); padding: 20px 0px; display: grid; grid-template-columns: 200px 1fr; gap: 20px;"><span style="font-size: 14px; font-weight: 500;"><span class="sc-interp">8+ years across AI &amp; SaaS</span></span><span style="font-size: 14px; color: rgb(154, 154, 148); line-height: 1.6;"><span class="sc-interp">Fintech, healthcare, B2B SaaS, e-commerce, and AI-native products.</span></span></div>
+          
+            <div style="border-top: 1px solid rgb(34, 34, 32); padding: 20px 0px; display: grid; grid-template-columns: 200px 1fr; gap: 20px;"><span style="font-size: 14px; font-weight: 500;"><span class="sc-interp">Lean and fast</span></span><span style="font-size: 14px; color: rgb(154, 154, 148); line-height: 1.6;"><span class="sc-interp">Focused weekly cycles with visible progress — no long silences, no design theater.</span></span></div>
+          
+            <div style="border-top: 1px solid rgb(34, 34, 32); padding: 20px 0px; display: grid; grid-template-columns: 200px 1fr; gap: 20px;"><span style="font-size: 14px; font-weight: 500;"><span class="sc-interp">Metric-first</span></span><span style="font-size: 14px; color: rgb(154, 154, 148); line-height: 1.6;"><span class="sc-interp">Every engagement starts with the business number we are trying to move.</span></span></div>
+          
+        </div>
+        
+        <div class="rs-media" style="flex: 1 1 260px; max-width: 480px; height: 290px; aspect-ratio: 386 / 290; border-radius: 8px; overflow: hidden; position: relative;">
+          <div style="position: absolute; inset: 0px;"><img decoding="async" width="960" height="720" src="../../uploads/eb18e66508ec09.webp" alt="Crypto sales statistics dashboard UI design" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section class="dsi" data-screen-label="Industries" style="padding: 120px 40px 60px; max-width: 1200px; margin: 0px auto; display: grid; grid-template-columns: 260px 1fr; gap: 40px;">
+    <div class="ds-pill" style="font-size: 12px; letter-spacing: 0.12em; color: rgb(138, 138, 132);">/ INDUSTRIES I SERVE</div>
+    <div>
+      <div class="scp7" style="display: grid; grid-template-rows: auto 0fr; transition: grid-template-rows 0.45s; border-top: 1px solid rgb(34, 34, 32); cursor: default;">
+        <div style="display: flex; align-items: baseline; gap: 24px; padding: 26px 0px;"><span style="font-size: 13px; color: rgb(90, 90, 84); width: 32px;">01</span><span style="font-size: 26px; font-weight: 500; letter-spacing: -0.01em;">Fintech</span><span style="margin-left: auto; font-size: 13px; color: rgb(138, 138, 132);">Payments · Banking · Compliance</span></div>
+        <div style="overflow: hidden; min-height: 0px;">
+          <div style="display: grid; grid-template-columns: 1fr 280px; gap: 40px; padding: 0px 0px 30px 56px; align-items: start;">
+            <div>
+              <p style="margin: 0px 0px 16px; font-size: 14px; line-height: 1.7; color: rgb(154, 154, 148); max-width: 480px;">Secure software for banking, payments, and finance.</p>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 12px; color: rgb(201, 201, 196);"><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">Trust &amp; security UX</span><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">Onboarding &amp; KYC flows</span><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">Financial dashboards</span></div>
+            </div>
+            <div style="height: 150px; border-radius: 8px; overflow: hidden; position: relative;"><div style="position: absolute; inset: 0px;"><img decoding="async" width="700" height="375" src="../../uploads/aa342318c21568.webp" alt="Contactless card payment at a payment terminal, fintech industry" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="scp7" style="display: grid; grid-template-rows: auto 0fr; transition: grid-template-rows 0.45s; border-top: 1px solid rgb(34, 34, 32); cursor: default;">
+        <div style="display: flex; align-items: baseline; gap: 24px; padding: 26px 0px;"><span style="font-size: 13px; color: rgb(90, 90, 84); width: 32px;">02</span><span style="font-size: 26px; font-weight: 500; letter-spacing: -0.01em;">Real Estate &amp; Construction</span><span style="margin-left: auto; font-size: 13px; color: rgb(138, 138, 132);">Property · Projects · Field teams</span></div>
+        <div style="overflow: hidden; min-height: 0px;">
+          <div style="display: grid; grid-template-columns: 1fr 280px; gap: 40px; padding: 0px 0px 30px 56px; align-items: start;">
+            <div>
+              <p style="margin: 0px 0px 16px; font-size: 14px; line-height: 1.7; color: rgb(154, 154, 148); max-width: 480px;">Smarter property and construction management software.</p>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 12px; color: rgb(201, 201, 196);"><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">Listing &amp; search flows</span><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">Project tracking</span><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">Field-ready mobile UI</span></div>
+            </div>
+            <div style="height: 150px; border-radius: 8px; overflow: hidden; position: relative;"><div style="position: absolute; inset: 0px;"><img decoding="async" width="700" height="375" src="../../uploads/21aa66031fd8e3.webp" alt="Glass office towers seen from below, real estate and construction industry" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="scp7" style="display: grid; grid-template-rows: auto 0fr; transition: grid-template-rows 0.45s; border-top: 1px solid rgb(34, 34, 32); cursor: default;">
+        <div style="display: flex; align-items: baseline; gap: 24px; padding: 26px 0px;"><span style="font-size: 13px; color: rgb(90, 90, 84); width: 32px;">03</span><span style="font-size: 26px; font-weight: 500; letter-spacing: -0.01em;">Healthcare</span><span style="margin-left: auto; font-size: 13px; color: rgb(138, 138, 132);">Patients · Clinicians · Access</span></div>
+        <div style="overflow: hidden; min-height: 0px;">
+          <div style="display: grid; grid-template-columns: 1fr 280px; gap: 40px; padding: 0px 0px 30px 56px; align-items: start;">
+            <div>
+              <p style="margin: 0px 0px 16px; font-size: 14px; line-height: 1.7; color: rgb(154, 154, 148); max-width: 480px;">Digital healthcare solutions for better patient care.</p>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 12px; color: rgb(201, 201, 196);"><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">Accessibility-first design</span><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">Booking &amp; records</span><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">Clinical dashboards</span></div>
+            </div>
+            <div style="height: 150px; border-radius: 8px; overflow: hidden; position: relative;"><div style="position: absolute; inset: 0px;"><img decoding="async" width="700" height="375" src="../../uploads/488bee2c4308c7.webp" alt="Doctor working at a laptop, healthcare industry" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="scp7" style="display: grid; grid-template-rows: auto 0fr; transition: grid-template-rows 0.45s; border-top: 1px solid rgb(34, 34, 32); cursor: default;">
+        <div style="display: flex; align-items: baseline; gap: 24px; padding: 26px 0px;"><span style="font-size: 13px; color: rgb(90, 90, 84); width: 32px;">04</span><span style="font-size: 26px; font-weight: 500; letter-spacing: -0.01em;">Technology</span><span style="margin-left: auto; font-size: 13px; color: rgb(138, 138, 132);">Platforms · APIs · AI</span></div>
+        <div style="overflow: hidden; min-height: 0px;">
+          <div style="display: grid; grid-template-columns: 1fr 280px; gap: 40px; padding: 0px 0px 30px 56px; align-items: start;">
+            <div>
+              <p style="margin: 0px 0px 16px; font-size: 14px; line-height: 1.7; color: rgb(154, 154, 148); max-width: 480px;">Build scalable software and AI-powered products.</p>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 12px; color: rgb(201, 201, 196);"><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">Platform &amp; API tooling</span><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">Design systems at scale</span><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">AI product interfaces</span></div>
+            </div>
+            <div style="height: 150px; border-radius: 8px; overflow: hidden; position: relative;"><div style="position: absolute; inset: 0px;"><img decoding="async" width="700" height="375" src="../../uploads/28d59122860b5c.webp" alt="Developer pointing at code on a monitor, technology industry" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="scp7" style="display: grid; grid-template-rows: auto 0fr; transition: grid-template-rows 0.45s; border-top: 1px solid rgb(34, 34, 32); cursor: default;">
+        <div style="display: flex; align-items: baseline; gap: 24px; padding: 26px 0px;"><span style="font-size: 13px; color: rgb(90, 90, 84); width: 32px;">05</span><span style="font-size: 26px; font-weight: 500; letter-spacing: -0.01em;">Education</span><span style="margin-left: auto; font-size: 13px; color: rgb(138, 138, 132);">Learning · Engagement · Completion</span></div>
+        <div style="overflow: hidden; min-height: 0px;">
+          <div style="display: grid; grid-template-columns: 1fr 280px; gap: 40px; padding: 0px 0px 30px 56px; align-items: start;">
+            <div>
+              <p style="margin: 0px 0px 16px; font-size: 14px; line-height: 1.7; color: rgb(154, 154, 148); max-width: 480px;">Modern EdTech platforms for smarter learning.</p>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 12px; color: rgb(201, 201, 196);"><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">Course &amp; lesson flows</span><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">Progress &amp; assessment</span><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">Learner engagement</span></div>
+            </div>
+            <div style="height: 150px; border-radius: 8px; overflow: hidden; position: relative;"><div style="position: absolute; inset: 0px;"><img decoding="async" width="700" height="375" src="../../uploads/b174261ca57f76.webp" alt="Students learning on laptops, education industry" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="scp7" style="display: grid; grid-template-rows: auto 0fr; transition: grid-template-rows 0.45s; border-top: 1px solid rgb(34, 34, 32); cursor: default;">
+        <div style="display: flex; align-items: baseline; gap: 24px; padding: 26px 0px;"><span style="font-size: 13px; color: rgb(90, 90, 84); width: 32px;">06</span><span style="font-size: 26px; font-weight: 500; letter-spacing: -0.01em;">Retail</span><span style="margin-left: auto; font-size: 13px; color: rgb(138, 138, 132);">Storefront · Checkout · Loyalty</span></div>
+        <div style="overflow: hidden; min-height: 0px;">
+          <div style="display: grid; grid-template-columns: 1fr 280px; gap: 40px; padding: 0px 0px 30px 56px; align-items: start;">
+            <div>
+              <p style="margin: 0px 0px 16px; font-size: 14px; line-height: 1.7; color: rgb(154, 154, 148); max-width: 480px;">Smart retail solutions that drive growth and sales.</p>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 12px; color: rgb(201, 201, 196);"><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">Storefront &amp; merchandising</span><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">Checkout conversion</span><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">Loyalty &amp; retention</span></div>
+            </div>
+            <div style="height: 150px; border-radius: 8px; overflow: hidden; position: relative;"><div style="position: absolute; inset: 0px;"><img decoding="async" width="700" height="375" src="../../uploads/d61a652e3a5618.webp" alt="Shopper paying online with a credit card, retail industry" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="scp7" style="display: grid; grid-template-rows: auto 0fr; transition: grid-template-rows 0.45s; border-top: 1px solid rgb(34, 34, 32); cursor: default;">
+        <div style="display: flex; align-items: baseline; gap: 24px; padding: 26px 0px;"><span style="font-size: 13px; color: rgb(90, 90, 84); width: 32px;">07</span><span style="font-size: 26px; font-weight: 500; letter-spacing: -0.01em;">Insurance</span><span style="margin-left: auto; font-size: 13px; color: rgb(138, 138, 132);">Claims · Policies · Compliance</span></div>
+        <div style="overflow: hidden; min-height: 0px;">
+          <div style="display: grid; grid-template-columns: 1fr 280px; gap: 40px; padding: 0px 0px 30px 56px; align-items: start;">
+            <div>
+              <p style="margin: 0px 0px 16px; font-size: 14px; line-height: 1.7; color: rgb(154, 154, 148); max-width: 480px;">Automate claims, policies, and compliance.</p>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 12px; color: rgb(201, 201, 196);"><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">Claims automation</span><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">Policy management</span><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">Quote &amp; underwriting flows</span></div>
+            </div>
+            <div style="height: 150px; border-radius: 8px; overflow: hidden; position: relative;"><div style="position: absolute; inset: 0px;"><img decoding="async" width="700" height="375" src="../../uploads/39c33f87b3963a.webp" alt="Advisor reviewing an insurance form with a client, insurance industry" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="scp7" style="display: grid; grid-template-rows: auto 0fr; transition: grid-template-rows 0.45s; border-top: 1px solid rgb(34, 34, 32); cursor: default;">
+        <div style="display: flex; align-items: baseline; gap: 24px; padding: 26px 0px;"><span style="font-size: 13px; color: rgb(90, 90, 84); width: 32px;">08</span><span style="font-size: 26px; font-weight: 500; letter-spacing: -0.01em;">Compliance &amp; Governance</span><span style="margin-left: auto; font-size: 13px; color: rgb(138, 138, 132);">Audits · Risk · Controls</span></div>
+        <div style="overflow: hidden; min-height: 0px;">
+          <div style="display: grid; grid-template-columns: 1fr 280px; gap: 40px; padding: 0px 0px 30px 56px; align-items: start;">
+            <div>
+              <p style="margin: 0px 0px 16px; font-size: 14px; line-height: 1.7; color: rgb(154, 154, 148); max-width: 480px;">Simplify compliance, audits, and risk management.</p>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 12px; color: rgb(201, 201, 196);"><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">Audit workflows</span><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">Risk dashboards</span><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">Policy &amp; controls UX</span></div>
+            </div>
+            <div style="height: 150px; border-radius: 8px; overflow: hidden; position: relative;"><div style="position: absolute; inset: 0px;"><img decoding="async" width="700" height="375" src="../../uploads/b97453c05f15d6.webp" alt="Team reviewing documents, compliance and governance" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="scp7" style="display: grid; grid-template-rows: auto 0fr; transition: grid-template-rows 0.45s; border-top: 1px solid rgb(34, 34, 32); cursor: default;">
+        <div style="display: flex; align-items: baseline; gap: 24px; padding: 26px 0px;"><span style="font-size: 13px; color: rgb(90, 90, 84); width: 32px;">09</span><span style="font-size: 26px; font-weight: 500; letter-spacing: -0.01em;">Transportation &amp; Logistics</span><span style="margin-left: auto; font-size: 13px; color: rgb(138, 138, 132);">Fleet · Supply chain · Tracking</span></div>
+        <div style="overflow: hidden; min-height: 0px;">
+          <div style="display: grid; grid-template-columns: 1fr 280px; gap: 40px; padding: 0px 0px 30px 56px; align-items: start;">
+            <div>
+              <p style="margin: 0px 0px 16px; font-size: 14px; line-height: 1.7; color: rgb(154, 154, 148); max-width: 480px;">Optimize logistics and supply chain operations.</p>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 12px; color: rgb(201, 201, 196);"><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">Fleet &amp; dispatch</span><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">Shipment tracking</span><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">Warehouse operations</span></div>
+            </div>
+            <div style="height: 150px; border-radius: 8px; overflow: hidden; position: relative;"><div style="position: absolute; inset: 0px;"><img decoding="async" width="700" height="375" src="../../uploads/6b304bde7cd1e9.webp" alt="Truck on a highway at sunset, transportation and logistics industry" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="scp7" style="display: grid; grid-template-rows: auto 0fr; transition: grid-template-rows 0.45s; border-top: 1px solid rgb(34, 34, 32); cursor: default;">
+        <div style="display: flex; align-items: baseline; gap: 24px; padding: 26px 0px;"><span style="font-size: 13px; color: rgb(90, 90, 84); width: 32px;">10</span><span style="font-size: 26px; font-weight: 500; letter-spacing: -0.01em;">Energy</span><span style="margin-left: auto; font-size: 13px; color: rgb(138, 138, 132);">Grid · Monitoring · Sustainability</span></div>
+        <div style="overflow: hidden; min-height: 0px;">
+          <div style="display: grid; grid-template-columns: 1fr 280px; gap: 40px; padding: 0px 0px 30px 56px; align-items: start;">
+            <div>
+              <p style="margin: 0px 0px 16px; font-size: 14px; line-height: 1.7; color: rgb(154, 154, 148); max-width: 480px;">Energy platforms for monitoring, efficiency, and sustainability.</p>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 12px; color: rgb(201, 201, 196);"><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">Monitoring &amp; telemetry</span><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">Usage analytics</span><span style="border: 1px solid rgb(42, 42, 38); border-radius: 100px; padding: 6px 14px;">Sustainability reporting</span></div>
+            </div>
+            <div style="height: 150px; border-radius: 8px; overflow: hidden; position: relative;"><div style="position: absolute; inset: 0px;"><img decoding="async" width="700" height="375" src="../../uploads/959a8773a97849.webp" alt="Wind turbines at sunrise, energy industry" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dsi" data-screen-label="Tools and expertise" style="padding: 60px 40px 120px; max-width: 1200px; margin: 0px auto;">
+    <div style="display: grid; grid-template-columns: 260px 1fr; gap: 40px; margin-bottom: 50px;">
+      <div class="ds-pill" style="font-size: 12px; letter-spacing: 0.12em; color: rgb(138, 138, 132);">/ TOOLS &amp; EXPERTISE</div>
+      <p style="margin: 0px; font-size: 30px; line-height: 1.35; letter-spacing: -0.01em; max-width: 620px; text-wrap: pretty;"><span class="sc-interp">The tools I design and build with, end to end.</span></p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px;">
+      
+        <div class="scp6" style="background: rgb(17, 17, 16); border: 1px solid rgb(34, 34, 32); border-radius: 8px; padding: 24px; display: flex; flex-direction: column; align-items: center; gap: 14px;"><div style="width: 52px; height: 52px; border-radius: 10px; overflow: hidden; position: relative;"><div style="position: absolute; inset: 0px;"><img decoding="async" width="208" height="208" src="../../uploads/a4771de6293850.webp" alt="Figma logo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div></div><span style="font-size: 13px; font-weight: 500;"><span class="sc-interp">Figma</span></span></div>
+      
+        <div class="scp6" style="background: rgb(17, 17, 16); border: 1px solid rgb(34, 34, 32); border-radius: 8px; padding: 24px; display: flex; flex-direction: column; align-items: center; gap: 14px;"><div style="width: 52px; height: 52px; border-radius: 10px; overflow: hidden; position: relative;"><div style="position: absolute; inset: 0px;"><img decoding="async" width="208" height="208" src="../../uploads/585919de25e350.webp" alt="Claude logo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div></div><span style="font-size: 13px; font-weight: 500;"><span class="sc-interp">Claude</span></span></div>
+      
+        <div class="scp6" style="background: rgb(17, 17, 16); border: 1px solid rgb(34, 34, 32); border-radius: 8px; padding: 24px; display: flex; flex-direction: column; align-items: center; gap: 14px;"><div style="width: 52px; height: 52px; border-radius: 10px; overflow: hidden; position: relative;"><div style="position: absolute; inset: 0px;"><img decoding="async" width="208" height="208" src="../../uploads/104c3558a4a378.webp" alt="Webflow logo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div></div><span style="font-size: 13px; font-weight: 500;"><span class="sc-interp">Webflow</span></span></div>
+      
+        <div class="scp6" style="background: rgb(17, 17, 16); border: 1px solid rgb(34, 34, 32); border-radius: 8px; padding: 24px; display: flex; flex-direction: column; align-items: center; gap: 14px;"><div style="width: 52px; height: 52px; border-radius: 10px; overflow: hidden; position: relative;"><div style="position: absolute; inset: 0px;"><img decoding="async" width="208" height="208" src="../../uploads/394072f0c42676.webp" alt="Framer logo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div></div><span style="font-size: 13px; font-weight: 500;"><span class="sc-interp">Framer</span></span></div>
+      
+        <div class="scp6" style="background: rgb(17, 17, 16); border: 1px solid rgb(34, 34, 32); border-radius: 8px; padding: 24px; display: flex; flex-direction: column; align-items: center; gap: 14px;"><div style="width: 52px; height: 52px; border-radius: 10px; overflow: hidden; position: relative;"><div style="position: absolute; inset: 0px;"><img decoding="async" width="208" height="208" src="../../uploads/140b39947a08d9.webp" alt="Adobe XD logo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div></div><span style="font-size: 13px; font-weight: 500;"><span class="sc-interp">Adobe XD</span></span></div>
+      
+        <div class="scp6" style="background: rgb(17, 17, 16); border: 1px solid rgb(34, 34, 32); border-radius: 8px; padding: 24px; display: flex; flex-direction: column; align-items: center; gap: 14px;"><div style="width: 52px; height: 52px; border-radius: 10px; overflow: hidden; position: relative;"><div style="position: absolute; inset: 0px;"><img decoding="async" width="208" height="208" src="../../uploads/195d1c284151ab.webp" alt="v0 logo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div></div><span style="font-size: 13px; font-weight: 500;"><span class="sc-interp">v0</span></span></div>
+      
+        <div class="scp6" style="background: rgb(17, 17, 16); border: 1px solid rgb(34, 34, 32); border-radius: 8px; padding: 24px; display: flex; flex-direction: column; align-items: center; gap: 14px;"><div style="width: 52px; height: 52px; border-radius: 10px; overflow: hidden; position: relative;"><div style="position: absolute; inset: 0px;"><img decoding="async" width="208" height="208" src="../../uploads/8517381faee4ee.webp" alt="Gemini logo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div></div><span style="font-size: 13px; font-weight: 500;"><span class="sc-interp">Gemini</span></span></div>
+      
+        <div class="scp6" style="background: rgb(17, 17, 16); border: 1px solid rgb(34, 34, 32); border-radius: 8px; padding: 24px; display: flex; flex-direction: column; align-items: center; gap: 14px;"><div style="width: 52px; height: 52px; border-radius: 10px; overflow: hidden; position: relative;"><div style="position: absolute; inset: 0px;"><img decoding="async" width="208" height="208" src="../../uploads/7cd308f652c6e9.webp" alt="Adobe Photoshop logo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div></div><span style="font-size: 13px; font-weight: 500;"><span class="sc-interp">Photoshop</span></span></div>
+      
+        <div class="scp6" style="background: rgb(17, 17, 16); border: 1px solid rgb(34, 34, 32); border-radius: 8px; padding: 24px; display: flex; flex-direction: column; align-items: center; gap: 14px;"><div style="width: 52px; height: 52px; border-radius: 10px; overflow: hidden; position: relative;"><div style="position: absolute; inset: 0px;"><img decoding="async" width="208" height="208" src="../../uploads/31380dedfd6392.webp" alt="Adobe Illustrator logo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div></div><span style="font-size: 13px; font-weight: 500;"><span class="sc-interp">Illustrator</span></span></div>
+      
+        <div class="scp6" style="background: rgb(17, 17, 16); border: 1px solid rgb(34, 34, 32); border-radius: 8px; padding: 24px; display: flex; flex-direction: column; align-items: center; gap: 14px;"><div style="width: 52px; height: 52px; border-radius: 10px; overflow: hidden; position: relative;"><div style="position: absolute; inset: 0px;"><img decoding="async" width="208" height="208" src="../../uploads/d733816d3934db.webp" alt="Sketch logo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div></div><span style="font-size: 13px; font-weight: 500;"><span class="sc-interp">Sketch</span></span></div>
+      
+    </div>
+  </section>
+
+  <section class="dsk" data-screen-label="Featured work" style="background: rgb(244, 244, 241); color: rgb(10, 10, 10); padding: 100px 40px;">
+    <div style="max-width: 1200px; margin: 0px auto;">
+      <div style="display: grid; grid-template-columns: 260px 1fr; gap: 40px; margin-bottom: 50px;">
+        <div class="ds-pill" style="font-size: 12px; letter-spacing: 0.12em; color: rgb(107, 107, 102);">/ FEATURED WORK</div>
+        <div class="feat-head"><h2 style="margin: 0px; font-size: 30px; line-height: 1.35; letter-spacing: -0.01em; max-width: 560px; text-wrap: pretty;"><span class="sc-interp">Related product design case studies.</span></h2><p class="feat-sub" style="margin: 16px 0px 0px; max-width: 560px; font-size: 15px; line-height: 1.65; color: rgb(107, 107, 102);"><span class="sc-interp">KADUU and OnlyTrade show how I turn complex, data-heavy products into clear workspaces, the same skill AI products need when the output changes every time.</span></p></div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 0px;">
+        
+          <a href="../../work/kaduu/index.html" class="svc-case" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: stretch;">
+            <div class="rs-case" style="border-radius: 8px; overflow: hidden; position: relative; min-height: 380px;">
+              <div style="position: absolute; inset: 0px;"><img srcset="../../uploads/work-kaduu-cover-v2-w480.webp 480w, ../../uploads/work-kaduu-cover-v2-w800.webp 800w, ../../uploads/work-kaduu-cover-v2-w1200.webp 1200w, ../../uploads/work-kaduu-cover-v2.webp 1586w" sizes="(max-width: 600px) 79vw, 569px" decoding="async" width="1586" height="992" src="../../uploads/work-kaduu-cover-v2.webp" alt="KADUU dark web intelligence SaaS platform UI design" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+            </div>
+            <div style="background: rgb(255, 255, 255); border: 1px solid rgb(226, 226, 220); border-radius: 8px; padding: 36px; display: flex; flex-direction: column; justify-content: space-between; gap: 32px; color: rgb(10, 10, 10);">
+              <div>
+                <div style="font-size: 12px; color: rgb(107, 107, 102); margin-bottom: 14px;">✳&nbsp; <span class="sc-interp">SAAS &amp; B2B · WEB APP</span></div>
+                <h3 style="margin: 0px 0px 12px; font-size: 26px; font-weight: 500; letter-spacing: -0.01em;"><span class="sc-interp">KADUU — a dark web intelligence workspace</span></h3>
+                <p style="margin: 0px; font-size: 14px; line-height: 1.6; color: rgb(107, 107, 102);"><span class="sc-interp">A connected workspace for discovering digital exposure, understanding risk and keeping the next action in sight.</span></p>
+              </div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; border-top: 1px solid rgb(226, 226, 220); padding-top: 24px;">
+                <div><div style="font-size: 36px; font-weight: 500;"><span class="sc-interp">5</span></div><div style="font-size: 12px; color: rgb(107, 107, 102); margin-top: 4px;"><span class="sc-interp">Product areas designed</span></div></div>
+                <div><div style="font-size: 36px; font-weight: 500;"><span class="sc-interp">3</span></div><div style="font-size: 12px; color: rgb(107, 107, 102); margin-top: 4px;"><span class="sc-interp">Search modes in one place</span></div></div>
+              </div>
+            </div>
+          </a>
+          <a href="../../work/onlytrade/index.html" class="svc-case" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: stretch;">
+            <div class="rs-case" style="border-radius: 8px; overflow: hidden; position: relative; min-height: 380px;">
+              <div style="position: absolute; inset: 0px;"><img srcset="../../uploads/work-onlytrade-cover-v2-w480.webp 480w, ../../uploads/work-onlytrade-cover-v2-w800.webp 800w, ../../uploads/work-onlytrade-cover-v2-w1200.webp 1200w, ../../uploads/work-onlytrade-cover-v2.webp 1785w" sizes="(max-width: 600px) 79vw, 569px" decoding="async" width="1785" height="1108" src="../../uploads/work-onlytrade-cover-v2.webp" alt="OnlyTrade fintech trading web app UI design" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+            </div>
+            <div style="background: rgb(255, 255, 255); border: 1px solid rgb(226, 226, 220); border-radius: 8px; padding: 36px; display: flex; flex-direction: column; justify-content: space-between; gap: 32px; color: rgb(10, 10, 10);">
+              <div>
+                <div style="font-size: 12px; color: rgb(107, 107, 102); margin-bottom: 14px;">✳&nbsp; <span class="sc-interp">FINTECH · WEB APP</span></div>
+                <h3 style="margin: 0px 0px 12px; font-size: 26px; font-weight: 500; letter-spacing: -0.01em;"><span class="sc-interp">OnlyTrade — clarity in every trade</span></h3>
+                <p style="margin: 0px; font-size: 14px; line-height: 1.6; color: rgb(107, 107, 102);"><span class="sc-interp">A focused desktop trading workspace that keeps markets, orders and account context in the same view.</span></p>
+              </div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; border-top: 1px solid rgb(226, 226, 220); padding-top: 24px;">
+                <div><div style="font-size: 36px; font-weight: 500;"><span class="sc-interp">5</span></div><div style="font-size: 12px; color: rgb(107, 107, 102); margin-top: 4px;"><span class="sc-interp">Design phases</span></div></div>
+                <div><div style="font-size: 36px; font-weight: 500;"><span class="sc-interp">Desktop</span></div><div style="font-size: 12px; color: rgb(107, 107, 102); margin-top: 4px;"><span class="sc-interp">Trading workspace</span></div></div>
+              </div>
+            </div>
+          </a>
+        
+      </div>
+    </div>
+  </section>
+
+  <section class="dsi" data-screen-label="FAQs" style="padding: 120px 40px 40px; max-width: 820px; margin: 0px auto;">
+    <div class="ds-pill" style="font-size: 12px; letter-spacing: 0.12em; color: rgb(138, 138, 132); margin-bottom: 32px;">/ FAQS</div>
+    <div style="border-bottom: 1px solid rgb(34, 34, 32);">
+      
+        <div style="border-top: 1px solid rgb(34, 34, 32); padding: 20px 0px;"><div style="font-size: 16px; font-weight: 500; margin-bottom: 8px;"><span class="sc-interp">What is AI product design?</span></div><p style="margin: 0px; font-size: 14px; line-height: 1.7; color: rgb(154, 154, 148);"><span class="sc-interp">It's designing the experience layer around a model: how users express intent, how output is presented and verified, and how people stay in control. It covers interaction model, states, trust signals, and recovery paths.</span></p></div>
+      
+        <div style="border-top: 1px solid rgb(34, 34, 32); padding: 20px 0px;"><div style="font-size: 16px; font-weight: 500; margin-bottom: 8px;"><span class="sc-interp">Do you work with our ML or engineering team?</span></div><p style="margin: 0px; font-size: 14px; line-height: 1.7; color: rgb(154, 154, 148);"><span class="sc-interp">Yes. I work directly with ML and product engineers to understand model behavior, latency, and failure modes, and design within those realities.</span></p></div>
+      
+        <div style="border-top: 1px solid rgb(34, 34, 32); padding: 20px 0px;"><div style="font-size: 16px; font-weight: 500; margin-bottom: 8px;"><span class="sc-interp">Can you design an AI feature inside an existing product?</span></div><p style="margin: 0px; font-size: 14px; line-height: 1.7; color: rgb(154, 154, 148);"><span class="sc-interp">Often the better move. I design AI features that inherit your existing patterns so they feel native rather than bolted on.</span></p></div>
+      
+        <div style="border-top: 1px solid rgb(34, 34, 32); padding: 20px 0px;"><div style="font-size: 16px; font-weight: 500; margin-bottom: 8px;"><span class="sc-interp">How do you handle hallucinations in the UX?</span></div><p style="margin: 0px; font-size: 14px; line-height: 1.7; color: rgb(154, 154, 148);"><span class="sc-interp">With citations, confidence framing, editable output, and clear recovery paths — the interface should make verification easy rather than pretend the model is perfect.</span></p></div>
+      
+        <div style="border-top: 1px solid rgb(34, 34, 32); padding: 20px 0px;"><div style="font-size: 16px; font-weight: 500; margin-bottom: 8px;"><span class="sc-interp">How do you design for AI that can be wrong?</span></div><p style="margin: 0px; font-size: 14px; line-height: 1.7; color: rgb(154, 154, 148);"><span class="sc-interp">I design for uncertainty from the start: visible sources and confidence, easy ways to edit, retry or undo, a clear handoff to a human, and states for slow, partial and failed responses. That way users keep their trust even when the model makes a mistake.</span></p></div>
+      
+    </div>
+  </section>
+
+  <section class="dsc" data-screen-label="CTA" style="padding: 120px 40px; text-align: center;">
+    <h2 style="margin: 0px 0px 20px; font-size: 48px; letter-spacing: -0.02em; font-weight: 500;"><span class="sc-interp">Make your AI product usable.</span></h2>
+    <p style="margin: 0px auto 32px; max-width: 440px; font-size: 14px; line-height: 1.7; color: rgb(154, 154, 148);"><span class="sc-interp">Bring me your model or your prototype — I'll design the experience that gets it adopted.</span></p>
+    <div style="display: flex; gap: 12px; justify-content: center;">
+      <a href="../../contact/index.html" class="scp0" style="display: inline-block; background: rgb(242, 242, 239); color: rgb(10, 10, 10); padding: 14px 28px; border-radius: 4px; font-size: 14px; font-weight: 500;"><span class="sc-interp">Book an AI design call</span></a>
+      <a href="../index.html" class="scp1" style="display: inline-block; border: 1px solid rgb(58, 58, 54); padding: 14px 28px; border-radius: 4px; font-size: 14px; color: rgb(230, 230, 225);">View all services</a>
+    </div>
+  </section>
+
+  <div class="sc-host" data-sc-name="Footer"><footer style="border-top: 1px solid rgb(34, 34, 32); padding: 80px 40px 40px; background: rgb(10, 10, 10); color: rgb(242, 242, 239); font-family: Archivo, sans-serif;">
+  <div style="max-width: 1200px; margin: 0px auto;">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-bottom: 100px; font-size: 13px;">
+      <div><div style="color: rgb(138, 138, 132); margin-bottom: 16px;">SITEMAP</div><div style="display: flex; flex-direction: column; gap: 10px;"><a href="../../about/index.html" class="scp5" style="color: rgb(242, 242, 239); text-decoration: none;">About</a><a href="../index.html" class="scp5" style="color: rgb(242, 242, 239); text-decoration: none;">Services</a><a href="../../work/index.html" class="scp5" style="color: rgb(242, 242, 239); text-decoration: none;">Work</a><a href="../../insights/index.html" class="scp5" style="color: rgb(242, 242, 239); text-decoration: none;">Insights</a><a href="../../faq/index.html" class="scp5" style="color: rgb(242, 242, 239); text-decoration: none;">FAQ</a></div></div>
+      <div><div style="color: rgb(138, 138, 132); margin-bottom: 16px;">SERVICES</div><div style="display: flex; flex-direction: column; gap: 10px;"><a href="../index.html" class="scp5" style="color: rgb(242, 242, 239); text-decoration: none;">UI UX Design</a><a href="../index.html" class="scp5" style="color: rgb(242, 242, 239); text-decoration: none;">No Code Design</a><a href="../index.html" class="scp5" style="color: rgb(242, 242, 239); text-decoration: none;">AI Design</a></div></div>
+      <div><div style="color: rgb(138, 138, 132); margin-bottom: 16px;">CONTACT</div><div style="display: flex; flex-direction: column; gap: 10px;"><a href="mailto:babar.13@outlook.com" class="scp5" style="color: rgb(242, 242, 239); text-decoration: none;">babar.13@outlook.com</a><a href="tel:+923070460959" class="scp5" style="color: rgb(242, 242, 239); text-decoration: none;">+92 307 0460959</a></div></div>
+      <div><div style="color: rgb(138, 138, 132); margin-bottom: 16px;">AVAILABILITY</div><span style="color: rgb(154, 154, 148); line-height: 1.6;">Available for new projects.</span></div>
+    </div>
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; border-top: 1px solid rgb(34, 34, 32); padding-top: 32px;">
+      <div style="font-size: 64px; font-weight: 600; letter-spacing: -0.03em;"><svg class="brand-mark" viewBox="0 0 1382 247" fill="currentColor" role="img" aria-label="Babar" style="display:block;height:clamp(30px,7vw,52px);width:auto;max-width:100%"><path d="M581.416 0.457264L677.054 0.360264C694.234 0.320264 715.364 -0.754738 732.244 1.21126C794.094 8.41526 820.944 82.1003 768.314 122.05C769.224 122.798 770.124 123.555 771.024 124.322C800.794 149.858 805.144 190.596 779.454 220.762C767.094 235.242 745.643 245.335 726.604 245.628C683.594 246.236 640.534 245.253 597.497 245.983C589.92 246.112 577.606 246.731 571.649 241.309C569.04 238.888 567.513 235.52 567.414 231.962C567.293 227.914 568.843 223.994 571.699 221.123C578.679 214.053 606.33 216.314 616.844 216.328L687.144 216.431C714.114 216.695 747.064 222.309 760.314 192.419C764.604 182.804 764.844 171.871 761.004 162.071C757.294 152.678 750.014 144.132 740.564 140.2C735.624 138.191 730.413 136.918 725.104 136.421C715.393 135.42 695.454 135.99 685.164 136.008L608.276 136.314C599.133 136.358 589.599 136.936 580.608 135.342C571.195 133.673 563.555 125.875 568.69 116.2C570.604 112.543 573.926 109.824 577.889 108.671C588.001 105.786 601.121 107.172 611.614 107.201C633.714 107.261 722.724 109.943 736.794 105.297C747.384 101.796 755.684 94.1083 760.564 84.1253C764.684 75.7123 764.754 65.7833 761.734 57.0023C758.034 46.2463 748.754 36.4103 738.034 32.4243C723.574 27.0463 628.554 29.3902 606.197 29.5412C596.64 29.6062 583.393 31.7823 574.667 27.3593C571.392 25.6993 568.658 23.1353 567.6 19.5353C566.493 15.7703 567.531 11.6393 569.492 8.33927C572.324 3.57627 576.348 1.84126 581.416 0.457264Z"/><path d="M13.3817 0.508356L105.211 0.400354C121.972 0.338354 142.425 -0.791641 158.749 1.04536C220.76 8.02236 246.304 81.8214 194.926 122.262C196.656 123.571 198.35 124.926 200.007 126.325C212.186 136.693 221.597 156.13 222.421 172.079C224.415 210.708 194.129 243.811 155.447 245.486C132.999 246.457 110.428 245.44 87.9527 245.681C63.7927 245.527 39.4497 246.427 15.3217 245.667C11.7157 245.553 7.09467 243.838 4.41967 241.454C1.65367 238.982 0.0526629 235.462 0.00866286 231.752C-0.0663371 227.817 1.44167 224.017 4.19467 221.204C11.2447 214.122 37.1567 216.291 47.4297 216.31L114.394 216.481C142.018 216.753 175.688 222.798 188.181 191.324C192.254 181.272 192.101 170.002 187.757 160.064C183.536 150.418 176.027 143.012 166.171 139.303C148.878 132.794 63.2567 136.156 37.9157 136.307C29.0817 136.36 16.2557 137.911 8.04467 134.482C4.94567 133.188 2.33766 130.526 1.06866 127.424C-0.34834 123.964 -0.349342 119.405 1.25366 116C2.93366 112.433 6.47269 109.725 10.2277 108.667C20.1117 105.883 32.4957 107.213 42.7427 107.238C64.7437 107.291 151.908 109.983 165.356 105.285C175.021 101.865 182.897 94.6904 187.2 85.3854C191.659 75.9184 192.149 65.0613 188.561 55.2313C184.806 44.8653 176.708 36.6574 166.393 32.7624C141.277 23.2624 59.6137 32.8484 28.1007 29.8204C15.5367 28.6124 -6.38933 31.1954 1.77667 8.73837C3.59467 3.74137 8.91568 1.87736 13.3817 0.508356Z"/><path d="M1156.07 0.557381C1198.32 -0.191619 1241.65 1.13737 1283.98 0.553368C1311.05 0.180368 1335.3 4.74038 1355.18 24.9234C1367.06 36.8014 1373.66 52.9474 1373.52 69.7404C1373.24 103.177 1344.59 129.057 1313.2 134.538C1303.35 136.259 1295.87 136.249 1285.97 136.131C1316.54 173.222 1350.94 209.057 1381.56 245.954C1344.43 246.112 1342.75 249.492 1318.62 221.634L1300.9 201.556L1242 136.137C1227.69 136.109 1159.88 138.276 1150.88 134.674C1147.42 133.291 1144.32 130.949 1142.86 127.43C1141.52 124.183 1141.12 119.92 1142.59 116.651C1144.84 111.66 1150.38 109.278 1155.43 108.182C1165.5 105.993 1177.09 107.226 1187.4 107.262C1211.51 107.346 1296.67 110.365 1313.12 104.457C1323.03 100.898 1332.24 93.9254 1336.77 84.2274C1341.22 74.6974 1340.72 64.7724 1337.13 55.0744C1332.83 43.4554 1321.99 35.5684 1310.44 32.0024C1292.44 26.4444 1206.13 29.6594 1182.57 29.7684C1172.21 29.8164 1158.73 31.4934 1149.2 26.9074C1146.03 25.3804 1143.07 22.8424 1142 19.3764C1140.97 16.0024 1141.67 11.9764 1143.31 8.90937C1146.18 3.53337 1150.61 2.10938 1156.07 0.557381Z"/><path d="M960.984 6.22143C981.184 5.45743 988.704 25.9574 998.274 41.3694C1007.22 55.8204 1016.24 70.2244 1025.34 84.5824L1126.54 245.908C1090.75 245.106 1093.95 251.363 1074.21 220.434L1049.89 182.187L965.754 49.6004L964.814 48.7864C959.684 50.7384 853.554 228.26 840.904 241.122C833.844 248.308 810.503 245.918 802.833 245.748C836.853 193.27 870.284 140.415 903.124 87.1934L934.174 37.1214C942.234 24.1824 946.534 12.1244 960.984 6.22143Z"/><path d="M384.909 6.23126C391.396 6.03226 398.185 6.25526 402.639 11.7003C410.269 21.0293 416.445 32.3413 422.663 42.6823C431.901 58.1273 441.218 73.5242 450.614 88.8732L547.453 245.934C537.948 245.563 515.011 248.684 508.985 240.171C495.567 221.214 483.486 200.596 471.199 180.814L389.449 48.6873C385.901 51.3553 371.58 75.2003 368.082 80.7953L298.069 191.983C288.394 207.235 276.066 228.418 264.678 241.865C259.768 247.662 235.919 245.97 227.347 245.791C263.049 194.071 299.637 133.253 333.15 79.3213L359.776 35.9743C367.392 23.5513 371.308 12.2743 384.909 6.23126Z"/></svg></div>
+      <div style="font-size: 12px; color: rgb(138, 138, 132);">© 2026 Muhammad Babar. All rights reserved.</div>
+    </div>
+  </div></footer></div></div></div></div></div>
+
+<script src="../../assets/site.js?v=0d09c7f2" defer></script><script src="../../assets/motion.js?v=d8ab7638" defer></script></body></html>
