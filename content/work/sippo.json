@@ -32,18 +32,65 @@
     }
   ],
   "stats": [],
-  "sections": [],
+  "sections": [
+    {
+      "label": "The idea",
+      "heading": "Bubble tea that doesn’t take itself too seriously",
+      "body": "SIPPO is a bubble tea brand made for a young, social crowd. The identity leans into fun: a chunky pixel wordmark that reads like a game title, a cheeky mascot, and two loud colours set against black and a warm off-white.\n\nThe aim was a small system that is simple enough to print on a cup sleeve and strong enough to carry a whole shopfront.",
+      "images": []
+    },
+    {
+      "label": "Wordmark",
+      "heading": "A pixel wordmark that reads like a game title",
+      "body": "SIPPO is drawn on a square pixel grid, with stepped curves on the S and a slanted O that gives the name a little movement. The heavy strokes stay readable when the logo is small on a cup and still feel crisp metres wide on a window.\n\nSmall labels such as BUBBLE TEA are set in a widely spaced monospace that sits under the logo without competing with it.",
+      "images": []
+    },
+    {
+      "label": "Colour",
+      "heading": "Two loud colours, two quiet ones",
+      "body": "Lime and pink do the shouting. Ink black carries the wordmark and type, and a warm off-white gives the mascot drawings room to breathe.",
+      "images": [],
+      "swatches": [
+        {
+          "name": "Acid lime",
+          "hex": "#B9F500",
+          "note": "Backgrounds, cup sleeves, window graphic"
+        },
+        {
+          "name": "Pink",
+          "hex": "#E67BDD",
+          "note": "Mascot, carrier, signage"
+        },
+        {
+          "name": "Ink",
+          "hex": "#171717",
+          "note": "Wordmark, type, outlines"
+        },
+        {
+          "name": "Off-white",
+          "hex": "#F6F5EE",
+          "note": "Mascot sheets and quiet backgrounds"
+        }
+      ]
+    },
+    {
+      "label": "Mascot & touchpoints",
+      "heading": "One character, everywhere the brand goes",
+      "body": "The mascot is a round pixel character drawn on the same grid as the wordmark, in three moods: a wave hello, a wink, and a cool pose with sunglasses and a lime burst. Each works on its own, so it can sit on a cup, a T-shirt or a window without the logo next to it.\n\nThe same few pieces carry the brand across cup sleeves that alternate lime and pink, a pink two-cup carrier, black and white T-shirts, a pink hanging sign and a lime window graphic.",
+      "images": []
+    }
+  ],
   "draft": false,
   "gallery": [
     {
       "images": [
         {
-          "image": "/uploads/cms/sippo-detail-mascot-pink.webp",
-          "alt": "Pink SIPPO mascot waving on an acid lime background"
+          "image": "/uploads/cms/sippo-cups.webp",
+          "alt": "Two SIPPO bubble tea cups with pink and lime sleeves on a café table next to a croissant and sunglasses"
         },
         {
-          "image": "/uploads/cms/sippo-detail-pose-cool.webp",
-          "alt": "SIPPO mascot in sunglasses with a lime starburst"
+          "image": "/uploads/cms/sippo-carrier-tshirt.webp",
+          "alt": "A man in a black SIPPO T-shirt carrying a pink SIPPO cup carrier with two lime cups"
         }
       ]
     },
@@ -58,80 +105,12 @@
     {
       "images": [
         {
-          "image": "/uploads/cms/sippo-detail-sleeves.webp",
-          "alt": "Close-up of pink and lime SIPPO cup sleeves with the wordmark and BUBBLE TEA label"
-        },
-        {
-          "image": "/uploads/cms/sippo-detail-carrier.webp",
-          "alt": "Pink SIPPO carrier holding two lime cups printed with the mascot"
-        }
-      ]
-    },
-    {
-      "images": [
-        {
-          "image": "/uploads/cms/sippo-cups.webp",
-          "alt": "Two SIPPO bubble tea cups with pink and lime sleeves on a café table next to a croissant and sunglasses"
-        }
-      ]
-    },
-    {
-      "images": [
-        {
-          "image": "/uploads/cms/sippo-detail-tee-black.webp",
-          "alt": "Black T-shirt with the SIPPO wordmark in white"
-        },
-        {
-          "image": "/uploads/cms/sippo-detail-tee-mascot.webp",
-          "alt": "White T-shirt with the SIPPO wordmark and pink mascot"
-        }
-      ]
-    },
-    {
-      "images": [
-        {
-          "image": "/uploads/cms/sippo-carrier-tshirt.webp",
-          "alt": "A man in a black SIPPO T-shirt carrying a pink SIPPO cup carrier with two lime cups"
-        }
-      ]
-    },
-    {
-      "images": [
-        {
-          "image": "/uploads/cms/sippo-detail-sign.webp",
-          "alt": "Pink SIPPO hanging sign on a shop wall"
-        },
-        {
-          "image": "/uploads/cms/sippo-detail-pose-wave.webp",
-          "alt": "SIPPO mascot waving hello"
-        }
-      ]
-    },
-    {
-      "images": [
-        {
           "image": "/uploads/cms/sippo-merch-friends.webp",
           "alt": "Two friends laughing at a café table in SIPPO T-shirts, one with the pink mascot, with lime and pink SIPPO cups"
-        }
-      ]
-    },
-    {
-      "images": [
-        {
-          "image": "/uploads/cms/sippo-detail-sleeve-lime.webp",
-          "alt": "Close-up of a lime SIPPO cup sleeve with the pixel wordmark and BUBBLE TEA label"
         },
         {
-          "image": "/uploads/cms/sippo-detail-pose-wink.webp",
-          "alt": "SIPPO mascot winking mid-step"
-        }
-      ]
-    },
-    {
-      "images": [
-        {
           "image": "/uploads/cms/sippo-storefront.webp",
-          "alt": "SIPPO shopfront with a lime pixel wordmark and waving pink mascot on the window"
+          "alt": "SIPPO shopfront with a lime pixel wordmark and waving pink mascot on the window and a pink hanging sign"
         }
       ]
     }

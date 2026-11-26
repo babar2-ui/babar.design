@@ -1655,3 +1655,10 @@ html body.rx .csx-gallery{padding-top:12px}
 .csx-gallery .csx-g2 .csx-fig img{aspect-ratio:1/1;object-fit:cover;height:100%}
 .csx-gallery .csx-g1 .csx-fig img{aspect-ratio:4/3;object-fit:cover;height:100%}
 @media (max-width:640px){.csx-rows{gap:8px}.csx-gallery .csx-g2{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.csx-gallery .csx-fig{border-radius:8px}}
+/* v5.11.1 gallery pairs keep the photos' own 4:3 shape (nothing cut off) */
+.csx-gallery .csx-g2 .csx-fig img{aspect-ratio:4/3}
+html body.rx .csx-gallery{padding-top:110px}
+@media (max-width:640px){html body.rx .csx-gallery{padding-top:72px}.csx-gallery .csx-g2{grid-template-columns:1fr}}
+/* swatch chips keep an outline so Ink shows on dark sections and Off-white on light ones */
+.csx-chip{box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+.axs-dark .csx-chip{box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}

@@ -369,14 +369,6 @@ def case(tpl, d, cases, old_cases, ctx):
         out.append(f'<section class="axs axs-dark csx-res" data-screen-label="Results"><div class="axs-in axs-stack">'
                    f'<div class="axs-hd"><span class="pr-tag">/ Results</span>{lead}</div><dl class="axs-scards csx-n{len(stats)}">{st}</dl></div></section>')
     dark = bool(stats)
-    rows = [[x for x in (r.get("images") or []) if x.get("image")] for r in (d.get("gallery") or [])]
-    rows = [r for r in rows if r]
-    if rows:  # image-only gallery: rows of 1, 2 or 3 images, no text
-        def fig(x):
-            return (f'<figure class="csx-fig">{ctx.img(x["image"], x.get("alt") or "", p, extra=LAZY)}</figure>')
-        out.append('<section class="axs axs-light csx-gallery" data-screen-label="Gallery"><div class="axs-in csx-rows">'
-                   + "".join(f'<div class="csx-gal csx-g{min(len(r), 3)}">' + "".join(fig(x) for x in r) + "</div>" for r in rows)
-                   + "</div></section>")
     for i, s in enumerate(d.get("sections") or []):
         heading, txt = str(s.get("heading") or "").strip(), str(s.get("body") or "").strip()
         imgs = [x for x in (s.get("images") or []) if x.get("image")]
@@ -412,6 +404,14 @@ def case(tpl, d, cases, old_cases, ctx):
                    + (f'<h2 class="csx-h">{esc(heading)}</h2>' if heading else "")
                    + (f'<div class="csx-prose">{prose}</div>' if txt else "") + "</div></div>")
         out.append(f'<section class="axs {"axs-dark" if dark else "axs-light"} csx-sec" data-screen-label="{esc(label)}"><div class="axs-in axs-stack">{top}{extra}{gal}</div></section>')
+    rows = [[x for x in (r.get("images") or []) if x.get("image")] for r in (d.get("gallery") or [])]
+    rows = [r for r in rows if r]
+    if rows:  # image-only gallery: rows of 1, 2 or 3 images, no text
+        def fig(x):
+            return (f'<figure class="csx-fig">{ctx.img(x["image"], x.get("alt") or "", p, extra=LAZY)}</figure>')
+        out.append('<section class="axs axs-light csx-gallery" data-screen-label="Gallery"><div class="axs-in csx-rows">'
+                   + "".join(f'<div class="csx-gal csx-g{min(len(r), 3)}">' + "".join(fig(x) for x in r) + "</div>" for r in rows)
+                   + "</div></section>")
     # next case study: the next one added in the admin, then the existing case studies
     pool = cases + [c for c in old_cases if c["slug"] != d["slug"]]
     if len(pool) > 1:
