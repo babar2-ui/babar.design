@@ -71,6 +71,7 @@ def main():
 
     run(SCRIPTS / "rx.py", STAGE, LOCAL, ROOT / "site" / "studio" / "rx.css")
     shutil.copy2(ROOT / "site" / "studio" / "Start-Preview.bat", LOCAL / "Start-Preview.bat")
+    run(SCRIPTS / "nodash.py", LOCAL)
     run(SCRIPTS / "mkdist.py", LOCAL, DIST, datetime.date.today().isoformat())
     (DIST / "Start-Preview.bat").unlink(missing_ok=True)
     (DIST / "netlify.toml").unlink(missing_ok=True)  # the repository's own netlify.toml is the one Netlify reads
