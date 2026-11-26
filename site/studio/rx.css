@@ -1616,3 +1616,8 @@ html body.rx section.stx[data-screen-label="Statement"]{background:linear-gradie
 html body.rx section.stx[data-screen-label="Statement"] p.stx-p{max-width:30ch!important;margin:0 auto!important;font-size:clamp(26px,2.8vw,40px)!important;color:#fff!important}
 @media (max-width:1099px){html body.rx section.stx[data-screen-label="Statement"]{padding:96px 24px 150px!important}}
 @media (max-width:640px){html body.rx section.stx[data-screen-label="Statement"]{padding:72px 16px 110px!important}html body.rx section.stx[data-screen-label="Statement"] p.stx-p{font-size:24px!important}}
+/* v5.9.1 outlined wordmark removed from the Statement band (owner's request); even padding without it */
+html body.rx .stx-mark{display:none!important}
+html body.rx section.stx[data-screen-label="Statement"]{padding:120px 48px!important}
+@media (max-width:1099px){html body.rx section.stx[data-screen-label="Statement"]{padding:96px 24px!important}}
+@media (max-width:640px){html body.rx section.stx[data-screen-label="Statement"]{padding:72px 16px!important}}
