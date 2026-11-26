@@ -1534,3 +1534,19 @@ html body.rx .inx-focus + .axs-light{padding-top:72px}
   html body.rx .rx-nav .rx-up:hover .rx-up-cta{background:#108a00}
 }
 @media (min-width:1100px) and (max-height:760px){html body.rx .rx-nav .rx-up{display:none}}
+
+/* v5.6.1 Upwork card more prominent: dark card like the profile card above, brand-green accents, bigger numbers */
+@media (min-width:1100px){
+  html body.rx .rx-nav .rx-up{gap:16px;padding:18px 18px 16px;background:#121212;border:1px solid #121212;border-top:3px solid #14a800;color:#f4f4f1!important;position:relative;overflow:hidden}
+  html body.rx .rx-nav .rx-up::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 70% at 100% 0%,rgba(20,168,0,.22),transparent 60%);pointer-events:none}
+  html body.rx .rx-nav .rx-up > *{position:relative}
+  html body.rx .rx-nav .rx-up:hover{border-color:#14a800}
+  .rx-up-brand{font-size:17px;color:#fff}
+  .rx-up-brand svg{width:26px;height:26px}
+  .rx-up-brand svg path{fill:#14a800}
+  .rx-up-badge{background:#14a800;color:#fff;font-weight:500}
+  .rx-up-stats{border-color:rgba(255,255,255,.14);padding:14px 0}
+  .rx-up-stats b{font-size:24px;color:#fff}
+  .rx-up-stats i{color:#a4a49e}
+  .rx-up-cta{padding:12px 14px;font-size:14.5px;font-weight:600}
+}
