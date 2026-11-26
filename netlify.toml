@@ -31,6 +31,16 @@
     Cache-Control = "public, max-age=0, must-revalidate"
 
 [[redirects]]
+  from = "/work/kaduu/*"
+  to = "/work/sippo/"
+  status = 301
+
+[[redirects]]
+  from = "/work/kaduu"
+  to = "/work/sippo/"
+  status = 301
+
+[[redirects]]
   from = "/work/finpay"
   to = "/work/"
   status = 301
