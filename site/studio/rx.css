@@ -1647,3 +1647,11 @@ html body.rx .csx-items h3.axs-ct{font-size:21px!important;text-transform:none;l
 @media (max-width:1099px){.csx-swatches{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:640px){.csx-swatches{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.csx-sn{font-size:16px}.csx-sn,.csx-hex,.csx-snote{padding:0 12px}}
 .csx-gal .csx-fig[style*="max-width"]{justify-self:center;width:100%}
+
+/* v5.11 image-only case-study gallery: rows of 2 and 1 */
+html body.rx .csx-gallery{padding-top:12px}
+.csx-rows{display:flex;flex-direction:column;gap:12px}
+.csx-gallery .csx-fig{border-radius:12px}
+.csx-gallery .csx-g2 .csx-fig img{aspect-ratio:1/1;object-fit:cover;height:100%}
+.csx-gallery .csx-g1 .csx-fig img{aspect-ratio:4/3;object-fit:cover;height:100%}
+@media (max-width:640px){.csx-rows{gap:8px}.csx-gallery .csx-g2{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.csx-gallery .csx-fig{border-radius:8px}}
