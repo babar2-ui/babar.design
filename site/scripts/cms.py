@@ -372,15 +372,30 @@ def case(tpl, d, cases, old_cases, ctx):
     for i, s in enumerate(d.get("sections") or []):
         heading, txt = str(s.get("heading") or "").strip(), str(s.get("body") or "").strip()
         imgs = [x for x in (s.get("images") or []) if x.get("image")]
-        if not (heading or txt or imgs):
+        if not (heading or txt or imgs or s.get("swatches") or s.get("items")):
             continue
         dark = not dark
         label = str(s.get("label") or "").strip() or f"{i + 1:02d}"
         prose = md_html(txt, ctx, p)
         prose = re.sub(r"<p>\s*(<img [^>]*>)\s*</p>", lambda m: figure(m.group(1), ctx, "csx-fig"), prose)
+        extra = ""
+        sw = [x for x in (s.get("swatches") or []) if re.fullmatch(r"#[0-9A-Fa-f]{6}", str(x.get("hex") or ""))]
+        if sw:  # colour palette
+            extra += '<div class="csx-swatches">' + "".join(
+                f'<div class="csx-sw" style="--c:{x["hex"]}"><span class="csx-chip"></span><span class="csx-sn">{esc(x.get("name"))}</span>'
+                f'<code class="csx-hex">{esc(x["hex"].upper())}</code>' + (f'<span class="csx-snote">{esc(x["note"])}</span>' if x.get("note") else "") + "</div>"
+                for x in sw) + "</div>"
+        it = [x for x in (s.get("items") or []) if str(x.get("title") or "").strip()]
+        if it:  # cards
+            extra += f'<div class="axs-cards axs-c{min(len(it), 3) if len(it) % 3 == 0 or len(it) > 4 else min(len(it), 4)} csx-items">' + "".join(
+                f'<article class="axs-card"><span class="axs-no" aria-hidden="true">/{k + 1:02d}</span><h3 class="axs-ct">{esc(x["title"])}</h3>'
+                + (f'<p class="axs-cd">{esc(x.get("text"))}</p>' if x.get("text") else "") + "</article>" for k, x in enumerate(it)) + "</div>"
         gal = ""
         if imgs:
-            figs = "".join(f'<figure class="csx-fig">{ctx.img(x["image"], x.get("alt") or "", p, extra=LAZY)}'
+            def fw(x):  # small detail crops are not blown up past ~1.5x their own width
+                f = ctx.local(x["image"]); wh = imgsize(f) if f is not None and f.exists() else None
+                return f' style="max-width:{int(wh[0] * 1.1)}px"' if wh and wh[0] < 1000 else ""
+            figs = "".join(f'<figure class="csx-fig"{fw(x)}>{ctx.img(x["image"], x.get("alt") or "", p, extra=LAZY)}'
                            + (f'<figcaption>{esc(x["caption"])}</figcaption>' if x.get("caption") else "") + "</figure>" for x in imgs)
             gal = f'<div class="csx-gal csx-g{min(len(imgs), 3)}">{figs}</div>'
         top = ""
@@ -388,7 +403,15 @@ def case(tpl, d, cases, old_cases, ctx):
             top = (f'<div class="csx-row"><span class="pr-tag">/ {esc(label)}</span><div class="csx-main">'
                    + (f'<h2 class="csx-h">{esc(heading)}</h2>' if heading else "")
                    + (f'<div class="csx-prose">{prose}</div>' if txt else "") + "</div></div>")
-        out.append(f'<section class="axs {"axs-dark" if dark else "axs-light"} csx-sec" data-screen-label="{esc(label)}"><div class="axs-in axs-stack">{top}{gal}</div></section>')
+        out.append(f'<section class="axs {"axs-dark" if dark else "axs-light"} csx-sec" data-screen-label="{esc(label)}"><div class="axs-in axs-stack">{top}{extra}{gal}</div></section>')
+    rows = [[x for x in (r.get("images") or []) if x.get("image")] for r in (d.get("gallery") or [])]
+    rows = [r for r in rows if r]
+    if rows:  # image-only gallery: rows of 1, 2 or 3 images, no text
+        def fig(x):
+            return (f'<figure class="csx-fig">{ctx.img(x["image"], x.get("alt") or "", p, extra=LAZY)}</figure>')
+        out.append('<section class="axs axs-light csx-gallery" data-screen-label="Gallery"><div class="axs-in csx-rows">'
+                   + "".join(f'<div class="csx-gal csx-g{min(len(r), 3)}">' + "".join(fig(x) for x in r) + "</div>" for r in rows)
+                   + "</div></section>")
     # next case study: the next one added in the admin, then the existing case studies
     pool = cases + [c for c in old_cases if c["slug"] != d["slug"]]
     if len(pool) > 1:
@@ -435,6 +458,56 @@ def work_card(d, ctx):
             f'            <div style="display: flex; gap: 40px;">{st}</div>\n            <span style="font-size: 20px;">→</span>\n          </div>\n        </div>\n      </a>')
 
 
+# ---------------------------------------------------------------- replacing an original case study
+def replace_case(stage, old, d, ctx):
+    """An admin case study with "replaces": "<slug>" takes that original case study's place:
+    its cards on the homepage and Work page show the new project in the same position, its cards
+    on service pages are removed (they were chosen for that service), and its page is dropped
+    (the old address redirects to the new one: netlify.toml / vercel.json)."""
+    new_title, new_sum, new_cat = esc(d["title"]), esc(d.get("summary") or d["description"]), esc(case_category(d))
+    stats = [s for s in (d.get("card_stats") or d.get("stats") or []) if str(s.get("value") or "").strip()][:2]
+    card = re.compile(r'<a href="([^"]*)' + re.escape(old) + r'/index\.html"([^>]*)>(.*?)</a>', re.S)
+    for f in stage.rglob("*.html"):
+        if f.parent.name == old and f.parent.parent.name == "work":
+            continue
+        h = f.read_text(encoding="utf-8")
+        if f"{old}/index.html" not in h:
+            continue
+        rel = f.parent.relative_to(stage)
+        p = "../" * (0 if str(rel) == "." else len(rel.parts))
+
+        def swap(m):
+            pre, attrs, body = m.groups()
+            if 'class="svc-case"' in attrs:  # service page "Featured work": drop it
+                return ""
+            if 'class="rs-case"' not in body:  # a plain text link: just point it at the new page
+                return f'<a href="{pre}{d["slug"]}/index.html"{attrs}>{body}</a>'
+            img = re.search(r"<img [^>]*>", body).group(0)
+            style = re.search(r' style="[^"]*"', img)
+            new_img = ctx.img(d["cover"], d.get("cover_alt") or "", p, extra=' decoding="async" loading="lazy"',
+                              style=style.group(0)[8:-1] if style else "")
+            body = body.replace(img, new_img, 1)
+            body = re.sub(r'(margin-bottom: 14px;">.*?<span class="sc-interp">).*?(</span>)', lambda x: x.group(1) + new_cat + x.group(2), body, count=1, flags=re.S)
+            body = re.sub(r'(<h3[^>]*><span class="sc-interp">).*?(</span></h3>)', lambda x: x.group(1) + new_title + x.group(2), body, count=1, flags=re.S)
+            body = re.sub(r'(<p[^>]*><span class="sc-interp">).*?(</span></p>)', lambda x: x.group(1) + new_sum + x.group(2), body, count=1, flags=re.S)
+            olds = list(re.finditer(r'(font-size: 36px;[^>]*><span class="sc-interp">).*?(</span></div><div[^>]*><span class="sc-interp">).*?(</span>)', body))
+            for i, x in reversed(list(enumerate(olds))):
+                if i < len(stats):
+                    body = body[:x.start()] + x.group(1) + esc(stats[i]["value"]) + x.group(2) + esc(stats[i].get("label")) + x.group(3) + body[x.end():]
+            return f'<a href="{pre}{d["slug"]}/index.html"{attrs}>{body}</a>'
+
+        h2 = card.sub(swap, h)
+        # any other link to the old page (e.g. "Next case study: KADUU" with attributes in another order)
+        h2 = re.sub(r'<a\b([^>]*?)href="([^"]*)' + re.escape(old) + r'/index\.html"([^>]*)>(.*?)</a>',
+                    lambda m: (f'<a{m.group(1)}href="{m.group(2)}{d["slug"]}/index.html"{m.group(3)}>'
+                               + re.sub(re.escape(old), esc(d.get("short_title") or d["title"]), m.group(4), flags=re.I) + "</a>"), h2, flags=re.S)
+        if h2 != h:
+            f.write_text(h2, encoding="utf-8")
+    page = stage / "work" / old
+    if page.exists():
+        shutil.rmtree(page)
+
+
 # ---------------------------------------------------------------- entry point
 def place(stage, content):
     stage, content = pathlib.Path(stage), pathlib.Path(content)
@@ -472,6 +545,11 @@ def place(stage, content):
         lst_f.write_text(lst, encoding="utf-8")
 
     cases = load(content / "work")
+    for d in cases:
+        if d.get("replaces"):
+            if not d.get("cover"):
+                raise ContentError(f"work/{d['slug']}: the cover image is missing")
+            replace_case(stage, d["replaces"], d, ctx)
     wl_f = stage / "work" / "index.html"
     wl = wl_f.read_text(encoding="utf-8")
     old_cases = existing_cases(wl)
@@ -492,6 +570,6 @@ def place(stage, content):
     if cases:
         k = '<h2 class="ds-sr">Case studies</h2>'
         a = wl.index(k) + len(k)
-        wl = wl[:a] + "".join(work_card(d, ctx) for d in cases) + wl[a:]
+        wl = wl[:a] + "".join(work_card(d, ctx) for d in cases if not d.get("replaces")) + wl[a:]
         wl_f.write_text(wl, encoding="utf-8")
     return made

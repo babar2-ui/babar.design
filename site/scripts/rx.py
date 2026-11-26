@@ -38,6 +38,26 @@ def card(p):
             f'<a class="rx-card-n" href="{p}about/index.html">Muhammad Babar</a>'
             f'<a class="rx-card-cta" href="{p}contact/index.html"><i aria-hidden="true">+</i>Contact me</a></div></div>')
 
+def upwork_card():
+    """Sidebar card with the Upwork profile numbers (content/upwork.json, editable in the admin).
+    Replaces the phone image under the contact details; falls back to that image if switched off."""
+    import json, os
+    f = os.environ.get("RX_UPWORK")
+    if not f or not os.path.exists(f):
+        return None
+    d = json.loads(open(f, encoding="utf-8").read())
+    if not d.get("show"):
+        return None
+    import html as _h
+    e = lambda k: _h.escape(str(d.get(k) or ""))
+    logo = json.loads((pathlib.Path(__file__).parent / "social_icons.json").read_text())["Upwork"]
+    stats = "".join(f'<span><b>{e(k)}</b><i>{lab}</i></span>' for k, lab in (("job_success", "Job success"), ("jobs", "Jobs"), ("earned", "Earned")) if d.get(k))
+    return (f'<a class="rx-up" href="{e("profile_url")}" target="_blank" rel="noopener">'
+            f'<span class="rx-up-top"><span class="rx-up-brand">{logo}<span>Upwork</span></span>'
+            + (f'<span class="rx-up-badge">{e("badge")}</span>' if d.get("badge") else "")
+            + f'</span><span class="rx-up-stats">{stats}</span><span class="rx-up-cta">{e("button") or "Hire me on Upwork"}</span></a>')
+
+
 def reel(p):
     return (f'<a class="rx-reel" href="{p}work/index.html"><img src="{p}uploads/work-zippy-cover-w480.webp" '
             f'alt="Zippy fintech wallet app UI design" width="480" height="300" loading="lazy" decoding="async"></a>')
@@ -126,7 +146,7 @@ for f in sorted(OUT.rglob("*.html")):
     sys.path.insert(0, str(pathlib.Path(__file__).parent)); import navsub
     h = navsub.place(h, rel.parts if depth else ())
     nav_end = h.index("</nav>", hs) + len("</nav>")
-    h = h[:nav_end] + FOOT + reel(p) + "</div>" + h[nav_end:]
+    h = h[:nav_end] + FOOT + (upwork_card() or reel(p)) + "</div>" + h[nav_end:]
     # heroes: full-bleed colour panel
     if depth == 0:
         sys.path.insert(0, str(pathlib.Path(__file__).parent)); import about2
@@ -164,6 +184,8 @@ for f in sorted(OUT.rglob("*.html")):
         h = blog2.place(h, p)
         import faq2
         h = faq2.place(h, p)
+        import statement2
+        h = statement2.place(h, p, SRC / "index.html")
         hero = h.index('<section id="top" class="hero-fit"')
         hero_end = h.index("</section>", hero)
         socials = re.findall(r'<a href="https://(?:www\.)?(?:linkedin|dribbble|behance|instagram|upwork)[^"]*" target="_blank" aria-label="[^"]+"[^>]*>.*?</a>', h, flags=re.S)[:5]
@@ -199,8 +221,11 @@ for f in sorted(OUT.rglob("*.html")):
             sys.path.insert(0, str(pathlib.Path(__file__).parent)); import article_page
             h = article_page.place(h)
         if len(rel.parts) == 2 and rel.parts[0] == "services":
-            sys.path.insert(0, str(pathlib.Path(__file__).parent)); import service_detail
-            h = service_detail.place(h)
+            if 'data-screen-label="Cover"' in h:  # one of the 13 original service pages
+                sys.path.insert(0, str(pathlib.Path(__file__).parent)); import service_detail
+                h = service_detail.place(h)
+            else:  # added later (extra_services.py): already built from the same blocks
+                h = h.replace('<body class="ds rx">', '<body class="ds rx rx-svd">', 1)
     # article cards: "Read article" moves onto the image as a button shown on hover (image blurs)
     RA = '<span style="font-size: 13px; color: rgb(138, 138, 132);">Read article →</span>'
     RBTN = ('<span class="rdx-ov"><span class="rdx-btn">Read article <svg viewBox="0 0 24 24" width="14" height="14" fill="none" '

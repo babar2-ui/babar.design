@@ -238,3 +238,56 @@ collections:
           - { name: question, label: Question, widget: string }
           - { name: answer, label: Answer, widget: richtext, required: false, buttons: [bold, italic, link, bulleted-list] }
       - { name: draft, label: Draft (not on the website), widget: boolean, default: false, required: false }
+
+  # ------------------------------------------------------------------ settings
+  - name: settings
+    label: Site settings
+    description: "Upwork card: the card under your contact details in the sidebar. Update the numbers when your Upwork profile changes."
+    icon: settings
+    files:
+      - name: upwork
+        label: Upwork card (sidebar)
+        file: content/upwork.json
+        format: json
+        fields:
+          - { name: show, label: Show the card, widget: boolean, default: true, hint: "Off: the sidebar shows the phone image again." }
+          - { name: badge, label: Badge, widget: string, required: false, hint: "e.g. Top Rated, Top Rated Plus, Expert-Vetted. Leave empty to hide." }
+          - { name: job_success, label: Job success, widget: string, required: false, hint: "e.g. 100%" }
+          - { name: jobs, label: Jobs, widget: string, required: false, hint: "Total jobs, e.g. 18" }
+          - { name: earned, label: Earned, widget: string, required: false, hint: "e.g. $8K+" }
+          - { name: button, label: Button text, widget: string, default: Hire me on Upwork }
+          - { name: profile_url, label: Upwork profile link, widget: string, pattern: ["^https://www\\.upwork\\.com/", "Must be an upwork.com link"] }
+
+  # ------------------------------------------------------------------ new service pages
+  - name: services
+    label: Service pages (new)
+    label_singular: Service page
+    description: Service pages added after launch, e.g. AI-Assisted UI/UX Design. Each is listed in the Services menu right after the service named in "Show after".
+    icon: design_services
+    folder: content/services
+    format: json
+    extension: json
+    create: true
+    slug: "{{slug}}"
+    identifier_field: name
+    preview_path: /services/{{slug}}/
+    fields:
+      - { name: name, label: Name, widget: string, hint: "Shown in the menu and the breadcrumb." }
+      - { name: after, label: Show after, widget: string, default: AI Product Design, hint: "The existing service it follows in the menus, written exactly as in the menu." }
+      - { name: pill, label: Small label above the headline, widget: string, required: false }
+      - { name: headline, label: Headline (H1), widget: string }
+      - { name: hero_lead, label: Intro under the headline, widget: text }
+      - { name: seo_title, label: SEO title, widget: string, required: false }
+      - { name: description, label: Meta description, widget: text, hint: "About 150–160 characters." }
+      - { name: summary, label: Overview lead, widget: text }
+      - { name: overview, label: Overview text, widget: richtext, buttons: [bold, italic, link, bulleted-list] }
+      - { name: image, label: Overview image, widget: image, required: false }
+      - { name: image_alt, label: Image description, widget: string, required: false }
+      - { name: challenges, label: The challenge, widget: list, max: 4, summary: "{{title}}", fields: [{ name: title, label: Title, widget: string }, { name: text, label: Text, widget: text }] }
+      - { name: what_i_do, label: What I do, widget: list, summary: "{{title}}", fields: [{ name: title, label: Title, widget: string }, { name: text, label: Text, widget: text }] }
+      - { name: approach, label: My approach, widget: list, summary: "{{title}}", fields: [{ name: title, label: Step, widget: string }, { name: text, label: Text, widget: text }] }
+      - { name: deliverables, label: What you get, widget: list, summary: "{{title}}", fields: [{ name: title, label: Title, widget: string }, { name: text, label: Text, widget: text }] }
+      - { name: why, label: Why work with me, widget: list, summary: "{{title}}", fields: [{ name: title, label: Title, widget: string }, { name: text, label: Text, widget: text }] }
+      - { name: related, label: Related links, widget: list, summary: "{{label}}", fields: [{ name: label, label: Label, widget: string }, { name: link, label: Link, widget: string, hint: "A page on this site, e.g. /services/claude-design/" }] }
+      - { name: faqs, label: FAQs, widget: list, summary: "{{question}}", fields: [{ name: question, label: Question, widget: string }, { name: answer, label: Answer, widget: richtext, buttons: [bold, italic, link, bulleted-list] }] }
+      - { name: draft, label: Draft (not on the website), widget: boolean, default: false, required: false }

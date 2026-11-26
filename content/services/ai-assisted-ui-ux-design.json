@@ -1,0 +1,164 @@
+{
+  "name": "AI-Assisted UI/UX Design",
+  "after": "AI Product Design",
+  "pill": "/ AI-ASSISTED UI UX DESIGN · FASTER ITERATION",
+  "headline": "AI-assisted UI UX design: more ideas, tested sooner, decided by a designer.",
+  "hero_lead": "I use AI tools such as Claude, Figma AI, v0 and Gemini to research, explore and prototype faster, so you get more iterations in less time. Every UX decision is still mine.",
+  "seo_title": "AI-Assisted UI UX Design | Muhammad Babar, AI Product Designer",
+  "description": "AI-assisted UI UX design: faster research, more design options and working prototypes with Claude, Figma AI and v0, with every UX decision made by a designer.",
+  "summary": "AI speeds up the slow, repetitive parts of design. Judgment, taste and responsibility for the result stay with me.",
+  "overview": "Most of a design project is not drawing screens. It is reading research, comparing options, writing microcopy, documenting components and rebuilding prototypes after feedback. That is where AI helps. I use it to summarise interviews, generate layout options to react to, draft UX copy and turn ideas into working HTML prototypes in hours instead of days.\n\nYou still work with a designer who owns every decision. I review, edit and test everything the tools produce, and you get a clean Figma file and design system your team can build from. I have delivered products designed with Claude for clients, and I write about where these tools help and where they don’t, for example in [Claude Design vs Figma AI](/insights/claude-design-vs-figma-ai/).",
+  "image": "/uploads/3aa58b6ef24f4a.webp",
+  "image_alt": "Collage of profile card UI designs illustrating UI UX design trends for 2026",
+  "challenges": [
+    {
+      "title": "Slow iteration",
+      "text": "Each round of changes takes days, so teams test fewer ideas and ship with more guesswork."
+    },
+    {
+      "title": "Generic AI output",
+      "text": "Screens generated straight from a prompt look like everyone else’s and ignore your users and brand."
+    },
+    {
+      "title": "Research left unread",
+      "text": "Interview notes, tickets and analytics pile up because nobody has time to turn them into decisions."
+    },
+    {
+      "title": "Static prototypes",
+      "text": "Flat mock-ups hide motion, edge cases and real data until development, when changes cost the most."
+    }
+  ],
+  "what_i_do": [
+    {
+      "title": "Research synthesis",
+      "text": "Interview notes, support tickets and reviews turned into clear problem statements and opportunities."
+    },
+    {
+      "title": "Rapid concept exploration",
+      "text": "Several layout and flow directions in hours, so we choose with evidence instead of debating one option."
+    },
+    {
+      "title": "Working prototypes",
+      "text": "Interactive HTML prototypes built with Claude, Claude Design or v0 to test real behaviour and motion."
+    },
+    {
+      "title": "UX writing and microcopy",
+      "text": "Onboarding, empty states and error messages drafted with AI, then tested for tone and edited by hand."
+    },
+    {
+      "title": "Design systems with AI",
+      "text": "Component documentation, token descriptions and usage rules kept up to date as the system grows."
+    },
+    {
+      "title": "Design-to-code handoff",
+      "text": "Specs and front-end starter code that help engineers build the design as intended."
+    }
+  ],
+  "approach": [
+    {
+      "title": "Discover",
+      "text": "A short call about your users and goals, with any existing research summarised before we start."
+    },
+    {
+      "title": "Explore",
+      "text": "Several directions generated and compared side by side, then narrowed down with you."
+    },
+    {
+      "title": "Design",
+      "text": "High-fidelity screens in Figma with every state covered. AI drafts copy and variants; I make the calls."
+    },
+    {
+      "title": "Prototype and test",
+      "text": "A working prototype in front of real users to catch confusion before development."
+    },
+    {
+      "title": "Hand off",
+      "text": "A documented design system and dev-ready specs your engineers can build from directly."
+    }
+  ],
+  "deliverables": [
+    {
+      "title": "Research summary",
+      "text": "The problems worth solving, pulled from your interviews, tickets and analytics."
+    },
+    {
+      "title": "Explored directions",
+      "text": "The options we considered and why we chose one, so decisions are easy to revisit."
+    },
+    {
+      "title": "High-fidelity UI in Figma",
+      "text": "Every screen and state: empty, loading, error and success."
+    },
+    {
+      "title": "Interactive prototype",
+      "text": "A clickable or coded prototype for testing and stakeholder reviews."
+    },
+    {
+      "title": "Design system and handoff",
+      "text": "Components, tokens and documentation in an organised Figma file."
+    }
+  ],
+  "why": [
+    {
+      "title": "Designer first, AI second",
+      "text": "Every screen is reviewed and decided by me. The tools speed up the work, not the judgment."
+    },
+    {
+      "title": "More rounds, same quality",
+      "text": "More iterations in the same time, with weekly reviews so you always see progress."
+    },
+    {
+      "title": "Hands-on with the tools",
+      "text": "I design with Claude, Claude Design, Figma AI, v0 and Gemini on real client projects."
+    },
+    {
+      "title": "Dev-ready handoff",
+      "text": "Documented specs, tokens and components engineers can build from directly."
+    }
+  ],
+  "related": [
+    {
+      "label": "Claude Design",
+      "link": "/services/claude-design/"
+    },
+    {
+      "label": "AI Product Design",
+      "link": "/services/ai-product-design/"
+    },
+    {
+      "label": "UI UX Design",
+      "link": "/services/ui-ux-design/"
+    },
+    {
+      "label": "Claude Design vs Figma AI",
+      "link": "/insights/claude-design-vs-figma-ai/"
+    },
+    {
+      "label": "7 things to know before using Claude Design",
+      "link": "/insights/before-using-claude-design/"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Will my product look AI-generated?",
+      "answer": "No. AI gives me options to react to. The final design follows your users, brand and design system, and every screen is refined by hand."
+    },
+    {
+      "question": "Which AI tools do you use?",
+      "answer": "Mainly Claude and Claude Design, Figma AI, v0 and Gemini, with Figma for the final design. I choose the tools per project."
+    },
+    {
+      "question": "Does AI make the project faster?",
+      "answer": "You get more iterations and working prototypes sooner. Timelines still depend on scope, so I give you a plan and quote after our first call."
+    },
+    {
+      "question": "Is my product data safe with AI tools?",
+      "answer": "I only share what a task needs, follow your confidentiality rules, and can work without AI tools on anything sensitive."
+    },
+    {
+      "question": "How do we start?",
+      "answer": "Send me a short brief through the contact page. We will have a call about your product, users and timeline, and I will come back with a plan and quote."
+    }
+  ],
+  "draft": false
+}
