@@ -242,13 +242,13 @@ collections:
   # ------------------------------------------------------------------ settings
   - name: settings
     label: Site settings
+    description: "Upwork card: the card under your contact details in the sidebar. Update the numbers when your Upwork profile changes."
     icon: settings
     files:
       - name: upwork
         label: Upwork card (sidebar)
         file: content/upwork.json
         format: json
-        description: The card under your contact details in the sidebar. Update the numbers when your Upwork profile changes.
         fields:
           - { name: show, label: Show the card, widget: boolean, default: true, hint: "Off: the sidebar shows the phone image again." }
           - { name: badge, label: Badge, widget: string, required: false, hint: "e.g. Top Rated, Top Rated Plus, Expert-Vetted. Leave empty to hide." }
