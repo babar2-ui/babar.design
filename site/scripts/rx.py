@@ -184,6 +184,8 @@ for f in sorted(OUT.rglob("*.html")):
         h = blog2.place(h, p)
         import faq2
         h = faq2.place(h, p)
+        import statement2
+        h = statement2.place(h, p, SRC / "index.html")
         hero = h.index('<section id="top" class="hero-fit"')
         hero_end = h.index("</section>", hero)
         socials = re.findall(r'<a href="https://(?:www\.)?(?:linkedin|dribbble|behance|instagram|upwork)[^"]*" target="_blank" aria-label="[^"]+"[^>]*>.*?</a>', h, flags=re.S)[:5]

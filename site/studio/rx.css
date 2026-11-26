@@ -1589,3 +1589,30 @@ html body.rx .fx-w{padding-right:.12em!important;margin-right:-.12em!important}
 /* v5.8 links inside service and industry overview text */
 .svd-copy a{color:var(--rx-ink);text-decoration:none;border-bottom:1px solid var(--rx-blue);transition:color .2s}
 .svd-copy a:hover{color:var(--rx-blue)}
+
+/* =====================================================================
+   v5.9 homepage Statement → minimal blue CTA band (statement2.py)
+   ===================================================================== */
+html body.rx .stx{position:relative;overflow:hidden;isolation:isolate;background:linear-gradient(125deg,#0716b8 0%,#2340ff 55%,#4a63ff 100%);color:#fff;padding:120px 48px 200px;text-align:center}
+.stx-bg{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.stx-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:64px 64px;
+  -webkit-mask-image:radial-gradient(ellipse 75% 70% at 50% 45%,#000 30%,transparent 75%);mask-image:radial-gradient(ellipse 75% 70% at 50% 45%,#000 30%,transparent 75%)}
+.stx-mark{position:absolute;left:50%;bottom:-6%;width:118%;transform:translateX(-50%);animation:stx-drift 26s ease-in-out infinite alternate}
+.stx-mark svg{display:block;width:100%;height:auto}
+.stx-mark svg path{fill:none;stroke:rgba(255,255,255,.2);stroke-width:1.4px;vector-effect:non-scaling-stroke}
+@keyframes stx-drift{from{transform:translateX(-52%)}to{transform:translateX(-48%)}}
+.stx-in{position:relative;max-width:860px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:40px}
+html body.rx .stx-p{margin:0;font-size:clamp(26px,2.8vw,40px)!important;line-height:1.25!important;letter-spacing:-.025em;font-weight:500;color:#fff!important;text-wrap:balance;max-width:none!important}
+.stx-btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.stx-btn{display:inline-flex;align-items:center;justify-content:center;min-width:190px;padding:15px 26px;border-radius:9px;border:1px solid rgba(255,255,255,.5);color:#fff;text-decoration:none;font-size:15px;font-weight:500;transition:background-color .25s,color .25s,border-color .25s}
+.stx-btn:hover{background:rgba(255,255,255,.12);border-color:#fff}
+.stx-btn.is-solid{background:#fff;color:var(--rx-blue);border-color:#fff}
+.stx-btn.is-solid:hover{background:#0b0b0b;color:#fff;border-color:#0b0b0b}
+@media (max-width:1099px){html body.rx .stx{padding:96px 24px 150px}}
+@media (max-width:640px){html body.rx .stx{padding:72px 16px 110px}.stx-in{gap:28px}.stx-btn{min-width:0;flex:1 1 100%}.stx-mark{width:150%}.stx-grid{background-size:44px 44px}}
+@media (prefers-reduced-motion:reduce){.stx-mark{animation:none}}
+/* v5.9 overrides the older v3.13 Statement rules (same section label) */
+html body.rx section.stx[data-screen-label="Statement"]{background:linear-gradient(125deg,#0716b8 0%,#2340ff 55%,#4a63ff 100%)!important;padding:120px 48px 200px!important}
+html body.rx section.stx[data-screen-label="Statement"] p.stx-p{max-width:30ch!important;margin:0 auto!important;font-size:clamp(26px,2.8vw,40px)!important;color:#fff!important}
+@media (max-width:1099px){html body.rx section.stx[data-screen-label="Statement"]{padding:96px 24px 150px!important}}
+@media (max-width:640px){html body.rx section.stx[data-screen-label="Statement"]{padding:72px 16px 110px!important}html body.rx section.stx[data-screen-label="Statement"] p.stx-p{font-size:24px!important}}
