@@ -1662,3 +1662,7 @@ html body.rx .csx-gallery{padding-top:110px}
 /* swatch chips keep an outline so Ink shows on dark sections and Off-white on light ones */
 .csx-chip{box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
 .axs-dark .csx-chip{box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+/* v5.11.2 space under the case-study cover before the next section */
+html body.rx .csx-cover{padding-bottom:96px}
+@media (max-width:1099px){html body.rx .csx-cover{padding-bottom:72px}}
+@media (max-width:640px){html body.rx .csx-cover{padding-bottom:48px}}
