@@ -1577,3 +1577,7 @@ html body.rx .rx-strip dd::before,html body.rx .rx-strip dd::after{content:none}
   html body.rx .rx-strip > div:nth-child(n+3){border-top:1px solid rgba(255,255,255,.16)}
   html body.rx .rx-strip dd{font-size:28px}
 }
+/* v5.7.1 hero stats: regular weight, a little bigger */
+html body.rx .rx-strip dd{font-size:48px;font-weight:400;letter-spacing:-.035em}
+@media (max-width:1099px){html body.rx .rx-strip dd{font-size:38px}}
+@media (max-width:700px){html body.rx .rx-strip dd{font-size:32px}}
