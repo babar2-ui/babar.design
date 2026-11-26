@@ -1558,3 +1558,22 @@ html body.rx .inx-focus + .axs-light{padding-top:72px}
 @media (prefers-reduced-motion:reduce){html body.rx .rx-nav .rx-up:hover{transform:none}}
 /* v5.6.3 no green outline on hover either: the edge stays dark, the shadow and lift do the hover */
 @media (min-width:1100px){html body.rx .rx-nav .rx-up,html body.rx .rx-nav .rx-up:hover{border:1px solid #121212}}
+
+/* v5.7 hero stats: bigger numbers on a frosted-glass panel */
+html body.rx .rx-strip{margin:0 48px 28px;padding:0;border:1px solid rgba(255,255,255,.22);border-radius:16px;
+  background:linear-gradient(135deg,rgba(255,255,255,.16),rgba(255,255,255,.05));
+  -webkit-backdrop-filter:blur(18px) saturate(140%);backdrop-filter:blur(18px) saturate(140%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.25)}
+html body.rx .rx-strip > div{padding:22px 26px 24px;gap:8px;align-items:flex-start!important}
+html body.rx .rx-strip > div + div{border-left:1px solid rgba(255,255,255,.16)}
+html body.rx .rx-strip dt{font-size:11.5px;color:#c9d0ff}
+html body.rx .rx-strip dd{font-family:inherit;font-size:40px;line-height:1;font-weight:600;letter-spacing:-.04em}
+html body.rx .rx-strip dd::before,html body.rx .rx-strip dd::after{content:none}
+@media (max-width:1099px){html body.rx .rx-strip{margin:0 24px 24px}html body.rx .rx-strip dd{font-size:32px}}
+@media (max-width:700px){
+  html body.rx .rx-strip{grid-template-columns:1fr 1fr;gap:0;margin:0 16px 20px;padding:0}
+  html body.rx .rx-strip > div{padding:16px 16px 18px}
+  html body.rx .rx-strip > div:nth-child(3){border-left:0}
+  html body.rx .rx-strip > div:nth-child(n+3){border-top:1px solid rgba(255,255,255,.16)}
+  html body.rx .rx-strip dd{font-size:28px}
+}
