@@ -85,6 +85,14 @@
     {
       "images": [
         {
+          "image": "/uploads/cms/sippo-carrier-standing.webp",
+          "alt": "Pink SIPPO two-cup carrier with the wordmark and mascot holding two lime cups on a tiled counter"
+        }
+      ]
+    },
+    {
+      "images": [
+        {
           "image": "/uploads/cms/sippo-cups.webp",
           "alt": "Two SIPPO bubble tea cups with pink and lime sleeves on a café table next to a croissant and sunglasses"
         },
@@ -105,9 +113,37 @@
     {
       "images": [
         {
+          "image": "/uploads/cms/sippo-lids-straws.webp",
+          "alt": "Lime and pink SIPPO cup seals with the wordmark and mascot, next to black straws on a pink background"
+        },
+        {
+          "image": "/uploads/cms/sippo-pouches.webp",
+          "alt": "Lime and pink SIPPO bubble tea pouches with a pixel tapioca pearl pattern"
+        }
+      ]
+    },
+    {
+      "images": [
+        {
+          "image": "/uploads/cms/sippo-paper-bags.webp",
+          "alt": "White SIPPO paper bags closed with lime tape, one with the mascot and one with the wordmark"
+        }
+      ]
+    },
+    {
+      "images": [
+        {
+          "image": "/uploads/cms/sippo-box.webp",
+          "alt": "White SIPPO box with a pink sleeve showing the wordmark and mascot"
+        },
+        {
           "image": "/uploads/cms/sippo-merch-friends.webp",
           "alt": "Two friends laughing at a café table in SIPPO T-shirts, one with the pink mascot, with lime and pink SIPPO cups"
-        },
+        }
+      ]
+    },
+    {
+      "images": [
         {
           "image": "/uploads/cms/sippo-storefront.webp",
           "alt": "SIPPO shopfront with a lime pixel wordmark and waving pink mascot on the window and a pink hanging sign"
