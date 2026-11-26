@@ -63,6 +63,8 @@ def main():
         made += industries.place(STAGE, CONTENT, nav_json)
     except cms.ContentError as e:
         sys.exit(f"\nADMIN ENTRY PROBLEM: {e}\nFix it in babar.info/admin and publish again. The live site was not changed.\n")
+    import more_work
+    print("more case studies on:", ", ".join(more_work.place(STAGE)))
     os.environ["RX_UPWORK"] = str(CONTENT / "upwork.json")  # sidebar Upwork card (rx.py)
     os.environ["RX_INDUSTRIES"] = str(nav_json)  # the sidebar Industries menu (navsub.py)
     print("admin entries:", ", ".join(made) or "none")
