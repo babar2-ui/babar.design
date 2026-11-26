@@ -219,8 +219,11 @@ for f in sorted(OUT.rglob("*.html")):
             sys.path.insert(0, str(pathlib.Path(__file__).parent)); import article_page
             h = article_page.place(h)
         if len(rel.parts) == 2 and rel.parts[0] == "services":
-            sys.path.insert(0, str(pathlib.Path(__file__).parent)); import service_detail
-            h = service_detail.place(h)
+            if 'data-screen-label="Cover"' in h:  # one of the 13 original service pages
+                sys.path.insert(0, str(pathlib.Path(__file__).parent)); import service_detail
+                h = service_detail.place(h)
+            else:  # added later (extra_services.py): already built from the same blocks
+                h = h.replace('<body class="ds rx">', '<body class="ds rx rx-svd">', 1)
     # article cards: "Read article" moves onto the image as a button shown on hover (image blurs)
     RA = '<span style="font-size: 13px; color: rgb(138, 138, 132);">Read article →</span>'
     RBTN = ('<span class="rdx-ov"><span class="rdx-btn">Read article <svg viewBox="0 0 24 24" width="14" height="14" fill="none" '

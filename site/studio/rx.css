@@ -1586,3 +1586,6 @@ html body.rx .rx-strip dd{font-size:48px;font-weight:400;letter-spacing:-.035em}
    letter overhangs the box and lost its right edge (e.g. the S of PRODUCTS). Extra room on the right,
    cancelled by a negative margin so spacing and line breaks stay the same. */
 html body.rx .fx-w{padding-right:.12em!important;margin-right:-.12em!important}
+/* v5.8 links inside service and industry overview text */
+.svd-copy a{color:var(--rx-ink);text-decoration:none;border-bottom:1px solid var(--rx-blue);transition:color .2s}
+.svd-copy a:hover{color:var(--rx-blue)}

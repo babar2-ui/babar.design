@@ -52,7 +52,9 @@ def main():
     sys.path.insert(0, str(SCRIPTS))
     import cms
     try:
-        made = cms.place(STAGE, CONTENT)
+        import extra_services  # new service pages first, so every later page (and the menus) list them
+        made = extra_services.place(STAGE, CONTENT)
+        made += cms.place(STAGE, CONTENT)
     except cms.ContentError as e:
         sys.exit(f"\nADMIN ENTRY PROBLEM: {e}\nFix it in babar.info/admin and publish again. The live site was not changed.\n")
     import industries
