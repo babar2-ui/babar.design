@@ -38,6 +38,26 @@ def card(p):
             f'<a class="rx-card-n" href="{p}about/index.html">Muhammad Babar</a>'
             f'<a class="rx-card-cta" href="{p}contact/index.html"><i aria-hidden="true">+</i>Contact me</a></div></div>')
 
+def upwork_card():
+    """Sidebar card with the Upwork profile numbers (content/upwork.json, editable in the admin).
+    Replaces the phone image under the contact details; falls back to that image if switched off."""
+    import json, os
+    f = os.environ.get("RX_UPWORK")
+    if not f or not os.path.exists(f):
+        return None
+    d = json.loads(open(f, encoding="utf-8").read())
+    if not d.get("show"):
+        return None
+    import html as _h
+    e = lambda k: _h.escape(str(d.get(k) or ""))
+    logo = json.loads((pathlib.Path(__file__).parent / "social_icons.json").read_text())["Upwork"]
+    stats = "".join(f'<span><b>{e(k)}</b><i>{lab}</i></span>' for k, lab in (("job_success", "Job success"), ("jobs", "Jobs"), ("earned", "Earned")) if d.get(k))
+    return (f'<a class="rx-up" href="{e("profile_url")}" target="_blank" rel="noopener">'
+            f'<span class="rx-up-top"><span class="rx-up-brand">{logo}<span>Upwork</span></span>'
+            + (f'<span class="rx-up-badge">{e("badge")}</span>' if d.get("badge") else "")
+            + f'</span><span class="rx-up-stats">{stats}</span><span class="rx-up-cta">{e("button") or "Hire me on Upwork"}</span></a>')
+
+
 def reel(p):
     return (f'<a class="rx-reel" href="{p}work/index.html"><img src="{p}uploads/work-zippy-cover-w480.webp" '
             f'alt="Zippy fintech wallet app UI design" width="480" height="300" loading="lazy" decoding="async"></a>')
@@ -126,7 +146,7 @@ for f in sorted(OUT.rglob("*.html")):
     sys.path.insert(0, str(pathlib.Path(__file__).parent)); import navsub
     h = navsub.place(h, rel.parts if depth else ())
     nav_end = h.index("</nav>", hs) + len("</nav>")
-    h = h[:nav_end] + FOOT + reel(p) + "</div>" + h[nav_end:]
+    h = h[:nav_end] + FOOT + (upwork_card() or reel(p)) + "</div>" + h[nav_end:]
     # heroes: full-bleed colour panel
     if depth == 0:
         sys.path.insert(0, str(pathlib.Path(__file__).parent)); import about2

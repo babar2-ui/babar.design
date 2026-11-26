@@ -238,3 +238,22 @@ collections:
           - { name: question, label: Question, widget: string }
           - { name: answer, label: Answer, widget: richtext, required: false, buttons: [bold, italic, link, bulleted-list] }
       - { name: draft, label: Draft (not on the website), widget: boolean, default: false, required: false }
+
+  # ------------------------------------------------------------------ settings
+  - name: settings
+    label: Site settings
+    icon: settings
+    files:
+      - name: upwork
+        label: Upwork card (sidebar)
+        file: content/upwork.json
+        format: json
+        description: The card under your contact details in the sidebar. Update the numbers when your Upwork profile changes.
+        fields:
+          - { name: show, label: Show the card, widget: boolean, default: true, hint: "Off: the sidebar shows the phone image again." }
+          - { name: badge, label: Badge, widget: string, required: false, hint: "e.g. Top Rated, Top Rated Plus, Expert-Vetted. Leave empty to hide." }
+          - { name: job_success, label: Job success, widget: string, required: false, hint: "e.g. 100%" }
+          - { name: jobs, label: Jobs, widget: string, required: false, hint: "Total jobs, e.g. 18" }
+          - { name: earned, label: Earned, widget: string, required: false, hint: "e.g. $8K+" }
+          - { name: button, label: Button text, widget: string, default: Hire me on Upwork }
+          - { name: profile_url, label: Upwork profile link, widget: string, pattern: ["^https://www\\.upwork\\.com/", "Must be an upwork.com link"] }
