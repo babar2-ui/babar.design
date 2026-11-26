@@ -372,15 +372,30 @@ def case(tpl, d, cases, old_cases, ctx):
     for i, s in enumerate(d.get("sections") or []):
         heading, txt = str(s.get("heading") or "").strip(), str(s.get("body") or "").strip()
         imgs = [x for x in (s.get("images") or []) if x.get("image")]
-        if not (heading or txt or imgs):
+        if not (heading or txt or imgs or s.get("swatches") or s.get("items")):
             continue
         dark = not dark
         label = str(s.get("label") or "").strip() or f"{i + 1:02d}"
         prose = md_html(txt, ctx, p)
         prose = re.sub(r"<p>\s*(<img [^>]*>)\s*</p>", lambda m: figure(m.group(1), ctx, "csx-fig"), prose)
+        extra = ""
+        sw = [x for x in (s.get("swatches") or []) if re.fullmatch(r"#[0-9A-Fa-f]{6}", str(x.get("hex") or ""))]
+        if sw:  # colour palette
+            extra += '<div class="csx-swatches">' + "".join(
+                f'<div class="csx-sw" style="--c:{x["hex"]}"><span class="csx-chip"></span><span class="csx-sn">{esc(x.get("name"))}</span>'
+                f'<code class="csx-hex">{esc(x["hex"].upper())}</code>' + (f'<span class="csx-snote">{esc(x["note"])}</span>' if x.get("note") else "") + "</div>"
+                for x in sw) + "</div>"
+        it = [x for x in (s.get("items") or []) if str(x.get("title") or "").strip()]
+        if it:  # cards
+            extra += f'<div class="axs-cards axs-c{min(len(it), 3) if len(it) % 3 == 0 or len(it) > 4 else min(len(it), 4)} csx-items">' + "".join(
+                f'<article class="axs-card"><span class="axs-no" aria-hidden="true">/{k + 1:02d}</span><h3 class="axs-ct">{esc(x["title"])}</h3>'
+                + (f'<p class="axs-cd">{esc(x.get("text"))}</p>' if x.get("text") else "") + "</article>" for k, x in enumerate(it)) + "</div>"
         gal = ""
         if imgs:
-            figs = "".join(f'<figure class="csx-fig">{ctx.img(x["image"], x.get("alt") or "", p, extra=LAZY)}'
+            def fw(x):  # small detail crops are not blown up past ~1.5x their own width
+                f = ctx.local(x["image"]); wh = imgsize(f) if f is not None and f.exists() else None
+                return f' style="max-width:{int(wh[0] * 1.1)}px"' if wh and wh[0] < 1000 else ""
+            figs = "".join(f'<figure class="csx-fig"{fw(x)}>{ctx.img(x["image"], x.get("alt") or "", p, extra=LAZY)}'
                            + (f'<figcaption>{esc(x["caption"])}</figcaption>' if x.get("caption") else "") + "</figure>" for x in imgs)
             gal = f'<div class="csx-gal csx-g{min(len(imgs), 3)}">{figs}</div>'
         top = ""
@@ -388,7 +403,7 @@ def case(tpl, d, cases, old_cases, ctx):
             top = (f'<div class="csx-row"><span class="pr-tag">/ {esc(label)}</span><div class="csx-main">'
                    + (f'<h2 class="csx-h">{esc(heading)}</h2>' if heading else "")
                    + (f'<div class="csx-prose">{prose}</div>' if txt else "") + "</div></div>")
-        out.append(f'<section class="axs {"axs-dark" if dark else "axs-light"} csx-sec" data-screen-label="{esc(label)}"><div class="axs-in axs-stack">{top}{gal}</div></section>')
+        out.append(f'<section class="axs {"axs-dark" if dark else "axs-light"} csx-sec" data-screen-label="{esc(label)}"><div class="axs-in axs-stack">{top}{extra}{gal}</div></section>')
     # next case study: the next one added in the admin, then the existing case studies
     pool = cases + [c for c in old_cases if c["slug"] != d["slug"]]
     if len(pool) > 1:

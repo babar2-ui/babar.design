@@ -40,6 +40,90 @@
       "images": []
     },
     {
+      "label": "At a glance",
+      "heading": "A small kit that does a lot of work",
+      "body": "The identity is built from a handful of parts that work together or on their own.",
+      "images": [],
+      "items": [
+        {
+          "title": "Wordmark",
+          "text": "A chunky pixel logotype for the name."
+        },
+        {
+          "title": "Mascot",
+          "text": "A round pixel character with three moods."
+        },
+        {
+          "title": "Colour",
+          "text": "Acid lime and pink, with ink black and off-white."
+        },
+        {
+          "title": "Packaging",
+          "text": "Cup sleeves and a two-cup carrier."
+        },
+        {
+          "title": "Merch",
+          "text": "Black and white T-shirts."
+        },
+        {
+          "title": "Signage",
+          "text": "A hanging sign and a window graphic."
+        }
+      ]
+    },
+    {
+      "label": "Wordmark",
+      "heading": "A pixel wordmark that reads like a game title",
+      "body": "SIPPO is drawn on a square pixel grid, with stepped curves on the S and a slanted O that gives the name a little movement. The heavy strokes stay readable when the logo is small on a cup and still feel crisp when it is metres wide on a window.",
+      "images": [
+        {
+          "image": "/uploads/cms/sippo-detail-wordmark.webp",
+          "alt": "SIPPO pixel wordmark in black on acid lime",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "label": "Colour",
+      "heading": "Two loud colours, two quiet ones",
+      "body": "Lime and pink do the shouting. Ink black carries the wordmark and type, and a warm off-white gives the mascot drawings room to breathe.",
+      "images": [],
+      "swatches": [
+        {
+          "name": "Acid lime",
+          "hex": "#B9F500",
+          "note": "Backgrounds, cup sleeves, window graphic"
+        },
+        {
+          "name": "Pink",
+          "hex": "#E67BDD",
+          "note": "Mascot, carrier, signage"
+        },
+        {
+          "name": "Ink",
+          "hex": "#171717",
+          "note": "Wordmark, type, outlines"
+        },
+        {
+          "name": "Off-white",
+          "hex": "#F6F5EE",
+          "note": "Mascot sheets and quiet backgrounds"
+        }
+      ]
+    },
+    {
+      "label": "Typography",
+      "heading": "One voice to shout, one to whisper",
+      "body": "The pixel wordmark is the loud voice. Small labels such as BUBBLE TEA are set in a widely spaced monospace that sits under the logo without competing with it.",
+      "images": [
+        {
+          "image": "/uploads/cms/sippo-detail-sleeves.webp",
+          "alt": "Close-up of pink and lime SIPPO cup sleeves with the wordmark and BUBBLE TEA label",
+          "caption": ""
+        }
+      ]
+    },
+    {
       "label": "Mascot",
       "heading": "One character, three moods",
       "body": "The SIPPO mascot is a round pixel character drawn on the same grid as the wordmark. It comes in three poses: a wave hello, a wink, and a cool pose with sunglasses and a lime burst. Each one works on its own, so the mascot can sit on a cup, a T-shirt or a window without the logo next to it.",
@@ -47,6 +131,40 @@
         {
           "image": "/uploads/cms/sippo-mascot-poses.webp",
           "alt": "The SIPPO pixel mascot in three poses: waving, winking, and wearing sunglasses with a lime starburst",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "label": "Poses",
+      "heading": "Three poses, drawn on the same grid",
+      "body": "Each pose is drawn on the same pixel grid as the wordmark, so the character and the logo always look like they belong together.",
+      "images": [
+        {
+          "image": "/uploads/cms/sippo-detail-pose-wave.webp",
+          "alt": "SIPPO mascot waving hello",
+          "caption": ""
+        },
+        {
+          "image": "/uploads/cms/sippo-detail-pose-wink.webp",
+          "alt": "SIPPO mascot winking mid-step",
+          "caption": ""
+        },
+        {
+          "image": "/uploads/cms/sippo-detail-pose-cool.webp",
+          "alt": "SIPPO mascot in sunglasses with a lime starburst",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "label": "In colour",
+      "heading": "Pink on lime",
+      "body": "In colour the mascot turns pink and sits on lime, the brand’s loudest pairing. It is the version used on the window and on merch.",
+      "images": [
+        {
+          "image": "/uploads/cms/sippo-detail-mascot-pink.webp",
+          "alt": "Pink SIPPO mascot waving on an acid lime background",
           "caption": ""
         }
       ]
@@ -69,6 +187,52 @@
       ]
     },
     {
+      "label": "Carrier",
+      "heading": "A carrier you can spot down the street",
+      "body": "The two-cup carrier is solid pink with the wordmark front and centre. The lime cups below carry the mascot, so the two brand colours always travel together.",
+      "images": [
+        {
+          "image": "/uploads/cms/sippo-detail-carrier.webp",
+          "alt": "Pink SIPPO carrier holding two lime cups printed with the mascot",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "label": "Merch",
+      "heading": "T-shirts that work without a cup in hand",
+      "body": "A black tee with the wordmark in white, and a white tee with the black wordmark and the pink mascot. Both use the same pixel lettering as the packaging.",
+      "images": [
+        {
+          "image": "/uploads/cms/sippo-detail-tee-black.webp",
+          "alt": "Black T-shirt with the SIPPO wordmark in white",
+          "caption": ""
+        },
+        {
+          "image": "/uploads/cms/sippo-detail-tee-mascot.webp",
+          "alt": "White T-shirt with the SIPPO wordmark and pink mascot",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "label": "Signage",
+      "heading": "From the hanging sign to the window",
+      "body": "A pink lightbox sign carries the wordmark for passers-by, while the window graphic sets the lime wordmark and the waving mascot at full size.",
+      "images": [
+        {
+          "image": "/uploads/cms/sippo-detail-sign.webp",
+          "alt": "Pink SIPPO hanging sign on a shop wall",
+          "caption": ""
+        },
+        {
+          "image": "/uploads/cms/sippo-detail-window.webp",
+          "alt": "Lime SIPPO wordmark and pink mascot on a café window",
+          "caption": ""
+        }
+      ]
+    },
+    {
       "label": "In the world",
       "heading": "From T-shirts to the shop window",
       "body": "The same few pieces, the wordmark, the mascot and the two colours, carry over to merch and signage: black and white T-shirts, a pink hanging sign, and a lime window graphic big enough to read from across the street.",
@@ -82,6 +246,30 @@
           "image": "/uploads/cms/sippo-storefront.webp",
           "alt": "SIPPO shopfront with a lime pixel wordmark and waving pink mascot on the window",
           "caption": ""
+        }
+      ]
+    },
+    {
+      "label": "How it works",
+      "heading": "The rules that hold it together",
+      "body": "",
+      "images": [],
+      "items": [
+        {
+          "title": "One grid",
+          "text": "Wordmark and mascot share the same pixel grid."
+        },
+        {
+          "title": "Two lead colours",
+          "text": "Lime and pink lead; ink black carries the type."
+        },
+        {
+          "title": "Mascot can stand alone",
+          "text": "On cups and merch the character works without the logo."
+        },
+        {
+          "title": "Any size",
+          "text": "From a cup sleeve to a shop window, the shapes stay crisp."
         }
       ]
     }

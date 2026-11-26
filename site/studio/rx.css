@@ -1631,3 +1631,19 @@ html body.rx section.stx[data-screen-label="Statement"]{padding:120px 48px!impor
 @media (min-width:1100px) and (max-height:640px){
   html body.rx .rx-nav .rx-up-stats{display:none}
 }
+
+/* v5.10 case-study sections: colour palette and cards (cms.py) */
+.csx-swatches{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.csx-sw{display:flex;flex-direction:column;gap:6px;padding:0 0 18px;border-radius:12px;overflow:hidden;background:var(--rx-card);border:1px solid var(--rx-line)}
+.axs-dark .csx-sw{background:#1b1b1a;border-color:#3a3a37}
+.csx-chip{display:block;aspect-ratio:4/3;background:var(--c);margin-bottom:12px;border-bottom:1px solid rgba(0,0,0,.06)}
+.csx-sn,.csx-hex,.csx-snote{padding:0 18px}
+.csx-sn{font-size:18px;font-weight:600;letter-spacing:-.02em}
+.csx-hex{font-family:var(--rx-mono);font-size:12px;letter-spacing:.04em;color:var(--rx-mute)}
+.csx-snote{font-size:13.5px;line-height:1.5;color:var(--rx-mute)}
+.axs-dark .csx-hex,.axs-dark .csx-snote{color:#a4a49e}
+html body.rx .csx-items h3.axs-ct{font-size:21px!important;text-transform:none;letter-spacing:-.02em!important}
+.csx-items .axs-card{min-height:170px}
+@media (max-width:1099px){.csx-swatches{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.csx-swatches{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.csx-sn{font-size:16px}.csx-sn,.csx-hex,.csx-snote{padding:0 12px}}
+.csx-gal .csx-fig[style*="max-width"]{justify-self:center;width:100%}
